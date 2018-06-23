@@ -1,0 +1,388 @@
+//= template2/head.html
+<link rel="stylesheet" href="./css/pikaday.css">
+	
+<div class="nagi-container ">
+
+	//= template2/_sidenav.html
+
+
+	<div class="col-md-7 b-card__wrapper no-padding">
+		
+		<div class="b-card no-top-padding">
+
+			<div class="row b-card__top">
+				<div class="col-xs-6 b-card__top--left">
+					<h3 class="b-card__top--header">
+						Ödənişlərin tarixçəsi
+						<img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon">
+					</h3>
+					<p class="simple-p no-margin">Balansınıza artırdığınız ödənişlərin tarixçəsi</p>
+
+
+				</div>
+
+				<div class="col-xs-6 b-card__top--right">
+					
+				</div>
+			</div>
+
+			<div class="b-card__inner">
+				
+				<break-30></break-30>
+				
+				<div class="tabs">
+					<a href="#first" class="tab  tab--first tab--material" data-icon="backup"><b>Bu günə qədər</b></a>
+					<a href="#second" class="tab <!--tab--active--> tab--second tab--material" data-icon="build"><b>Zaman kəsimi üzrə</b></a>
+				</div>
+
+				<break-30></break-30>
+				
+				<div class="col-md-6 no-padding tabContent" id="first">
+					first
+				</div>
+				<div class="col-md-6 no-padding tabContent" id="second">
+					second
+				</div>
+
+
+				<break-30></break-30>
+
+				<!-- content here -->
+				
+			</div> <!-- /b-card__inner -->
+		</div> <!-- /b-card -->
+
+		<break-20></break-20>
+
+		<div class="b-card no-top-padding">
+
+			<div class="row b-card__top">
+				<div class="col-xs-6 b-card__top--left">
+					<h3 class="b-card__top--header">
+						Simkredit
+						<img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon">
+					</h3>
+					<p class="simple-p no-margin">Simkredit Sizə anında balansınızı artırmağa imkan verir.</p>
+
+
+				</div>
+
+				<div class="col-xs-6 b-card__top--right">
+					
+				</div>
+			</div>
+
+			<div class="b-card__inner">
+				
+				<break-30></break-30>
+
+				<p class="simple-p simple-p--main"><b>Simkredit əldə et</b></p>
+
+				<brea-15></brea-15>
+				
+				<div class="row row--no-margin">
+
+					<div class="col-md-4 break-20-between">
+						<button href="#" class="btn btn__material btn__material--rectangle" data-icon="backup">1.00 AZN</button>
+						<p class="simple-p simple-p--small no-margin">Xidmət haqqı: 1.20AZN</p>
+					</div>
+
+					<div class="col-md-4 break-20-between">
+						<button href="#" class="btn btn__material btn__material--rectangle" data-icon="backup">1.50 AZN</button>
+						<p class="simple-p simple-p--small no-margin">Xidmət haqqı: 1.80AZN</p>
+						
+					</div>
+
+					<div class="col-md-4 break-20-between">
+						<button href="#" class="btn btn__material btn__material--rectangle" data-icon="backup">2.00 AZN</button>
+						<p class="simple-p simple-p--small no-margin">Xidmət haqqı: 2.50AZN</p>
+						
+					</div>
+				</div>
+
+				<break-20></break-20>
+				<break-20></break-20>
+	
+
+
+				<p class="simple-p simple-p--main"><b>Simkredit tarixçəsi</b></p>
+				
+				<break-20></break-20>
+				
+				<div class="tabs">
+					<a href="#third" class="tab  tab--first tab--material" data-icon="backup"><b>Bu günə qədər</b></a>
+					<a href="#fourth" class="tab  tab--second tab--material" data-icon="build"><b>Zaman kəsimi üzrə</b></a>
+				</div>
+
+				<break-30></break-30>
+				
+				<div class="col-md-6 no-padding tabContent" id="third">
+					first
+				</div>
+				<div class="col-md-6 no-padding tabContent" id="fourth">
+					second
+				</div>
+
+				<break-30></break-30>
+
+				<div class="row row--no-margin">
+
+					<div class="col-md-6 break-20-between">
+						<p class="simple-p">
+							Bu tarixdən:
+						</p>
+						<!-- Google Material Style -->
+						<div class="material">
+							<input class="material__input" type="text" required id="datepicker1">
+
+							<label class="material__title">Tarix</label>
+							<img src="./img/icons/date_range.svg" alt="lock icon" class="material__icon"> 
+						</div>
+						<span class="b-error">Minimal 6 işarə. Yalnız latın hərfləri və rəqəmlər.</span>
+						<!-- /Google Material Style -->
+					</div>
+
+					<div class="col-md-6 break-20-between">
+						<p class="simple-p">
+							Bu tarixədək:
+						</p>
+						<!-- Google Material Style -->
+						<div class="material">
+							<input class="material__input" type="text" required id="datepicker2">
+
+							<label class="material__title">Tarix</label>
+							<img src="./img/icons/date_range.svg" alt="lock icon" class="material__icon"> 
+						</div>
+						<span class="b-error">Minimal 6 işarə. Yalnız latın hərfləri və rəqəmlər.</span>
+						<!-- /Google Material Style -->
+					</div>
+					
+					<break-30></break-30>
+					
+					<div class="table-responsive ">
+						<table class="table table-striped">
+						    <thead>
+						      <tr>
+						        <th>Məbləğ</th>
+						        <th>Tarix və zaman</th>
+						      </tr>
+						    </thead>
+						    <tbody>
+						      <tr>
+						        <td>1.00 AZN</td>
+						        <td>2 Fevral 2016, 15:02:19</td>
+						      </tr>
+						      <tr>
+						        <td>2.00 AZN</td>
+						        <td>11 Avqust 2016, 00:13:40</td>
+						      </tr>
+						      <tr>
+						        <td>1.50 AZN</td>
+						        <td>30 Yanvar 2017, 10:32:27</td>
+						      </tr>
+						      <tr>
+						        <td>1.00 AZN</td>
+						        <td>25 Mart 2018, 21:08:46</td>
+						      </tr>
+						    </tbody>
+						</table>
+					</div> 
+					
+
+					<break-30></break-30>
+
+				</div>
+
+			</div> <!-- /b-card__inner -->
+		</div> <!-- /b-card -->
+
+		<break-20></break-20>
+
+		<div class="b-card no-top-padding">
+
+			<div class="row b-card__top">
+				<div class="col-xs-6 b-card__top--left">
+					<h3 class="b-card__top--header">
+						Paycell
+						<img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon">
+					</h3>
+					<p class="simple-p no-margin">Paycell xidməti vasitəsilə digər nömrələrin balansını artıra bilərsiniz.</p>
+
+
+				</div>
+
+				<div class="col-xs-6 b-card__top--right">
+					
+				</div>
+			</div>
+
+			<div class="b-card__inner">
+				
+				<break-30></break-30>
+
+				<p class="simple-p simple-p--main"><b>Paycell göndər</b></p>
+
+				<brea-15></brea-15>
+				
+				<div class="row row--no-margin">
+
+					<div class="col-md-4 break-20-between">
+						<button href="#" class="btn btn__material btn__material--rectangle" data-icon="backup">0.20 AZN</button>
+						<p class="simple-p simple-p--small no-margin">Xidmət haqqı: 0.22AZN</p>
+					</div>
+
+					<div class="col-md-4 break-20-between">
+						<button href="#" class="btn btn__material btn__material--rectangle btn__material--rectangle--clicked" data-icon="backup">TƏSDİQLƏ</button>
+						<p class="simple-p simple-p--small no-margin">Xidmət haqqı: 0.54AZN</p>
+						
+					</div>
+
+					<div class="col-md-4 break-20-between">
+						<button href="#" class="btn btn__material btn__material--rectangle" data-icon="backup">2.00 AZN</button>
+						<p class="simple-p simple-p--small no-margin">Xidmət haqqı: 1.10AZN</p>
+						
+					</div>
+				</div>
+
+				<div class="row b-card__form-row b-card__form-row--last b-card__form-row--info">
+					<div class="col-xs-1">
+						<img src="./img/icons/warning.svg" alt="icon" class="img img__info">
+						
+					</div>
+					<div class="col-xs-10 text-left b-info" >
+						<p class="b-info__header">Xidmətdən gün ərzində istifadə limiti tükənmişdir (10 dəfə).</p>
+						<p class="b-info__text">
+							Yenidən istifadə 23 saat 41 dəqiqədən sonra mümkün olacaqdır.
+						</p>
+					</div>
+				</div>
+
+				<break-20></break-20>
+				<break-20></break-20>
+	
+
+
+				<p class="simple-p simple-p--main"><b>Paycell tarixçəsi</b></p>
+				
+				<break-20></break-20>
+				
+				<div class="tabs">
+					<a href="#fifth" class="tab  tab--first tab--material" data-icon="backup"><b>Bu günə qədər</b></a>
+					<a href="#sixth" class="tab tab--active tab--second tab--material" data-icon="build"><b>Zaman kəsimi üzrə</b></a>
+				</div>
+
+				<break-30></break-30>
+
+				<div class="col-md-6 no-padding tabContent" id="fifth">
+					first
+				</div>
+				<div class="col-md-6 no-padding tabContent" id="sixth">
+					second
+				</div>
+
+				<break-30></break-30>
+
+				<div class="col-md-6">
+					
+						<select name="" class="material-select">
+						  <option value="">Son 1 həftə ərzində</option>
+						  <option value="">GəncOL 2</option>
+						  <option value="">GəncOL 3</option>
+						  <option value="">GəncOL 7</option>
+						  
+						</select>
+				</div>
+
+				<break-30></break-30>
+
+				<div class="row row--no-margin">
+
+					
+					
+					<div class="table-responsive ">
+						<table class="table table-striped">
+						    <thead>
+						      <tr>
+						        <th>Məbləğ</th>
+						        <th>Nömrə və istiqamət</th>
+						        <th>Tarix və zaman</th>
+						      </tr>
+						    </thead>
+						    <tbody>
+						      <tr>
+						        <td>1.00 AZN</td>
+						        <td>
+						        	<img src="./img/icons/arrow_back.svg" class="img img__info pull-left" width="15px" alt="info icon">
+						        	051 950 56 78
+						        </td>
+						        <td>2 Fevral 2016, 15:02:19</td>
+						      </tr>
+						      <tr>
+						        <td>0.20 AZN</td>
+						        <td>
+						        	<img src="./img/icons/arrow_forward.svg" class="img img__info pull-left" width="15px" alt="info icon">
+						        	051 950 56 78
+						        </td>
+						        <td>11 Avqust 2016, 00:13:40</td>
+						      </tr>
+						      <tr>
+						        <td>0.20 AZN</td>
+						        <td>
+						        	<img src="./img/icons/arrow_back.svg" class="img img__info pull-left" width="15px" alt="info icon">
+						        	051 950 56 78
+						        </td>
+						        <td>30 Yanvar 2017, 10:32:27</td>
+						      </tr>
+						      <tr>
+						        <td>0.50 AZN</td>
+						        <td>
+						        	<img src="./img/icons/arrow_forward.svg" class="img img__info pull-left" width="15px" alt="info icon">
+						        	051 950 56 78
+						        </td>
+						        <td>25 Mart 2018, 21:08:46</td>
+						      </tr>
+						    </tbody>
+						</table>
+					</div> 
+					
+
+					<break-30></break-30>
+
+				</div>
+
+			</div> <!-- /b-card__inner -->
+		</div> <!-- /b-card -->
+
+	</div> <!-- b-card__wrapper -->
+	
+
+
+
+		
+	<div class="nagi-container">
+		<div class="col-md-1 col-md-offset-11">
+			<break-40></break-40>
+			<break-20></break-20>
+
+			<button class="btn btn--help btn--round b-tooltip">
+				<img src="./img/icons/Group 565.svg" alt="go" class="btn__go-icon btn__go-icon--help img-hover" hover-img="/img/icons/Group 566.svg" style="">
+				<span class="b-tooltip__text">Yardım</span>
+			</button>
+		</div>
+	</div>
+
+
+
+</div>
+
+
+
+<script src="./js/pikaday.js"></script>
+<script>
+    var picker = new Pikaday({ field: document.getElementById('datepicker1') });
+    var picker = new Pikaday({ field: document.getElementById('datepicker2') });
+</script>
+
+
+
+//= template2/footer.html

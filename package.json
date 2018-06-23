@@ -1,0 +1,33 @@
+{
+  "name": "start",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Babek Naghiyev",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer-core": "^6.0.1",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.5.0",
+    "gulp-flatten": "^0.4.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify": "^2.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^3.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^3.2.1",
+    "gulp-watch": "^5.0.0"
+  },
+  "dependencies": {
+    "pikaday": "^1.7.0"
+  }
+}

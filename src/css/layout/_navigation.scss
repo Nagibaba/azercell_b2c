@@ -1,0 +1,342 @@
+
+
+@keyframes slideInLeft {
+  0% {
+    transform: translate3d(-250px, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideOutLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-250px, 0, 0);
+    visibility: hidden;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+@media(min-width: 992px){
+  .nav-container{
+    box-shadow: 0 1px 20px;
+  }
+  .b-burger{ 
+    display: none
+  }
+  .b-nav{
+    color: $grey;
+    padding: 13px 0 10px 0;
+    &__header{
+      display: none;
+    }
+    &__list{
+      float: left;
+      color: color(complement);
+      margin-left: 20px;
+      margin-top: 1px;
+      &--first {
+        margin-left: 40px;
+      }
+      &--brand{
+        margin-left: 0;
+        margin-top: 0;
+      }
+      &--right{
+        margin-left: 10px;
+      }
+      &--last{
+        margin-right: 3px;
+      }
+    }
+    
+    &__link{
+      text-decoration: none;
+    }
+
+    &__logo{
+      &--xs{
+        display: none;
+      }
+      &--mobile{
+        display: none;
+      }
+    }
+
+    &__langs{
+      float: right;
+    }
+
+    &__single-icon{
+      vertical-align: baseline;
+
+    }
+
+    &__left-icon{
+      vertical-align: baseline;
+      margin-right: 15px;
+    }
+
+  }
+}
+
+@media(max-width: 991px){
+  .nav-container{
+    margin-left: -$full-container-mobile-padding;
+    margin-right: -$full-container-mobile-padding;
+    position: relative;
+    &:after{
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      box-shadow: 0 1px 20px;
+      pointer-events: none;
+    }
+  }
+  .b-nav {
+    position: absolute;
+    z-index: 11;
+    background-color: $main-color;
+    background: linear-gradient(to bottom right, $main-color, $second-main-color);
+    overflow: hidden;
+    &:not(.open) {
+      visibility: hidden;
+    }
+    &__header{
+      font-size: $secondary-font-size;
+      font-weight: bolder;
+      line-height: 60px;
+      color: black;
+    }
+    &__list {
+      color: color(complement);
+      list-style-type: none;
+      padding: 20px;
+      text-align: left;
+      transform: translateX(-250px);
+      margin-left: 31px;
+      &--main{
+        position: relative;
+        &:after{
+          content: '';
+          border-bottom: 1px solid $main-border-color;
+          @include makeLiWider; 
+        }
+        &--last{
+          &:after{
+            border-bottom: none;
+          }
+        }
+
+      }
+      &--secondary{
+        &:after{
+          content: '';
+          background-color: $main-color;
+          height: 100%;
+          z-index: -1;
+          @include makeLiWider; 
+        }
+        &--first{
+          &:after{
+            content: '';
+            border-bottom: 1px solid black;
+            @include makeLiWider;
+          }
+        }
+        
+      }
+
+      &--brand{
+        /*display: none; */
+      }
+      &:not(.open) {
+        animation-duration: $b-trans-speed;
+        animation-fill-mode: both;
+        animation-name: slideOutLeft;
+      }
+
+      &--first {
+        /*padding-top: $b-txt-pad-top;*/
+        margin-left: 31px;
+      }
+
+    }
+
+
+    
+    &__link {
+      background: transparent;
+      border-left: color(complement, normal, 0) solid $b-border-width;
+      color: white;
+      font-size: $secondary-font-size;
+      font-weight: $b-font-weight;
+      margin-left: $b-margin-left;
+      text-decoration: none;
+      transition: $b-transition;
+      width: auto;
+      margin-left: 15px;
+      &:hover,
+      &--active {
+        /*border-left: color(complement) solid $b-border-width;*/
+        color: white;
+        padding-left: $b-txt-pad;
+      }
+    }
+    
+    
+
+    &.open {
+      visibility: visible;
+
+      li {
+        animation-duration: $b-trans-speed;
+        animation-fill-mode: both;
+        animation-name: slideInLeft;
+      }
+    }
+    
+    &__logo{
+      margin: 13px;
+      &--mobile{
+        margin-left: 50%;
+        transform: translateX(-50%);
+      }
+
+    }
+    
+    &__lang{
+      display: block;
+      float: left;
+    }
+
+    &__services-nav{
+      white-space: pre-line;            
+      margin-top: 60px;
+    }
+
+   
+
+  } /* /b-nav */
+
+
+
+  .b-menu {
+    /*background: color(primary);*/
+    background: transparent;
+    /*border: color(primary) solid $b-border-width;*/
+    border: none;
+    border-radius: $b-border-radius;
+    cursor: pointer;
+    display: inline-block;
+    height: $b-height;
+    padding-left: $b-pad-left;
+    padding-top: $b-pad-top;
+    position: relative;
+    transition: $b-transition;
+    user-select: none;
+    width: $b-height;
+    z-index: 12;
+
+    &:hover {
+      /*border: color(complement) solid $b-border-width;*/
+    }
+  }
+
+  .b-bun {
+    background: color(complement);
+    position: relative;
+    transition: $b-transition;
+
+    &--top {
+      height: $b-bun-height;
+      top: 0;
+      width: $b-bun-width;
+    }
+
+    &--mid {
+      height: $b-bun-height;
+      top: 8px;
+      width: $b-bun-width;
+    }
+
+    &--bottom {
+      height: $b-bun-height;
+      top: 16px;
+      width: $b-bun-width;
+    }
+  }
+
+  .b-brand {
+    color: color(primary);
+    font-family: $b-font-family;
+    font-size: $b-font-size;
+    font-weight: $b-font-weight;
+    margin-left: $b-txt-pad;
+    position: relative;
+    text-decoration: none;
+    top: -$b-line-height;
+    transition: $b-transition;
+    z-index: 13;
+  }
+
+  .b-burger {
+    height: $b-height;
+    /*left: $b-margin-left;*/
+    position: relative;
+    /*top: $b-margin-top;*/
+    z-index: 10000;
+    display: inline-block;
+    &:hover:not(.open) {
+      .bun-top,
+      .bun-mid,
+      .bun-bottom {
+        background: color(primary);
+      }
+    }
+
+    &.open {
+      .b-main {
+        border: color(complement) solid $b-border-width;
+        color: white;
+      }
+
+      .b-bun--top {
+        background: white;
+        top: 9px;
+        transform: rotate(45deg);
+      }
+
+      .b-bun--mid {
+        opacity: 0;
+      }
+
+      .b-bun--bottom {
+        background: white;
+        top: 5px;
+        transform: rotate(-45deg);
+      }
+
+      .b-brand {
+        color: white;
+        display: block;
+      }
+    }
+  }
+}
