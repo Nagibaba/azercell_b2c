@@ -1,5 +1,9 @@
 //= template2/head.html
 <link rel="stylesheet" href="./css/pikaday.css">
+
+<!-- this part is automatically added to navigation header via JS. Please refer to your version if needed -->
+<b-nav__header>ÖDƏNİŞLƏRİM</b-nav__header> 
+
 	
 <div class="nagi-container ">
 
@@ -11,17 +15,20 @@
 		<div class="b-card no-top-padding">
 
 			<div class="row b-card__top">
-				<div class="col-xs-6 b-card__top--left">
+				<div class="col-xs-11 b-card__top--left">
 					<h3 class="b-card__top--header">
 						Ödənişlərin tarixçəsi
-						<img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon">
+						<!-- <span class="b-tooltip">
+							<img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon">
+							<span class="b-tooltip__text">Məlumat</span>
+						</span> -->
 					</h3>
 					<p class="simple-p no-margin">Balansınıza artırdığınız ödənişlərin tarixçəsi</p>
 
 
 				</div>
 
-				<div class="col-xs-6 b-card__top--right">
+				<div class="col-xs-1 b-card__top--right">
 					
 				</div>
 			</div>
@@ -57,17 +64,20 @@
 		<div class="b-card no-top-padding">
 
 			<div class="row b-card__top">
-				<div class="col-xs-6 b-card__top--left">
+				<div class="col-xs-11 b-card__top--left">
 					<h3 class="b-card__top--header">
 						Simkredit
-						<img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon">
+						<span class="b-tooltip">
+							<img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon">
+							<span class="b-tooltip__text">Məlumat</span>
+						</span>
 					</h3>
 					<p class="simple-p no-margin">Simkredit Sizə anında balansınızı artırmağa imkan verir.</p>
 
 
 				</div>
 
-				<div class="col-xs-6 b-card__top--right">
+				<div class="col-xs-1 b-card__top--right">
 					
 				</div>
 			</div>
@@ -83,21 +93,35 @@
 				<div class="row row--no-margin">
 
 					<div class="col-md-4 break-20-between">
-						<button href="#" class="btn btn__material btn__material--rectangle" data-icon="backup">1.00 AZN</button>
+						<button href="#" class="btn btn__material btn__material--rectangle" onclick="showOwe(this)">1.00 AZN</button>
 						<p class="simple-p simple-p--small no-margin">Xidmət haqqı: 1.20AZN</p>
 					</div>
 
 					<div class="col-md-4 break-20-between">
-						<button href="#" class="btn btn__material btn__material--rectangle" data-icon="backup">1.50 AZN</button>
+						<button href="#" class="btn btn__material btn__material--rectangle" onclick="showOwe(this)">1.50 AZN</button>
 						<p class="simple-p simple-p--small no-margin">Xidmət haqqı: 1.80AZN</p>
 						
 					</div>
 
 					<div class="col-md-4 break-20-between">
-						<button href="#" class="btn btn__material btn__material--rectangle" data-icon="backup">2.00 AZN</button>
+						<button href="#" class="btn btn__material btn__material--rectangle" onclick="showOwe(this)">2.00 AZN</button>
 						<p class="simple-p simple-p--small no-margin">Xidmət haqqı: 2.50AZN</p>
 						
 					</div>
+				</div>
+
+				<div class="row row--no-margin owe" style="display: none">
+					<p class="simple-p simple-p--secondary  no-margin">Simkredit borcunuz: <b class="main-color"> 0.24AZN</b></p>
+					<p class="simple-p  no-margin">Sonuncu istifadə: <b>15 Fevral 2018, 16:35 </b>
+						<span class="b-tooltip">
+							<img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon">
+							<span class="b-tooltip__text">Məlumat</span>
+						</span>
+					</p>
+					<p class="simple-p simple-p--main">
+						Simkredit xidmətindən təkrar istifadə etmək üçün cari Simkredit borcunuz ödənilməlidir.
+					</p>
+					<a href="" class="simple-a">ÖDƏ</a>
 				</div>
 
 				<break-20></break-20>
@@ -105,7 +129,7 @@
 	
 
 
-				<p class="simple-p simple-p--main"><b>Simkredit tarixçəsi</b></p>
+				<p class="simple-p simple-p--main no-margin"><b>Simkredit tarixçəsi</b></p>
 				
 				<break-20></break-20>
 				
@@ -128,14 +152,12 @@
 				<div class="row row--no-margin">
 
 					<div class="col-md-6 break-20-between">
-						<p class="simple-p">
-							Bu tarixdən:
-						</p>
+						
 						<!-- Google Material Style -->
 						<div class="material">
 							<input class="material__input" type="text" required id="datepicker1">
 
-							<label class="material__title">Tarix</label>
+							<label class="material__title">Bu tarixdən:</label>
 							<img src="./img/icons/date_range.svg" alt="lock icon" class="material__icon"> 
 						</div>
 						<span class="b-error">Minimal 6 işarə. Yalnız latın hərfləri və rəqəmlər.</span>
@@ -143,14 +165,13 @@
 					</div>
 
 					<div class="col-md-6 break-20-between">
-						<p class="simple-p">
-							Bu tarixədək:
-						</p>
+						
+
 						<!-- Google Material Style -->
 						<div class="material">
 							<input class="material__input" type="text" required id="datepicker2">
 
-							<label class="material__title">Tarix</label>
+							<label class="material__title">Bu tarixədək:</label>
 							<img src="./img/icons/date_range.svg" alt="lock icon" class="material__icon"> 
 						</div>
 						<span class="b-error">Minimal 6 işarə. Yalnız latın hərfləri və rəqəmlər.</span>
@@ -201,17 +222,20 @@
 		<div class="b-card no-top-padding">
 
 			<div class="row b-card__top">
-				<div class="col-xs-6 b-card__top--left">
+				<div class="col-xs-11 b-card__top--left">
 					<h3 class="b-card__top--header">
 						Paycell
-						<img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon">
+						<span class="b-tooltip">
+							<img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon">
+							<span class="b-tooltip__text">Məlumat</span>
+						</span>
 					</h3>
 					<p class="simple-p no-margin">Paycell xidməti vasitəsilə digər nömrələrin balansını artıra bilərsiniz.</p>
 
 
 				</div>
 
-				<div class="col-xs-6 b-card__top--right">
+				<div class="col-xs-1 b-card__top--right">
 					
 				</div>
 			</div>
@@ -232,7 +256,7 @@
 					</div>
 
 					<div class="col-md-4 break-20-between">
-						<button href="#" class="btn btn__material btn__material--rectangle btn__material--rectangle--clicked" data-icon="backup">TƏSDİQLƏ</button>
+						<button href="#" class="btn btn__material btn__material--rectangle btn__material--rectangle--clicked btn--no-hover" data-icon="backup">TƏSDİQLƏ</button>
 						<p class="simple-p simple-p--small no-margin">Xidmət haqqı: 0.54AZN</p>
 						
 					</div>
@@ -244,18 +268,23 @@
 					</div>
 				</div>
 
+
 				<div class="row b-card__form-row b-card__form-row--last b-card__form-row--info">
-					<div class="col-xs-1">
-						<img src="./img/icons/warning.svg" alt="icon" class="img img__info">
+					<div class="col-xs-1 no-padding">
+						<img src="./img/icons/warning.svg" alt="icon" class="img img__info align-text-bottom">
 						
 					</div>
-					<div class="col-xs-10 text-left b-info" >
+					<div class="col-xs-10 text-left b-info no-padding" >
 						<p class="b-info__header">Xidmətdən gün ərzində istifadə limiti tükənmişdir (10 dəfə).</p>
 						<p class="b-info__text">
 							Yenidən istifadə 23 saat 41 dəqiqədən sonra mümkün olacaqdır.
 						</p>
 					</div>
 				</div>
+				
+				
+
+				
 
 				<break-20></break-20>
 				<break-20></break-20>
@@ -359,17 +388,7 @@
 
 
 		
-	<div class="nagi-container">
-		<div class="col-md-1 col-md-offset-11">
-			<break-40></break-40>
-			<break-20></break-20>
-
-			<button class="btn btn--help btn--round b-tooltip">
-				<img src="./img/icons/Group 565.svg" alt="go" class="btn__go-icon btn__go-icon--help img-hover" hover-img="/img/icons/Group 566.svg" style="">
-				<span class="b-tooltip__text">Yardım</span>
-			</button>
-		</div>
-	</div>
+	//= template2/help.html
 
 
 

@@ -1,5 +1,7 @@
 //= template2/head.html
 
+<!-- this part is automatically added to navigation header via JS. Please refer to your version if needed -->
+<b-nav__header>BALANS</b-nav__header> 
 	
 <div class="nagi-container ">
 
@@ -10,7 +12,7 @@
 		<div class="b-card no-top-padding">
 
 			<div class="row b-card__top">
-				<div class="col-xs-6 b-card__top--left">
+				<div class="col-xs-11 b-card__top--left">
 					<h3 class="b-card__top--header">
 						Balans
 					</h3>
@@ -24,7 +26,14 @@
 			<div class="b-card__inner">
 				<break-30></break-30>
 				<p class="simple-p simple-p--secondary  no-margin">Əsas balans: <b class="main-color">0.75AZN</b></p>
-				<p class="simple-p  no-margin">Sonuncu istifadə: 15 Fevral 2018, 16:35 <img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon"></p>
+				<p class="simple-p  no-margin">Sonuncu istifadə: <b>15 Fevral 2018, 16:35 </b>
+					<span class="b-tooltip">
+						<img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon">
+						<span class="b-tooltip__text">Məlumat</span>
+					</span>
+				</p>
+				
+				<break-30></break-30>
 
 				<div class="b-jumbotron">
 					<p class="simple-p simple-p--main  no-margin"><b>Tarif paketinin balansı</b></p>
@@ -39,7 +48,7 @@
 							<div class="b-jumbotron__col-half b-jumbotron__col-half--second">
 								<div class="b-jumbotron__text">
 									<p class="b-jumbotron__col-header">Şəbəkədaxili</p>
-									<p class="b-jumbotron__col-footer"><b >128 dəq</b></p>
+									<p class="b-jumbotron__col-footer main-color"><b >128 dəq</b></p>
 								</div>
 							</div>
 
@@ -52,7 +61,7 @@
 							<div class="b-jumbotron__col-half b-jumbotron__col-half--second">
 								<div class="b-jumbotron__text">
 									<p class="b-jumbotron__col-header">İnternet</p>
-									<p class="b-jumbotron__col-footer"><b>0MB</b></p>
+									<p class="b-jumbotron__col-footer main-color"><b>0MB</b></p>
 								</div>
 							</div>
 
@@ -65,7 +74,7 @@
 							<div class="b-jumbotron__col-half b-jumbotron__col-half--second">
 								<div class="b-jumbotron__text">
 									<p class="b-jumbotron__col-header">Şəbəkədaxili</p>
-									<p class="b-jumbotron__col-footer"><b>196 SMS</b></p>
+									<p class="b-jumbotron__col-footer main-color"><b>196 SMS</b></p>
 								</div>
 							</div>
 
@@ -80,16 +89,21 @@
 
 				<break-30></break-30>
 				<p class="simple-p simple-p--secondary  no-margin">İnternet paketinin balansı: 192MB</p>
-				<p class="simple-p no-margin">Sonuncu istifadə: 15 Fevral 2018, 16:35 <img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon"></p>
+				<p class="simple-p no-margin">Sonuncu istifadə: <b>15 Fevral 2018, 16:35</b> 
+					<span class="b-tooltip">
+						<img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon">
+						<span class="b-tooltip__text">Məlumat</span>
+					</span>
+				</p>
 				
 
 
 				<div class="row b-card__form-row b-card__form-row--last b-card__form-row--info">
-					<div class="col-xs-1">
-						<img src="./img/icons/warning.svg" alt="icon" class="img img__info">
+					<div class="col-xs-1 no-padding">
+						<img src="./img/icons/warning.svg" alt="icon" class="img img__info align-text-bottom">
 						
 					</div>
-					<div class="col-xs-10 text-left b-info" >
+					<div class="col-xs-10 text-left b-info no-padding " >
 						<p class="b-info__header">Nömrənin ləğvetmə tarixi: <b>23 Avqust 2019</b></p>
 						<p class="b-info__text">
 							Nömrə bağlı olduqda çıxacaq səbəb mətni burada yer alacaq. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
@@ -109,7 +123,7 @@
 		
 		<div class="b-card no-top-padding">
 			<div class="row b-card__top">
-				<div class="col-sm-6 b-card__top--left">
+				<div class="col-xs-11 b-card__top--left">
 					<h3 class="b-card__top--header">
 						Digər nömrənin balansı
 					</h3>
@@ -121,13 +135,14 @@
 
 			<div class="b-card__inner">
 				<div class="clearfix">
-					<p class="simple-p simple-p--secondary pull-left">Nömrəni daxil edin:</p>
+					<break-30></break-30>
+					<p class="simple-p simple-p--secondary pull-left no-margin">Nömrəni daxil edin:</p>
 
 
-					<break-20></break-20>
+					<break-10></break-10>
 					
-					<div class="row b-card__form-row b-card__form-row--second">
-						<div class="col-sm-6">
+					<div class="row b-card__form-row b-card__form-row--second no-margin">
+						<div class="col-sm-6 no-padding">
 						
 							<div class="col-xs-2 b-card__double-input b-card__double-input--first no-left-padding">
 								<!-- Google Material Style -->
@@ -257,18 +272,28 @@
 	<div class="b-card no-padding">
 		<div class="b-card__inner b-card__inner--switch no-margin">
 
+
 				<div class="clearfix relative">
-					<div class="col-xs-6 switch__header">
+					<div class="col-sm-12 switch__header switch__header--bordered">
 						<h3 class="b-card__top--header">
-							Digər nömrənin balansı
-							<img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon">
+							Yükləcell xidməti
+							<span class="b-tooltip">
+								<img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon">
+								<span class="b-tooltip__text">Məlumat</span>
+							</span>
+
 						</h3>
 						<p class="simple-p no-margin">Dolor sit amet aliquam.</p>
+						<m-break-15></m-break-15>
 					</div>
-					<label class="switch__label vertically-center-right"> 
-					  <input type="checkbox" class="switch__checkbox">
-					  <span class="switch__slider"></span>
-					</label>
+					<div class="col-sm-12 switch-parent">
+						<m-break-15></m-break-15>
+						<label class="switch__label "> 
+						  <input type="checkbox" class="switch__checkbox" checked="checked">
+						  <span class="switch__slider"></span>
+						</label>
+						<span class="switch__text green">AKTİVDİR</span>
+					</div>
 				</div>
 
 		</div> <!-- /b-card__inner -->
@@ -281,17 +306,7 @@
 
 
 		
-	<div class="nagi-container">
-		<div class="col-md-1 col-md-offset-11">
-			<break-40></break-40>
-			<break-20></break-20>
-
-			<button class="btn btn--help btn--round b-tooltip">
-				<img src="./img/icons/Group 565.svg" alt="go" class="btn__go-icon btn__go-icon--help img-hover" hover-img="/img/icons/Group 566.svg" style="">
-				<span class="b-tooltip__text">Yardım</span>
-			</button>
-		</div>
-	</div>
+	//= template2/help.html
 
 
 

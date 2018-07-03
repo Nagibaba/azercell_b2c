@@ -16,9 +16,17 @@
     <!-- <link rel="stylesheet" type="text/css" href="libs/bootstrap/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" type="text/css" href="./css/bootstrap-3.3.7.min.css">
     <link rel="stylesheet" type="text/html"  href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css">
-    <link rel="stylesheet" href="./css/main/main.css">
+    <link rel="stylesheet" href="./css/main/main.min.css?v=2.0">
+    <style>
+      @media screen and (max-width: 991px) {
+        .b-card{
+          box-shadow: none;
+        }
+      }
+        
+    </style>
 </head>
-<body>
+<body class="first-body">
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -26,25 +34,32 @@
     <div class="nav-container white-back ">
         <div class="nagi-container ">
             <!-- Navigation -->
-            <div class="b-nav col-md-10 col-md-offset-1"> 
-                <ul class="b-nav__left">
-                  <li class="b-nav__list b-nav__list--brand">
-                    <a class="b-nav__link" href="">
-                        <img src="./img/Group 21.svg" alt="logo Azercell" width="86px" class="b-nav__logo">
-                    </a>
-                  </li>
-                  <li class="b-nav__list b-nav__list--first"><a class="b-nav__link" href="">Fərdi</a></li>
-                  <li class="b-nav__list"><a class="b-nav__link" href="">Korporativ</a></li>
+            <div class="b-nav col-md-10 col-xs-11 col-md-offset-1"> 
+              <ul class="b-nav__langs">
+                <li class="b-nav__list inline-wrapper b-nav__list--brand ">
+                  <a class="b-nav__link effect-underline" href="/">
+                      <img src="./img/Group 117.svg" alt="logo Azercell" width="86px" class="b-nav__logo b-nav__logo--mobile">
+                  </a>
+                </li>
+                <li class="b-nav__list inline-wrapper b-nav__lang b-nav__lang--first "><a class="b-nav__link effect-underline" href="">EN</a></li>
+                <li class="b-nav__list inline-wrapper b-nav__lang"><a class="b-nav__link effect-underline" href="">RU</a></li>
 
-                  <li class="b-nav__list"><a class="b-nav__link" href="">Şirkət haqqında</a></li>
-                </ul>
+              </ul>
 
-                <ul class="b-nav__right pull-right">
-                  
-                  <li class="b-nav__list b-nav__list--first"><a class="b-nav__link" href="">EN</a></li>
-                  <li class="b-nav__list"><a class="b-nav__link" href="">RU</a></li>
+              <ul class="b-nav__left  ">
+                <li class="b-nav__list inline-wrapper b-nav__list--brand visible-desktop">
+                  <a class="b-nav__link " href="/">
+                      <img src="./img/Group 21.svg" alt="logo Azercell" width="86px" class="b-nav__logo">
+                      
+                  </a>
+                </li>
+                <m-break-15></m-break-15>
+                <li class="b-nav__list b-nav__list--smaller inline-wrapper b-nav__list--first"><a class="b-nav__link b-nav__link--no-margin effect-underline" href="">Fərdi</a></li>
+                <li class="b-nav__list b-nav__list--smaller inline-wrapper"><a class="b-nav__link b-nav__link--no-margin effect-underline" href="">Korporativ</a></li>
 
-                </ul>
+                <li class="b-nav__list b-nav__list--smaller inline-wrapper"><a class="b-nav__link b-nav__link--no-margin effect-underline" href="">Şirkət haqqında</a></li>
+              </ul>
+
 
                 
                 
@@ -52,21 +67,21 @@
             
             </div>
                     
-                    
+                          
 
-            <img src="./img/Group 21.svg" alt="logo Azercell" width="86px" class="b-nav__logo b-nav__logo--xs">
+            <img src="./img/Group 21.svg" alt="logo Azercell" width="86px" class="b-nav__logo b-nav__logo--xs b-nav__logo--center">
             
             <!-- Burger-Icon -->
             
-            <!-- <div class="b-burger">
+            <div class="b-burger pull-left">
               <div class="b-menu">
                 <div class="b-bun b-bun--top"></div>
                 <div class="b-bun b-bun--mid"></div>
                 <div class="b-bun b-bun--bottom"></div>
-              </div> -->
+              </div>
 
-               <!-- <a href="#" class="b-brand">Azercell</a> 
-            </div> -->
+               <!-- <a href="#" class="b-brand">Azercell</a>  -->
+            </div>
         </div>
     </div>
 
@@ -84,14 +99,17 @@
 					<div class="b-card__slider-contents">
 
 						<div class="b-card__slider-content active">
+							<b-header>Qeydiyyat</b-header>
+
 							<img src="./img/slider/Mask Group 12.jpg" alt="slider image" class="img img-responsive b-card__slider-img" >
-							
 							<p class="b-card__slider-text"> 
 								Nömrənizi daim nəzarətdə saxlayın! Cari balans və tarif, mövcüd kampaniyalar barədə məlumat hər zaman əlinizin altında ola bilər. Siz həmçinin nömrənizin xəttini açıb/bağlaya, balansınızı artıra bilərisiniz.
 							</p>
 						</div>
 
 						<div class="b-card__slider-content">
+							<b-header>Balansım</b-header>
+
 							<img src="./img/slider/Mask Group 13.jpg" alt="slider image" class="img img-responsive b-card__slider-img" >
 							
 							<p class="b-card__slider-text"> 
@@ -100,6 +118,8 @@
 						</div>
 
 						<div class="b-card__slider-content">
+							<b-header>Xidmətlərim</b-header>
+
 							<img src="./img/slider/Mask Group 14.jpg" alt="slider image" class="img img-responsive b-card__slider-img" >
 							
 							<p class="b-card__slider-text"> 
@@ -108,6 +128,8 @@
 						</div>
 
 						<div class="b-card__slider-content">
+							<b-header>İnternet</b-header>
+
 							<img src="./img/slider/Mask Group 15.jpg" alt="slider image" class="img img-responsive b-card__slider-img" >
 							
 							<p class="b-card__slider-text"> 
@@ -116,6 +138,8 @@
 						</div>
 
 						<div class="b-card__slider-content">
+							<b-header>Kampaniyalar</b-header>
+
 							<img src="./img/slider/Mask Group 16.jpg" alt="slider image" class="img img-responsive b-card__slider-img" >
 							
 							<p class="b-card__slider-text"> 
@@ -124,6 +148,8 @@
 						</div>
 
 						<div class="b-card__slider-content">
+							<b-header>Ödənişlərim</b-header>
+
 							<img src="./img/slider/Mask Group 17.jpg" alt="slider image" class="img img-responsive b-card__slider-img" >
 							
 							<p class="b-card__slider-text"> 
@@ -132,6 +158,8 @@
 						</div>
 
 						<div class="b-card__slider-content">
+							<b-header>Ayarlar</b-header>
+
 							<img src="./img/slider/Mask Group 18.jpg" alt="slider image" class="img img-responsive b-card__slider-img" >
 							
 							<p class="b-card__slider-text"> 
@@ -140,6 +168,8 @@
 						</div>
 
 						<div class="b-card__slider-content">
+							<b-header>Əlavə xidmətlər</b-header>
+
 							<img src="./img/slider/Mask Group 19.jpg" alt="slider image" class="img img-responsive b-card__slider-img" >
 							
 							<p class="b-card__slider-text"> 
@@ -148,6 +178,8 @@
 						</div>
 
 						<div class="b-card__slider-content">
+							<b-header>WebSMS</b-header>
+
 							<img src="./img/slider/Mask Group 20.jpg" alt="slider image" class="img img-responsive b-card__slider-img" >
 							
 							<p class="b-card__slider-text"> 
@@ -156,6 +188,8 @@
 						</div>
 
 						<div class="b-card__slider-content">
+							<b-header>Telefon kitabçası</b-header>
+
 							<img src="./img/slider/Mask Group 21.jpg" alt="slider image" class="img img-responsive b-card__slider-img" >
 							
 							<p class="b-card__slider-text"> 
@@ -170,9 +204,24 @@
 					<div class="b-card__dots"></div>
 				</div>
 				
+				
+
 				<div class="b-card__acceptance-buttons ">
-					<a href="#" class="btn btn__material btn__material--casper " data-icon="backup">QƏBUL ETMİRƏM</a>
-					<button href="#" class="btn btn__material btn__material--full" >ŞƏRTLƏRİ QƏBUL EDİRƏM</button>
+					<div class="inline-wrapper pull-left">
+						<break-15></break-15>
+						<input type="checkbox" id="cbx" class="inp-cbx" style="display: none">
+						<label for="cbx" class="cbx">
+						  <span class="cbx__check-icon-wrapper">
+						    <svg width="12px" height="10px" viewBox="0 0 12 10" class="cbx__check-icon">
+						      <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+						    </svg>
+						  </span>
+						  <span class="cbx__text">Bir daha göstərmə</span>
+						</label>
+					</div>
+
+					<a href="#" class="btn btn__material btn__material--casper prev-slider-button" style="display: none">ƏVVƏLKİ</a>
+					<button href="#" class="btn btn__material btn__material--hollow next-slider-button" end-text="BAŞLA">NÖVBƏTİ</button>
 				</div>	
 
 
@@ -192,7 +241,16 @@
 
 
 
+<break-20></break-20>
 </div>
+
+<footer class="footer visible-mobile">
+  <div class="nagi-container">
+    <div class="col-md-12 footer__copyright">
+      © Azercell LLC, 2018
+    </div>
+  </div>
+</footer>
       <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script> -->
       <!-- <script>window.jQuery || document.write('<script src="libs/jquery/dist/jquery.min.js"><\/script>')</script> -->
       <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->

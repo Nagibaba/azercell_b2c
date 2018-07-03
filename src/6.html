@@ -1,5 +1,7 @@
 //= template2/head.html
 
+<!-- this part is automatically added to navigation header via JS. Please refer to your version if needed -->
+<b-nav__header>ƏSAS</b-nav__header> 
 	
 <div class="nagi-container ">
 
@@ -18,13 +20,13 @@
 				</div>
 
 				<div class="col-xs-6 b-card__top--right text-right">
-					<button href="#" class="btn btn__material btn__material--hollow btn__material--small" data-icon="backup">Prepaid</button>
+					<button href="#" class="btn btn__material btn__material--hollow btn__material--small no-hover" data-icon="backup">Prepaid</button>
 					<p class="b-card__self-number"><img src="./img/icons/Path 183.svg" alt="icon" class="img img__icon"><span class="">051 123 45 67</span></p>
 				</div>
 			</div>
 
 			<div class="b-card__inner">
-
+				<break-30></break-30>
 				<div class="switch">
 					<div class="clearfix">
 						<p class="switch__header">Əsas xətt bağlıdır</p>
@@ -44,12 +46,16 @@
 				<div class="clearfix">
 					<a href="" class="simple-a">BALANSI ARTIR</a>
 				</div>
-
+				<break-30></break-30>
 				<div class="switch switch--success">
 					<div class="clearfix">
 						<p class="switch__header switch__header--success ">
 							Beynəlxalq xətt açıqdır
-							<img src="./img/icons/info_outline.svg" width="18px" alt="info icon">
+							<span class="b-tooltip">
+								<img src="./img/icons/info_outline.svg" width="18px" alt="info icon">
+								<span class="b-tooltip__text">Məlumat</span>
+							</span>
+
 						</p>
 						<label class="switch__label"> 
 						  <input type="checkbox" class="switch__checkbox">
@@ -82,12 +88,14 @@
 		
 		<div class="b-card no-top-padding">
 			<div class="row b-card__top">
-				<div class="col-xs-6 b-card__top--left">
+				<div class="col-xs-11 b-card__top--left">
 					<h3 class="b-card__top--header">
 						Tarif
 					</h3>
 					<p class="simple-p no-margin">Lorem ipsum dolor sit amet consecteur.</p>
 				</div>
+				
+
 
 				
 			</div>
@@ -95,7 +103,20 @@
 			<div class="b-card__inner">
 				<div class="clearfix relative">
 					<p class="simple-p simple-p--secondary pull-left">Cari tarif: <b>Bizimkilər</b></p>
-					<a href="" class="simple-a pull-right vertically-center-right b-card__top-link">DİGƏR TARİFLƏR <img src="./img/icons/chevron_right.svg" alt="chevron right icon" width="18px"></a>
+					<break-2></break-2>
+					<a href="" class="simple-a b-card__top-link">DİGƏR TARİFLƏR <img src="./img/icons/chevron_right.svg" alt="chevron right icon" style="width: 18px" class="img-hover" hover-img="./img/icons/chevron_right-main.svg"></a>
+				</div>
+
+				<div class="row no-margin">
+					<div class="col-md-6 no-padding">
+							<select name="" class="material-select">
+							  <option value="">Tarifi dəyiş</option>
+							  <option value="">GəncOL 2</option>
+							  <option value="">GəncOL 3</option>
+							  <option value="">GəncOL 7</option>
+							  
+							</select>
+					</div>
 				</div>
 			</div> <!-- /b-card__inner -->
 
@@ -107,7 +128,7 @@
 		
 		<div class="b-card no-top-padding">
 			<div class="row b-card__top">
-				<div class="col-sm-6 b-card__top--left">
+				<div class="col-xs-11 b-card__top--left">
 					<h3 class="b-card__top--header">
 						Şəxsi kabinetin şifrəsi
 					</h3>
@@ -128,23 +149,24 @@
 							<break-20></break-20>
 							<!-- Google Material Style -->
 							<div class="material">
-								<input class="material__input" type="text" required>
+								<input class="material__input" type="password" required>
 
 								<label class="material__title">Şifrə</label>
 								<img src="./img/lock.svg" alt="lock icon" class="material__icon"> 
 							</div>
-							<span class="b-error">Minimal 6 işarə. Yalnız latın hərfləri və rəqəmlər.</span>
+							<!-- <span class="b-error">Minimal 6 işarə. Yalnız latın hərfləri və rəqəmlər.</span> -->
+							<span class="b-error b-error--only-info">Minimal 6 işarə. Yalnız latın hərfləri və rəqəmlər.</span>
 							<!-- /Google Material Style -->
 
 
 							<break-20></break-20>
 							<!-- Google Material Style -->
 							<div class="material">
-								<input class="material__input" type="text" required>
+								<input class="material__input" type="password" required>
 
 								<label class="material__title">Yeni şifrənin təkrarı</label>
 							</div>
-							<span class="b-error"></span>
+							<span class="b-error b-error--only-info"></span>
 							<!-- /Google Material Style -->
 
 							<break-20></break-20>
@@ -172,18 +194,9 @@
 
 
 
+	//= template2/help.html
 		
-	<div class="nagi-container">
-		<div class="col-md-1 col-md-offset-11">
-			<break-40></break-40>
-			<break-20></break-20>
-
-			<button class="btn btn--help btn--round b-tooltip">
-				<img src="./img/icons/Group 565.svg" alt="go" class="btn__go-icon btn__go-icon--help img-hover" hover-img="/img/icons/Group 566.svg" style="">
-				<span class="b-tooltip__text">Yardım</span>
-			</button>
-		</div>
-	</div>
+	
 
 
 

@@ -16,9 +16,17 @@
     <!-- <link rel="stylesheet" type="text/css" href="libs/bootstrap/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" type="text/css" href="./css/bootstrap-3.3.7.min.css">
     <link rel="stylesheet" type="text/html"  href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css">
-    <link rel="stylesheet" href="./css/main/main.css">
+    <link rel="stylesheet" href="./css/main/main.min.css?v=2.0">
+    <style>
+      @media screen and (max-width: 991px) {
+        .b-card{
+          box-shadow: none;
+        }
+      }
+        
+    </style>
 </head>
-<body>
+<body class="first-body">
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -26,25 +34,32 @@
     <div class="nav-container white-back ">
         <div class="nagi-container ">
             <!-- Navigation -->
-            <div class="b-nav col-md-10 col-md-offset-1"> 
-                <ul class="b-nav__left">
-                  <li class="b-nav__list b-nav__list--brand">
-                    <a class="b-nav__link" href="">
-                        <img src="./img/Group 21.svg" alt="logo Azercell" width="86px" class="b-nav__logo">
-                    </a>
-                  </li>
-                  <li class="b-nav__list b-nav__list--first"><a class="b-nav__link" href="">Fərdi</a></li>
-                  <li class="b-nav__list"><a class="b-nav__link" href="">Korporativ</a></li>
+            <div class="b-nav col-md-10 col-xs-11 col-md-offset-1"> 
+              <ul class="b-nav__langs">
+                <li class="b-nav__list inline-wrapper b-nav__list--brand ">
+                  <a class="b-nav__link effect-underline" href="/">
+                      <img src="./img/Group 117.svg" alt="logo Azercell" width="86px" class="b-nav__logo b-nav__logo--mobile">
+                  </a>
+                </li>
+                <li class="b-nav__list inline-wrapper b-nav__lang b-nav__lang--first "><a class="b-nav__link effect-underline" href="">EN</a></li>
+                <li class="b-nav__list inline-wrapper b-nav__lang"><a class="b-nav__link effect-underline" href="">RU</a></li>
 
-                  <li class="b-nav__list"><a class="b-nav__link" href="">Şirkət haqqında</a></li>
-                </ul>
+              </ul>
 
-                <ul class="b-nav__right pull-right">
-                  
-                  <li class="b-nav__list b-nav__list--first"><a class="b-nav__link" href="">EN</a></li>
-                  <li class="b-nav__list"><a class="b-nav__link" href="">RU</a></li>
+              <ul class="b-nav__left  ">
+                <li class="b-nav__list inline-wrapper b-nav__list--brand visible-desktop">
+                  <a class="b-nav__link " href="/">
+                      <img src="./img/Group 21.svg" alt="logo Azercell" width="86px" class="b-nav__logo">
+                      
+                  </a>
+                </li>
+                <m-break-15></m-break-15>
+                <li class="b-nav__list b-nav__list--smaller inline-wrapper b-nav__list--first"><a class="b-nav__link b-nav__link--no-margin effect-underline" href="">Fərdi</a></li>
+                <li class="b-nav__list b-nav__list--smaller inline-wrapper"><a class="b-nav__link b-nav__link--no-margin effect-underline" href="">Korporativ</a></li>
 
-                </ul>
+                <li class="b-nav__list b-nav__list--smaller inline-wrapper"><a class="b-nav__link b-nav__link--no-margin effect-underline" href="">Şirkət haqqında</a></li>
+              </ul>
+
 
                 
                 
@@ -52,21 +67,21 @@
             
             </div>
                     
-                    
+                          
 
-            <img src="./img/Group 21.svg" alt="logo Azercell" width="86px" class="b-nav__logo b-nav__logo--xs">
+            <img src="./img/Group 21.svg" alt="logo Azercell" width="86px" class="b-nav__logo b-nav__logo--xs b-nav__logo--center">
             
             <!-- Burger-Icon -->
             
-            <!-- <div class="b-burger">
+            <div class="b-burger pull-left">
               <div class="b-menu">
                 <div class="b-bun b-bun--top"></div>
                 <div class="b-bun b-bun--mid"></div>
                 <div class="b-bun b-bun--bottom"></div>
-              </div> -->
+              </div>
 
-               <!-- <a href="#" class="b-brand">Azercell</a> 
-            </div> -->
+               <!-- <a href="#" class="b-brand">Azercell</a>  -->
+            </div>
         </div>
     </div>
 
@@ -85,16 +100,18 @@
 					<h4 class="b-card__rules-header text-left">İstifadə şərtləri</h4>
 					<p class="b-card__rules-text text-left">
 						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
-
+						<br>
+						<br>
 						Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. 
-
+						<br>
+						<br>
 						Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus. Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis. Etiam imperdiet imperdiet orci. Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus accumsan cursus velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus consectetuer vestibulum elit. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue.
 					</p>
 				</div>
 					
 				<div class="b-card__acceptance-buttons ">
+					<button href="#" class="btn btn__material btn__material--full pull-right" >ŞƏRTLƏRİ QƏBUL EDİRƏM</button>
 					<a href="#" class="btn btn__material btn__material--casper " data-icon="backup">QƏBUL ETMİRƏM</a>
-					<button href="#" class="btn btn__material btn__material--full" >ŞƏRTLƏRİ QƏBUL EDİRƏM</button>
 				</div>	
 
 
@@ -114,7 +131,16 @@
 
 
 
+<break-20></break-20>
 </div>
+
+<footer class="footer visible-mobile">
+  <div class="nagi-container">
+    <div class="col-md-12 footer__copyright">
+      © Azercell LLC, 2018
+    </div>
+  </div>
+</footer>
       <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script> -->
       <!-- <script>window.jQuery || document.write('<script src="libs/jquery/dist/jquery.min.js"><\/script>')</script> -->
       <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->

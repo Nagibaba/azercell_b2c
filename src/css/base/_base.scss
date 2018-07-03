@@ -3,7 +3,7 @@
 }
 html{ 
 	width: 100%;
-	height: 100%;
+	min-height: 100%;
 	font-size: 62.5%; //burda rem'in 10 piksel olmasını ayarladık ki rahat değer verebilelim tarayıcı 16 piksel veriyor biz onun 62.5 faizini alarak 10 yaptık
 
 	/* @include respondmax(md){
@@ -25,8 +25,19 @@ html{
 }
 a{
 	color: $grey;
-	&:hover{
+	transition: .4s all;
+	& img{
+		transition: .4s all;
+	}
+	&:hover, &:focus{
+		outline: none;
 		text-decoration: none;
 		color: $main-color;
+
+		
 	}
+}
+
+input{
+	border-radius: 0;
 }

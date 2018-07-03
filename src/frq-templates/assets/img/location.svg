@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="1308 -2272 75 118.736">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f5a623;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Group_4" data-name="Group 4" transform="translate(1308 -2272)">
+    <circle id="Oval" class="cls-1" cx="37.5" cy="37.5" r="37.5" transform="translate(0 0)"/>
+    <circle id="Oval-2" data-name="Oval" class="cls-2" cx="12" cy="12" r="12" transform="translate(27 27)"/>
+    <path id="Triangle" class="cls-1" d="M33.6-1.788h0c.495.987,1.3.987,1.793,0l33.6-67H0Z" transform="translate(3 119.784)"/>
+  </g>
+</svg>

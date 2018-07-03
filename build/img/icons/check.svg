@@ -1,12 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #994dc9;
-        font-size: 18px;
-        font-family: MaterialIcons-Regular, Material Icons;
-      }
-    </style>
-  </defs>
-  <text id="check" class="cls-1" transform="translate(9 18)"><tspan x="-9" y="0">check</tspan></text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="#994dc9"/></svg>

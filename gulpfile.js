@@ -15,6 +15,7 @@ var flatten = require('gulp-flatten'); //fondaki klasör altında olan fontları
 // var livereload = require('gulp-livereload');
 var connect = require('gulp-connect');
 var notify = require("gulp-notify");
+const imagemin = require('gulp-imagemin');
 
 
 var gulpJustStarted = true;
@@ -77,9 +78,9 @@ gulp.task('html:build', function () {
         .pipe(reload())
         .pipe(
             notify(function(){
-                if(!gulpJustStarted && new Date() - lastCompile < 1000) {
+                if(!gulpJustStarted) {
                     gulpJustStarted = false;
-                    lastCompile = new Date()
+                    // lastCompile = new Date()
                      return 'HTML COMPILED'
                 }
                 return false
@@ -136,6 +137,7 @@ gulp.task('image:build', function () {
         console.log(err)
         this.emit('end')
     })
+    .pipe(imagemin())
     .pipe(gulp.dest(path.build.images))
     .pipe(reload())
     // .pipe(notify("IMAGE compiled"));

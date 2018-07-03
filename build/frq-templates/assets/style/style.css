@@ -1,0 +1,5149 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+body {
+  font-family: "Fira-Regular"; }
+
+@font-face {
+  font-family: "Fira-Bold";
+  src: url("../fonts/FiraSans-Bold.otf"); }
+@font-face {
+  font-family: "Fira-Regular";
+  src: url("../fonts/FiraSans-Regular.otf"); }
+.route_plan {
+  overflow-x: scroll; }
+  .route_plan ul {
+    display: -webkit-box;
+    display: -ms-flexbox; }
+    .route_plan ul .b_done:before {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 4px;
+      border-radius: 2px;
+      background-color: #cbcbcb;
+      top: 80px;
+      left: 0;
+      width: 210px; }
+    .route_plan ul .b_done .b_abs {
+      border-radius: 5px;
+      background-color: #e5e5e5;
+      text-align: center; }
+      .route_plan ul .b_done .b_abs .svg_3 {
+        position: absolute;
+        top: 40px;
+        left: 10%; }
+      .route_plan ul .b_done .b_abs .svg_1 {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 70px;
+        left: 0; }
+      .route_plan ul .b_done .b_abs p {
+        font-size: 14px;
+        line-height: 26px;
+        color: gray;
+        font-family: "Fira-Bold";
+        width: 130px;
+        padding: 8px 2px; }
+    .route_plan ul .r_done::before {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 4px;
+      border-radius: 2px;
+      background-color: #cbcbcb;
+      top: 80px;
+      left: 0;
+      width: 210px; }
+    .route_plan ul li {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-right: 70px;
+      margin-bottom: 70px;
+      position: relative; }
+      .route_plan ul li .abs {
+        text-align: center;
+        border-radius: 5px;
+        background-color: #4d77af; }
+        .route_plan ul li .abs .svg_2 {
+          position: absolute;
+          top: 40px;
+          left: 45%; }
+        .route_plan ul li .abs .svg_1 {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          top: 70px;
+          left: 45%; }
+        .route_plan ul li .abs p {
+          font-size: 14px;
+          line-height: 26px;
+          color: white;
+          font-family: "Fira-Bold";
+          padding: 8px 2px;
+          width: 130px; }
+
+.border_bot {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 30px; }
+
+.height_auto {
+  height: auto !important; }
+
+.map_tur {
+  width: 100%;
+  height: 300px; }
+
+.margin-top-0 {
+  margin-top: 0 !important; }
+
+.overlay {
+  position: fixed;
+  background-color: #000000;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out; }
+
+.mt-100 {
+  margin-top: 100px; }
+
+#map_big {
+  width: 100%;
+  height: 300px; }
+
+.star_form i {
+  font-size: 22px;
+  cursor: pointer;
+  margin-right: -4px; }
+
+.eyl_star {
+  margin-top: 2px;
+  margin-bottom: 12px; }
+  .eyl_star i {
+    font-size: 18px;
+    color: #ff7800;
+    vertical-align: middle;
+    margin-right: -4px; }
+  .eyl_star span {
+    font-size: 12px;
+    color: #b2b2b2; }
+
+.c_bott {
+  border-radius: 5px;
+  background-color: #4d77af; }
+  .c_bott p {
+    margin-left: 8px;
+    font-size: 12px;
+    line-height: 26px;
+    color: white;
+    font-family: "Fira-Regular"; }
+
+header {
+  padding: 20px 0;
+  border-bottom: 1px solid #e5e5e5; }
+  header .logo img {
+    width: 200px; }
+  header .burger {
+    position: absolute;
+    display: none;
+    cursor: pointer; }
+  header .menu ul {
+    list-style: none; }
+    header .menu ul li {
+      margin-right: 24px;
+      display: inline-block;
+      vertical-align: -webkit-baseline-middle; }
+      header .menu ul li:last-child {
+        margin-right: 0; }
+      header .menu ul li a {
+        display: inline-block;
+        font-size: 16px;
+        line-height: 26px;
+        color: #4c4c4c;
+        font-family: "Fira-Regular";
+        text-decoration: none; }
+        header .menu ul li a:hover {
+          color: #166de3; }
+        header .menu ul li a i {
+          font-size: 24px;
+          vertical-align: bottom; }
+  header .menu .li_icon {
+    vertical-align: text-top;
+    position: relative; }
+    header .menu .li_icon .sub_ul {
+      z-index: 9;
+      left: -84px;
+      top: 40px;
+      display: none;
+      position: absolute;
+      padding: 24px 22px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      min-width: 200px;
+      -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+              box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+      border: 1px solid #e5e5e5; }
+      header .menu .li_icon .sub_ul .top {
+        border: 1px solid #e5e5e5;
+        border-right: 0;
+        border-bottom: 0;
+        width: 20px;
+        height: 20px;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+        background-color: #f9f9f9;
+        position: absolute;
+        top: -10px;
+        right: 46%; }
+      header .menu .li_icon .sub_ul li {
+        margin-bottom: 24px;
+        margin-right: 0;
+        display: block; }
+        header .menu .li_icon .sub_ul li:last-child {
+          margin-bottom: 0 !important; }
+        header .menu .li_icon .sub_ul li a {
+          font-size: 16px;
+          line-height: 1;
+          color: #4d4d4d;
+          font-family: "Fira-Regular"; }
+          header .menu .li_icon .sub_ul li a:hover {
+            color: #166de3; }
+  header .right-menu a {
+    text-decoration: none; }
+  header .right-menu .currency {
+    display: inline-block;
+    margin-right: 28px;
+    position: relative; }
+    header .right-menu .currency .val_ul {
+      z-index: 9;
+      display: none;
+      list-style: none;
+      position: absolute;
+      width: 100px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      padding: 18px 0;
+      top: 40px;
+      right: 0;
+      -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+              box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+      border: 1px solid #e5e5e5; }
+      header .right-menu .currency .val_ul .top {
+        border: 1px solid #e5e5e5;
+        border-right: 0;
+        border-bottom: 0;
+        width: 20px;
+        height: 20px;
+        background-color: #f9f9f9;
+        position: absolute;
+        top: -10px;
+        right: 40%;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg); }
+      header .right-menu .currency .val_ul li {
+        margin-bottom: 14px; }
+        header .right-menu .currency .val_ul li:last-child {
+          margin-bottom: 0; }
+        header .right-menu .currency .val_ul li a {
+          font-size: 12px;
+          text-decoration: none;
+          text-transform: uppercase;
+          color: #4d4d4d;
+          font-family: "Fira-Regular"; }
+          header .right-menu .currency .val_ul li a:hover {
+            color: #166de3; }
+    header .right-menu .currency i {
+      display: inline-block;
+      font-size: 20px;
+      line-height: 26px;
+      color: #4e77af;
+      vertical-align: middle; }
+    header .right-menu .currency p {
+      display: inline-block;
+      font-size: 14px;
+      line-height: 26px;
+      color: #4e77af;
+      font-family: "Fira-Regular"; }
+      header .right-menu .currency p:hover {
+        color: #166de3; }
+  header .right-menu .sing_in {
+    display: inline-block;
+    margin-right: 30px; }
+    header .right-menu .sing_in i {
+      display: inline-block;
+      font-size: 20px;
+      line-height: 26px;
+      color: #4e77af;
+      vertical-align: middle; }
+    header .right-menu .sing_in p {
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      line-height: 26px;
+      color: #4e77af;
+      font-family: "Fira-Regular"; }
+      header .right-menu .sing_in p:hover {
+        color: #166de3; }
+
+.banner {
+  width: 100%;
+  padding: 140px 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .banner .menu_filter {
+    width: 100%;
+    border-radius: 33px;
+    -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff; }
+    .banner .menu_filter .main_ul li {
+      display: inline-block; }
+    .banner .menu_filter .main_ul .place {
+      padding: 20px 0 20px 28px;
+      width: 31%;
+      border-right: 1px solid #e5e5e5; }
+      .banner .menu_filter .main_ul .place i {
+        font-size: 24px;
+        color: #ff7800;
+        vertical-align: middle;
+        margin-right: 12px; }
+      .banner .menu_filter .main_ul .place input {
+        height: auto;
+        width: 70%;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        color: gray;
+        font-family: "Fira-Regular"; }
+    .banner .menu_filter .main_ul .location {
+      cursor: pointer;
+      padding: 20px 8px 20px 8px;
+      width: 17%;
+      position: relative;
+      border-right: 1px solid #e5e5e5; }
+      .banner .menu_filter .main_ul .location a {
+        text-decoration: none;
+        font-size: 16px;
+        color: gray;
+        font-family: "Fira-Regular"; }
+      .banner .menu_filter .main_ul .location i {
+        font-size: 24px;
+        color: #ff7800;
+        vertical-align: middle;
+        margin-right: 8px; }
+      .banner .menu_filter .main_ul .location .down {
+        position: absolute;
+        right: 0;
+        top: 24px;
+        font-size: 18px;
+        color: #4c4c4c;
+        margin-right: 12px; }
+      .banner .menu_filter .main_ul .location .loc_ul {
+        z-index: 9;
+        left: 0px;
+        top: 82px;
+        display: none;
+        position: absolute;
+        padding: 24px 22px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        min-width: 200px;
+        -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+                box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        border: 1px solid #e5e5e5; }
+        .banner .menu_filter .main_ul .location .loc_ul .top {
+          border: 1px solid #e5e5e5;
+          border-right: 0;
+          border-bottom: 0;
+          width: 20px;
+          height: 20px;
+          -webkit-transform: rotate(45deg);
+                  transform: rotate(45deg);
+          background-color: #f9f9f9;
+          position: absolute;
+          top: -10px;
+          right: 46%; }
+        .banner .menu_filter .main_ul .location .loc_ul li {
+          display: block; }
+          .banner .menu_filter .main_ul .location .loc_ul li a {
+            display: block;
+            font-size: 16px;
+            line-height: 36px;
+            color: #4d4d4d;
+            font-family: "Fira-Regular"; }
+            .banner .menu_filter .main_ul .location .loc_ul li a:hover {
+              color: #166de3; }
+    .banner .menu_filter .main_ul .stars {
+      cursor: pointer;
+      width: 18%;
+      padding: 20px 8px 20px 8px;
+      position: relative;
+      border-right: 1px solid #e5e5e5; }
+      .banner .menu_filter .main_ul .stars .hot_star i {
+        vertical-align: middle;
+        font-size: 16px;
+        line-height: 26px;
+        color: #4d4d4d;
+        margin-right: -4px; }
+      .banner .menu_filter .main_ul .stars .down {
+        position: absolute;
+        right: 0;
+        top: 24px;
+        font-size: 18px;
+        color: #4c4c4c;
+        margin-right: 12px; }
+      .banner .menu_filter .main_ul .stars .star_ul {
+        min-width: 200px;
+        z-index: 9;
+        left: 0px;
+        top: 82px;
+        display: none;
+        position: absolute;
+        padding: 24px 10px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+                box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        border: 1px solid #e5e5e5; }
+        .banner .menu_filter .main_ul .stars .star_ul .top {
+          border: 1px solid #e5e5e5;
+          border-right: 0;
+          border-bottom: 0;
+          width: 20px;
+          height: 20px;
+          -webkit-transform: rotate(45deg);
+                  transform: rotate(45deg);
+          background-color: #f9f9f9;
+          position: absolute;
+          top: -10px;
+          right: 46%; }
+        .banner .menu_filter .main_ul .stars .star_ul li {
+          cursor: pointer;
+          display: block;
+          margin-bottom: 10px; }
+          .banner .menu_filter .main_ul .stars .star_ul li:last-child {
+            margin-bottom: 0; }
+          .banner .menu_filter .main_ul .stars .star_ul li:hover i {
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+            color: #166de3; }
+          .banner .menu_filter .main_ul .stars .star_ul li i {
+            font-size: 16px; }
+    .banner .menu_filter .main_ul .hotels {
+      cursor: pointer;
+      width: 18%;
+      padding: 20px 12px 20px 12px;
+      position: relative; }
+      .banner .menu_filter .main_ul .hotels a {
+        text-decoration: none;
+        font-size: 16px;
+        color: #4d4d4d;
+        font-family: "Fira-Bold"; }
+      .banner .menu_filter .main_ul .hotels .white {
+        color: white;
+        vertical-align: middle; }
+      .banner .menu_filter .main_ul .hotels .down {
+        position: absolute;
+        right: 0;
+        top: 24px;
+        font-size: 18px;
+        color: #4c4c4c; }
+      .banner .menu_filter .main_ul .hotels .hot_ul {
+        z-index: 9;
+        left: 0px;
+        top: 82px;
+        display: none;
+        position: absolute;
+        padding: 24px 22px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        min-width: 200px;
+        -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+                box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        border: 1px solid #e5e5e5; }
+        .banner .menu_filter .main_ul .hotels .hot_ul .top {
+          border: 1px solid #e5e5e5;
+          border-right: 0;
+          border-bottom: 0;
+          width: 20px;
+          height: 20px;
+          -webkit-transform: rotate(45deg);
+                  transform: rotate(45deg);
+          background-color: #f9f9f9;
+          position: absolute;
+          top: -10px;
+          right: 46%; }
+        .banner .menu_filter .main_ul .hotels .hot_ul li {
+          display: block; }
+          .banner .menu_filter .main_ul .hotels .hot_ul li a {
+            display: block;
+            font-size: 16px;
+            line-height: 36px;
+            color: #4d4d4d;
+            font-family: "Fira-Regular"; }
+            .banner .menu_filter .main_ul .hotels .hot_ul li a:hover {
+              color: #166de3; }
+    .banner .menu_filter .main_ul .src {
+      width: 14%;
+      float: right;
+      border-radius: 33px;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      background-color: #ff7700;
+      text-align: center; }
+      .banner .menu_filter .main_ul .src button {
+        border: none;
+        outline: none;
+        background: transparent;
+        width: 100%;
+        padding: 20px;
+        font-size: 16px;
+        line-height: 26px;
+        color: white;
+        font-family: "Fira-Bold"; }
+        .banner .menu_filter .main_ul .src button i {
+          vertical-align: middle;
+          margin-left: 10px; }
+
+.respon_menu .mobile_menu {
+  width: 90%;
+  position: absolute;
+  background-color: #ffffff;
+  padding: 20px 24px;
+  top: 0;
+  left: -100%;
+  width: 90%;
+  z-index: 99;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out; }
+.respon_menu .header {
+  margin-bottom: 38px; }
+  .respon_menu .header .burger {
+    position: absolute;
+    cursor: pointer; }
+  .respon_menu .header .logo img {
+    width: 200px;
+    margin: auto; }
+.respon_menu .log_in ul {
+  list-style: none; }
+  .respon_menu .log_in ul li {
+    margin-bottom: 14px; }
+    .respon_menu .log_in ul li .sing {
+      border-radius: 3px;
+      background-color: #ffffff;
+      border: 2px solid #4d77af;
+      padding: 8px 0;
+      display: block;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 26px;
+      color: #4e77af;
+      font-family: "Fira-Regular"; }
+      .respon_menu .log_in ul li .sing i {
+        vertical-align: middle;
+        color: #4e77af; }
+    .respon_menu .log_in ul li .oreng {
+      border-radius: 3px;
+      background-color: #ffffff;
+      border: 2px solid #ff7700;
+      padding: 8px 0;
+      display: block;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 26px;
+      color: #ff7700;
+      font-family: "Fira-Regular"; }
+      .respon_menu .log_in ul li .oreng i {
+        vertical-align: middle;
+        color: #ff7700; }
+.respon_menu .m_valute .main {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  list-style: none;
+  padding: 12px 0; }
+  .respon_menu .m_valute .main .c_valute:hover p {
+    color: #166de3; }
+  .respon_menu .m_valute .main a {
+    text-decoration: none;
+    display: block; }
+    .respon_menu .m_valute .main a i {
+      font-size: 20px;
+      color: #4e77af;
+      display: inline-block;
+      vertical-align: middle; }
+    .respon_menu .m_valute .main a p {
+      display: inline-block;
+      font-family: "Fira-Regular";
+      font-size: 14px;
+      line-height: 26px;
+      color: #4e77af; }
+  .respon_menu .m_valute .main .sec_ul {
+    list-style: none;
+    display: none; }
+    .respon_menu .m_valute .main .sec_ul li {
+      margin-bottom: 12px; }
+      .respon_menu .m_valute .main .sec_ul li a {
+        font-size: 14px;
+        line-height: 26px;
+        color: #4e77af;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: "Fira-Regular"; }
+.respon_menu .foot ul {
+  list-style: none; }
+  .respon_menu .foot ul li {
+    border-bottom: 1px solid #e5e5e5; }
+    .respon_menu .foot ul li:last-child {
+      border-bottom: none; }
+    .respon_menu .foot ul li a {
+      display: block;
+      text-decoration: none;
+      font-size: 16px;
+      line-height: 48px;
+      color: #4d4d4d;
+      font-family: "Fira-Regular"; }
+      .respon_menu .foot ul li a:hover {
+        color: #166de3; }
+
+.place_list {
+  margin-top: 78px; }
+  .place_list .title p {
+    font-size: 30px;
+    color: gray;
+    font-family: "Fira-Bold"; }
+    .place_list .title p a {
+      font-size: 16px;
+      color: #4e77af;
+      font-family: "Fira-Regular";
+      margin-left: 28px;
+      text-decoration: none; }
+      .place_list .title p a:hover {
+        color: #166de3; }
+      .place_list .title p a i {
+        font-size: 18px;
+        color: #166de3;
+        vertical-align: text-bottom; }
+  .place_list .item {
+    margin-top: 34px; }
+    .place_list .item a {
+      text-decoration: none; }
+      .place_list .item a .photo {
+        margin-bottom: 16px; }
+        .place_list .item a .photo img {
+          -webkit-transition: all .4s ease-in-out;
+          transition: all .4s ease-in-out;
+          width: 100%;
+          height: auto;
+          border-radius: 3px; }
+      .place_list .item a .info p {
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        font-size: 16px;
+        color: #4e77af;
+        font-family: "Fira-Bold"; }
+      .place_list .item a .info span {
+        font-size: 12px;
+        color: gray;
+        font-family: "Fira-Regular"; }
+      .place_list .item a .stars i {
+        font-size: 18px;
+        color: #b2b2b2;
+        margin-right: -4px; }
+      .place_list .item a .stars-org i {
+        font-size: 18px;
+        color: #ff7800;
+        vertical-align: middle;
+        margin-right: -4px; }
+      .place_list .item a .stars-org span {
+        font-size: 12px;
+        color: #b2b2b2;
+        font-family: "Fira-Regular"; }
+    .place_list .item:hover img {
+      -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+              box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+      background-color: #b2b2b2; }
+    .place_list .item:hover .info p {
+      color: #166de3; }
+  .place_list .houses_list,
+  .place_list .restauran_list {
+    margin-top: 78px; }
+
+.trip_plan {
+  background-color: #f79c4a;
+  padding: 30px 0;
+  margin-top: 100px; }
+  .trip_plan .plan {
+    background-color: #ffffff;
+    border-radius: 5px; }
+    .trip_plan .plan .plan_left {
+      padding: 40px 20px 40px 30px; }
+      .trip_plan .plan .plan_left .title h1 {
+        font-size: 30px;
+        line-height: 26px;
+        color: #4e77af;
+        font-family: "Fira-Bold"; }
+      .trip_plan .plan .plan_left .title p {
+        margin-top: 30px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #4c4c4c;
+        font-family: "Fira-Regular"; }
+      .trip_plan .plan .plan_left .svg {
+        margin-top: 36px; }
+        .trip_plan .plan .plan_left .svg img {
+          width: 58%; }
+        .trip_plan .plan .plan_left .svg ul {
+          margin-top: 12px; }
+          .trip_plan .plan .plan_left .svg ul li {
+            display: inline-block;
+            margin-right: 26px; }
+            .trip_plan .plan .plan_left .svg ul li a {
+              text-decoration: none;
+              font-size: 14px;
+              line-height: 14px;
+              color: gray;
+              font-family: "Fira-Regular"; }
+      .trip_plan .plan .plan_left .more a {
+        text-decoration: none;
+        font-size: 16px;
+        color: #4e77af;
+        font-family: "Fira-Regular"; }
+        .trip_plan .plan .plan_left .more a i {
+          font-size: 18px;
+          vertical-align: bottom;
+          color: #166de3; }
+    .trip_plan .plan .plan_right {
+      width: 100%;
+      height: 364px;
+      background-position: top;
+      background-size: cover;
+      background-repeat: no-repeat; }
+
+.enter_tours {
+  margin-top: 100px; }
+  .enter_tours .tours {
+    margin-top: 80px; }
+  .enter_tours .title p {
+    font-size: 30px;
+    color: gray;
+    font-family: "Fira-Bold"; }
+    .enter_tours .title p a {
+      font-size: 16px;
+      color: #4e77af;
+      font-family: "Fira-Regular";
+      margin-left: 28px;
+      text-decoration: none; }
+      .enter_tours .title p a i {
+        font-size: 18px;
+        color: #166de3;
+        vertical-align: text-bottom; }
+  .enter_tours .item {
+    margin-top: 34px; }
+    .enter_tours .item a {
+      text-decoration: none; }
+      .enter_tours .item a .photo {
+        margin-bottom: 16px; }
+        .enter_tours .item a .photo img {
+          -webkit-transition: all .4s ease-in-out;
+          transition: all .4s ease-in-out;
+          width: 100%;
+          height: auto;
+          border-radius: 3px; }
+      .enter_tours .item a .info p {
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        font-size: 16px;
+        color: #4e77af;
+        font-family: "Fira-Bold"; }
+      .enter_tours .item a .info span {
+        font-size: 12px;
+        line-height: 26px;
+        color: gray;
+        font-family: "Fira-Regular"; }
+      .enter_tours .item a .stars-org {
+        margin-bottom: 14px; }
+        .enter_tours .item a .stars-org i {
+          margin-right: -4px;
+          font-size: 18px;
+          color: #ff7800;
+          vertical-align: middle; }
+        .enter_tours .item a .stars-org span {
+          font-size: 12px;
+          color: #b2b2b2;
+          font-family: "Fira-Regular"; }
+      .enter_tours .item a .bott {
+        border-radius: 5px;
+        background-color: #4d77af; }
+        .enter_tours .item a .bott p {
+          margin-left: 8px;
+          font-size: 12px;
+          line-height: 26px;
+          color: white;
+          font-family: "Fira-Regular"; }
+      .enter_tours .item a .bott_tours {
+        border-radius: 5px;
+        background-color: #e5e5e5;
+        padding: 6px; }
+        .enter_tours .item a .bott_tours p {
+          font-size: 12px;
+          line-height: 26px;
+          color: gray;
+          font-family: "Fira-Regular"; }
+          .enter_tours .item a .bott_tours p span {
+            font-family: "Fira-Bold"; }
+    .enter_tours .item:hover img {
+      -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+              box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+      background-color: #b2b2b2; }
+    .enter_tours .item:hover .info p {
+      color: #166de3; }
+
+.betwen_item {
+  padding: 24px 24px 24px 60px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 8px 15px rgba(78, 119, 175, 0.2);
+          box-shadow: 0px 8px 15px rgba(78, 119, 175, 0.2);
+  border: 1px solid #e5e5e5; }
+  .betwen_item .left img {
+    width: 270px !important;
+    height: 270px;
+    margin: auto; }
+  .betwen_item .right {
+    padding: 40px;
+    border: 1px solid #e5e5e5;
+    border-left: none; }
+    .betwen_item .right .title h3 {
+      font-size: 30px;
+      line-height: 26px;
+      color: #4e77af;
+      font-family: "Fira-Bold"; }
+    .betwen_item .right .title .border {
+      margin-top: 24px;
+      background-color: #e5e5e5;
+      height: 1px;
+      width: 80px; }
+    .betwen_item .right .desc {
+      margin-top: 22px; }
+      .betwen_item .right .desc p {
+        font-size: 16px;
+        line-height: 24px;
+        color: gray;
+        font-family: "Fira-Regular"; }
+    .betwen_item .right .more {
+      margin-top: 34px; }
+      .betwen_item .right .more a {
+        border-radius: 27px;
+        background-color: #ff7700;
+        padding: 18px 38px;
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 26px;
+        color: white;
+        font-family: "Fira-Regular"; }
+        .betwen_item .right .more a i {
+          font-size: 18px;
+          vertical-align: text-bottom; }
+  .betwen_item #betwen_sld .owl-dots {
+    position: absolute;
+    bottom: -78px;
+    left: 100px; }
+    .betwen_item #betwen_sld .owl-dots span {
+      width: 5px;
+      height: 5px;
+      border-radius: 2px;
+      background-color: #b2b2b2; }
+    .betwen_item #betwen_sld .owl-dots .owl-dot.active span {
+      width: 7px;
+      height: 7px;
+      border-radius: 3px;
+      background-color: #4d77af; }
+  .betwen_item #betwen_sld .owl-nav {
+    position: absolute;
+    bottom: -90px; }
+  .betwen_item #betwen_sld .owl-prev {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid #b2b2b2; }
+    .betwen_item #betwen_sld .owl-prev i {
+      position: absolute;
+      right: 51px;
+      top: 13px;
+      font-size: 24px;
+      line-height: 16px;
+      color: #b2b2b2; }
+  .betwen_item #betwen_sld .owl-next {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid #b2b2b2; }
+    .betwen_item #betwen_sld .owl-next i {
+      position: absolute;
+      left: 52px;
+      top: 13px;
+      font-size: 24px;
+      line-height: 16px;
+      color: #b2b2b2; }
+
+.e_t_t .trans_list {
+  margin-top: 80px; }
+.e_t_t .tur_paket {
+  margin-top: 80px; }
+.e_t_t .title p {
+  font-size: 30px;
+  color: gray;
+  font-family: "Fira-Bold"; }
+  .e_t_t .title p a {
+    font-size: 16px;
+    color: #4e77af;
+    font-family: "Fira-Regular";
+    margin-left: 28px;
+    text-decoration: none; }
+    .e_t_t .title p a i {
+      font-size: 18px;
+      color: #166de3;
+      vertical-align: text-bottom; }
+.e_t_t .item {
+  margin-top: 34px; }
+  .e_t_t .item a {
+    text-decoration: none; }
+    .e_t_t .item a .photo {
+      margin-bottom: 16px; }
+      .e_t_t .item a .photo img {
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+        width: 100%;
+        height: auto;
+        border-radius: 3px; }
+    .e_t_t .item a .info p {
+      -webkit-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+      font-size: 16px;
+      color: #4e77af;
+      font-family: "Fira-Bold"; }
+    .e_t_t .item a .info span {
+      display: block;
+      font-size: 12px;
+      line-height: 26px;
+      color: gray;
+      font-family: "Fira-Regular"; }
+      .e_t_t .item a .info span i {
+        margin-right: 6px;
+        font-size: 18px;
+        line-height: 26px;
+        vertical-align: middle; }
+  .e_t_t .item:hover img {
+    -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+    background-color: #b2b2b2; }
+  .e_t_t .item:hover .info p {
+    color: #166de3; }
+.e_t_t .stars-org span {
+  font-size: 12px;
+  line-height: 26px;
+  color: #b2b2b2;
+  font-family: "Fira-Regular";
+  margin-left: 6px; }
+.e_t_t .stars-org i {
+  vertical-align: middle;
+  margin-right: -4px;
+  font-size: 18px;
+  line-height: 26px;
+  color: #ff7800; }
+
+footer {
+  margin-top: 100px;
+  background-color: #f9f9f9;
+  padding-top: 36px;
+  border-top: 1px solid #e5e5e5; }
+  footer .up {
+    padding-bottom: 40px; }
+    footer .up .foot_logo img {
+      width: 200px; }
+    footer .up .foot_logo .desc {
+      margin-top: 22px;
+      font-size: 14px;
+      line-height: 22px;
+      color: gray;
+      font-family: "Fira-Regular"; }
+      footer .up .foot_logo .desc p {
+        margin-top: 20px; }
+    footer .up .foot_logo .google {
+      margin-right: 8px;
+      margin-top: 26px;
+      display: inline-block; }
+      footer .up .foot_logo .google img {
+        width: 110px;
+        height: 35px;
+        border-radius: 3px; }
+    footer .up .foot_logo .apple {
+      margin-top: 26px;
+      display: inline-block; }
+      footer .up .foot_logo .apple img {
+        width: 110px;
+        height: 35px;
+        border-radius: 3px; }
+    footer .up .foot_logo .sosial_i {
+      margin-top: 40px; }
+      footer .up .foot_logo .sosial_i .fb {
+        margin-right: 6px;
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        border-radius: 18px;
+        position: relative;
+        background-color: #3b5997; }
+        footer .up .foot_logo .sosial_i .fb img {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          width: 16px;
+          height: 16px; }
+      footer .up .foot_logo .sosial_i .tw {
+        margin-right: 6px;
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        border-radius: 18px;
+        background-color: #00abed;
+        position: relative; }
+        footer .up .foot_logo .sosial_i .tw img {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          width: 16px;
+          height: 16px; }
+      footer .up .foot_logo .sosial_i .yt {
+        margin-right: 6px;
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        border-radius: 18px;
+        background-color: #bb0000;
+        position: relative; }
+        footer .up .foot_logo .sosial_i .yt img {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          width: 16px;
+          height: 16px; }
+      footer .up .foot_logo .sosial_i .inst {
+        margin-right: 6px;
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        border-radius: 18px;
+        background-color: #c13583;
+        position: relative; }
+        footer .up .foot_logo .sosial_i .inst img {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          width: 16px;
+          height: 16px; }
+    footer .up .main_ul h2 {
+      font-size: 16px;
+      line-height: 26px;
+      color: #4c4c4c;
+      font-family: "Fira-Bold"; }
+    footer .up .main_ul ul {
+      -webkit-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+      margin-top: 24px;
+      list-style: none;
+      display: block; }
+      footer .up .main_ul ul li .oreng {
+        color: #ff7800; }
+        footer .up .main_ul ul li .oreng:before {
+          font-family: 'Material Icons';
+          content: "business_center";
+          -webkit-font-feature-settings: 'liga';
+          font-size: 16px;
+          margin-right: 6px;
+          color: #ff7800;
+          vertical-align: -3px; }
+      footer .up .main_ul ul li a {
+        text-decoration: none;
+        font-size: 14px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        line-height: 30px;
+        color: gray;
+        font-family: "Fira-Regular";
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out; }
+        footer .up .main_ul ul li a:before {
+          font-family: 'Material Icons';
+          content: "chevron_right";
+          -webkit-font-feature-settings: 'liga';
+          font-size: 16px;
+          margin-right: 6px;
+          vertical-align: -3px; }
+        footer .up .main_ul ul li a:hover {
+          color: #166de3; }
+  footer .middle {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: white;
+    padding: 40px 0px; }
+    footer .middle .title a {
+      text-decoration: none; }
+    footer .middle .title h2 {
+      font-size: 18px;
+      line-height: 26px;
+      color: #4c4c4c;
+      font-family: "Fira-Bold"; }
+    footer .middle .title p {
+      margin-top: 22px;
+      font-size: 18px;
+      color: #4c4c4c;
+      font-family: "Fira-Regular"; }
+      footer .middle .title p i {
+        font-size: 24px;
+        line-height: 26px;
+        color: #4e77af;
+        vertical-align: middle;
+        margin-right: 6px; }
+      footer .middle .title p span {
+        display: block;
+        margin-left: 36px;
+        font-size: 12px;
+        color: #b2b2b2;
+        font-family: "Fira-Regular"; }
+    footer .middle .photo_logo {
+      margin-top: 22px; }
+      footer .middle .photo_logo li {
+        margin-right: 14px;
+        display: inline-block; }
+        footer .middle .photo_logo li:last-child {
+          margin-right: 0; }
+        footer .middle .photo_logo li .asnx {
+          width: 128px;
+          vertical-align: -9px; }
+  footer .last_footer {
+    padding: 24px 0; }
+    footer .last_footer ul li {
+      display: inline-block;
+      margin-right: 10px; }
+      footer .last_footer ul li:last-child a {
+        border-right: none; }
+      footer .last_footer ul li a {
+        padding-right: 10px;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 26px;
+        color: #4e77af;
+        font-family: "Fira-Regular";
+        border-right: 1px solid #587fb2; }
+    footer .last_footer .nova_logo {
+      text-align: right; }
+
+.hotel_filter {
+  margin-top: 60px; }
+  .hotel_filter .title h2 {
+    font-size: 30px;
+    color: #4c4c4c;
+    font-family: "Fira-Bold"; }
+  .hotel_filter .filters {
+    float: right; }
+    .hotel_filter .filters .selec_li select {
+      font-size: 14px;
+      line-height: 58px;
+      color: #4c4c4c;
+      font-family: "Fira-Regular";
+      display: block;
+      width: 150px;
+      min-width: 100%;
+      height: 40px;
+      border-radius: 3px;
+      background-color: #ffffff;
+      outline: none;
+      border: 1px solid #cccccc;
+      cursor: pointer; }
+      .hotel_filter .filters .selec_li select option {
+        font-size: 14px;
+        line-height: 58px;
+        color: #4c4c4c;
+        font-family: "Fira-Regular"; }
+    .hotel_filter .filters li {
+      display: inline-block;
+      margin-right: 16px;
+      height: 40px;
+      vertical-align: bottom; }
+  .hotel_filter .input {
+    position: relative;
+    display: inline-block; }
+    .hotel_filter .input label {
+      font-size: 14px;
+      color: #4d4d4d;
+      font-family: "Fira-Regular";
+      margin-right: 10px; }
+    .hotel_filter .input input {
+      width: 210px;
+      outline: none;
+      padding-left: 36px;
+      height: 40px;
+      border-radius: 3px;
+      background-color: #ffffff;
+      border: 1px solid #cccccc;
+      font-size: 14px;
+      color: #4d4d4d;
+      font-family: "Fira-Regular"; }
+    .hotel_filter .input i {
+      font-size: 16px;
+      color: #b2b2b2;
+      position: absolute;
+      left: 12px;
+      top: 12px; }
+  .hotel_filter .selec_loc {
+    cursor: pointer;
+    padding: 10px 0 10px 10px;
+    position: relative;
+    width: 150px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding-left: 14px; }
+    .hotel_filter .selec_loc a {
+      text-decoration: none;
+      font-size: 14px;
+      color: #4d4d4d;
+      font-family: "Fira-Regular"; }
+    .hotel_filter .selec_loc i {
+      font-size: 18px;
+      position: absolute;
+      right: 10px;
+      color: #4c4c4c; }
+    .hotel_filter .selec_loc .selec_ul {
+      z-index: 9;
+      left: 0px;
+      top: 54px;
+      display: none;
+      position: absolute;
+      padding: 20px 20px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      min-width: 150px;
+      -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+              box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+      border: 1px solid #e5e5e5; }
+      .hotel_filter .selec_loc .selec_ul .top {
+        border: 1px solid #e5e5e5;
+        border-right: 0;
+        border-bottom: 0;
+        width: 20px;
+        height: 20px;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+        background-color: #f9f9f9;
+        position: absolute;
+        top: -10px;
+        right: 46%; }
+      .hotel_filter .selec_loc .selec_ul li {
+        display: block; }
+        .hotel_filter .selec_loc .selec_ul li a {
+          line-height: 30px;
+          -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out; }
+          .hotel_filter .selec_loc .selec_ul li a:hover {
+            color: #166de3; }
+  .hotel_filter .selec_stars {
+    cursor: pointer;
+    padding: 10px 0 10px 10px;
+    position: relative;
+    width: 200px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding-left: 14px; }
+    .hotel_filter .selec_stars .star i {
+      font-size: 18px;
+      color: #4c4c4c;
+      vertical-align: middle; }
+    .hotel_filter .selec_stars .down {
+      position: absolute;
+      right: 10px;
+      top: 8px; }
+    .hotel_filter .selec_stars .s_star_ul {
+      z-index: 9;
+      left: 0px;
+      top: 54px;
+      display: none;
+      position: absolute;
+      padding: 20px 20px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      min-width: 200px;
+      -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+              box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+      border: 1px solid #e5e5e5; }
+      .hotel_filter .selec_stars .s_star_ul .top {
+        border: 1px solid #e5e5e5;
+        border-right: 0;
+        border-bottom: 0;
+        width: 20px;
+        height: 20px;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+        background-color: #f9f9f9;
+        position: absolute;
+        top: -10px;
+        right: 46%; }
+      .hotel_filter .selec_stars .s_star_ul li {
+        display: block;
+        height: 30px; }
+        .hotel_filter .selec_stars .s_star_ul li:hover i {
+          color: #166de3; }
+        .hotel_filter .selec_stars .s_star_ul li i {
+          -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+          font-size: 16px; }
+  .hotel_filter .s_butt {
+    margin-right: 0 !important;
+    border-radius: 3px;
+    background-color: #4d77af; }
+    .hotel_filter .s_butt:hover {
+      -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+              box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      background: #5c8bca; }
+    .hotel_filter .s_butt button {
+      height: 40px;
+      text-transform: uppercase;
+      text-align: center;
+      outline: none;
+      width: 142px;
+      border: none;
+      background-color: transparent;
+      font-size: 14px;
+      color: white;
+      font-family: "Fira-Bold"; }
+
+.filter_list {
+  margin-top: 30px; }
+  .filter_list .left #m_p {
+    position: relative;
+    width: 100%;
+    height: 170px; }
+    .filter_list .left #m_p .back_map {
+      height: 170px;
+      background-position: center; }
+    .filter_list .left #m_p a {
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 26px;
+      color: #ff7800;
+      font-family: "Fira-Bold";
+      padding: 12px 20px;
+      background-color: #ffffff;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      width: 192px; }
+      .filter_list .left #m_p a i {
+        vertical-align: middle;
+        font-size: 18px;
+        line-height: 26px;
+        color: #ff7800; }
+  .filter_list .left .word {
+    margin-top: 30px;
+    position: relative; }
+    .filter_list .left .word .src_i {
+      font-size: 18px;
+      color: #4c4c4c;
+      position: absolute;
+      top: 12px;
+      left: 10px; }
+    .filter_list .left .word .can_i {
+      font-size: 20px;
+      color: #e5e5e5;
+      position: absolute;
+      top: 10px;
+      right: 10px; }
+    .filter_list .left .word input {
+      padding-right: 32px;
+      padding-left: 36px;
+      outline: none;
+      width: 100%;
+      height: 40px;
+      border-radius: 3px;
+      background-color: #ffffff;
+      border: 1px solid #cccccc;
+      font-size: 14px;
+      color: #b2b2b2;
+      font-family: "Fira-Regular"; }
+  .filter_list .left .cous_f {
+    margin-top: 30px;
+    padding-bottom: 26px;
+    border-bottom: 1px solid #e5e5e5; }
+    .filter_list .left .cous_f p {
+      font-size: 18px;
+      color: #4c4c4c;
+      font-family: "Fira-Regular"; }
+      .filter_list .left .cous_f p a {
+        text-decoration: none;
+        text-transform: uppercase;
+        float: right;
+        margin-top: 6px;
+        font-size: 12px;
+        color: #4e77af; }
+    .filter_list .left .cous_f ul {
+      list-style: none; }
+      .filter_list .left .cous_f ul li {
+        margin-top: 16px;
+        font-size: 14px;
+        color: #4e77af;
+        font-family: "Fira-Regular"; }
+        .filter_list .left .cous_f ul li i {
+          float: right;
+          font-size: 20px;
+          color: #4e77af; }
+        .filter_list .left .cous_f ul li span i {
+          float: none;
+          font-size: 16px;
+          color: #4e77af;
+          margin-right: -4px; }
+  .filter_list .left #noUiSlider {
+    padding-bottom: 26px;
+    border-bottom: 1px solid #e5e5e5;
+    margin-top: 30px; }
+    .filter_list .left #noUiSlider input {
+      margin-top: 30px;
+      padding-left: 10px;
+      width: 110px;
+      height: 40px;
+      border-radius: 3px;
+      background-color: #ffffff;
+      border: 1px solid #cccccc;
+      font-size: 14px;
+      line-height: 58px;
+      color: #4c4c4c;
+      font-family: "Fira-Regular"; }
+    .filter_list .left #noUiSlider .first {
+      margin-right: 34px; }
+    .filter_list .left #noUiSlider #range {
+      width: 90%;
+      margin: auto; }
+    .filter_list .left #noUiSlider .noUi-connect {
+      background-color: #4d77af; }
+    .filter_list .left #noUiSlider .noUi-horizontal {
+      height: 4px; }
+    .filter_list .left #noUiSlider .noUi-horizontal .noUi-handle {
+      top: -11px; }
+    .filter_list .left #noUiSlider .noUi-target {
+      border: none !important; }
+    .filter_list .left #noUiSlider h2 {
+      margin-bottom: 24px;
+      font-size: 18px;
+      line-height: 26px;
+      color: #4c4c4c;
+      font-family: "Fira-Regular"; }
+    .filter_list .left #noUiSlider .noUi-horizontal .noUi-handle {
+      width: 26px;
+      height: 26px;
+      border-radius: 13px;
+      -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+              box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+      background-color: #ffffff;
+      border: 1px solid #4d77af; }
+    .filter_list .left #noUiSlider .noUi-handle:after,
+    .filter_list .left #noUiSlider .noUi-handle:before {
+      content: "";
+      width: 0; }
+  .filter_list .left .distans {
+    margin-top: 30px;
+    padding-bottom: 26px;
+    border-bottom: 1px solid #e5e5e5; }
+    .filter_list .left .distans h2 {
+      font-size: 18px;
+      line-height: 26px;
+      color: #4c4c4c;
+      font-family: "Fira-Regular";
+      margin-bottom: 24px; }
+    .filter_list .left .distans select {
+      display: block;
+      padding-left: 14px;
+      font-size: 14px;
+      line-height: 58px;
+      color: gray;
+      font-family: "Fira-Regular";
+      outline: none;
+      width: 100%;
+      height: 40px;
+      border-radius: 3px;
+      background-color: #ffffff;
+      border: 1px solid #cccccc; }
+    .filter_list .left .distans label {
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: gray;
+      font-family: "Fira-Regular"; }
+    .filter_list .left .distans .down_selec {
+      margin-top: 18px; }
+  .filter_list .left .reyting {
+    margin-top: 30px;
+    padding-bottom: 26px;
+    border-bottom: 1px solid #e5e5e5; }
+    .filter_list .left .reyting h2 {
+      font-size: 18px;
+      line-height: 26px;
+      color: #4c4c4c;
+      font-family: "Fira-Regular";
+      margin-bottom: 24px; }
+    .filter_list .left .reyting label {
+      padding: 0; }
+      .filter_list .left .reyting label i {
+        font-size: 16px;
+        color: gray; }
+    .filter_list .left .reyting .radio input[type="radio"] {
+      position: absolute;
+      opacity: 0; }
+      .filter_list .left .reyting .radio input[type="radio"] + .radio-label:before {
+        content: '';
+        background: #f4f4f4;
+        border-radius: 100%;
+        border: 1px solid #b4b4b4;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        position: relative;
+        top: 0;
+        margin-right: 1em;
+        vertical-align: top;
+        cursor: pointer;
+        text-align: center;
+        -webkit-transition: all 250ms ease;
+        transition: all 250ms ease; }
+      .filter_list .left .reyting .radio input[type="radio"]:checked + .radio-label:before {
+        background-color: #3197EE;
+        -webkit-box-shadow: inset 0 0 0 4px #f4f4f4;
+                box-shadow: inset 0 0 0 4px #f4f4f4; }
+      .filter_list .left .reyting .radio input[type="radio"]:focus + .radio-label:before {
+        outline: none;
+        border-color: #3197EE; }
+      .filter_list .left .reyting .radio input[type="radio"]:disabled + .radio-label:before {
+        -webkit-box-shadow: inset 0 0 0 4px #f4f4f4;
+                box-shadow: inset 0 0 0 4px #f4f4f4;
+        border-color: #b4b4b4;
+        background: #b4b4b4; }
+      .filter_list .left .reyting .radio input[type="radio"] + .radio-label:empty:before {
+        margin-right: 0; }
+  .filter_list .left .style {
+    margin-top: 30px;
+    padding-bottom: 26px;
+    border-bottom: 1px solid #e5e5e5; }
+    .filter_list .left .style p {
+      font-size: 14px;
+      line-height: 58px;
+      color: gray;
+      font-family: "Fira-Regular"; }
+    .filter_list .left .style h2 {
+      font-size: 18px;
+      line-height: 26px;
+      color: #4c4c4c;
+      font-family: "Fira-Regular";
+      margin-bottom: 24px; }
+    .filter_list .left .style a {
+      text-decoration: none;
+      font-size: 12px;
+      color: gray;
+      font-family: "Fira-Regular"; }
+      .filter_list .left .style a i {
+        font-size: 16px;
+        vertical-align: sub; }
+    .filter_list .left .style .ig-control {
+      margin: 10px 0;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+      .filter_list .left .style .ig-control p {
+        display: table;
+        font-size: 12px;
+        line-height: 20px; }
+        .filter_list .left .style .ig-control p a {
+          text-decoration: none;
+          color: #4e77af;
+          font-family: "Fira-Bold";
+          outline: 0; }
+    .filter_list .left .style .check_login {
+      margin-top: 30px; }
+    .filter_list .left .style .ig-control__cbx:not(:checked),
+    .filter_list .left .style .ig-control__cbx:checked {
+      opacity: 0;
+      position: absolute;
+      margin: 0;
+      z-index: -1;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      left: 0;
+      pointer-events: none; }
+    .filter_list .left .style .ig-control__cbx ~ label {
+      margin-top: 3px;
+      position: relative;
+      cursor: pointer;
+      height: 20px;
+      line-height: 20px;
+      font-size: 1rem;
+      color: #484848;
+      padding-left: 25px;
+      float: left; }
+    .filter_list .left .style .ig-control__cbx ~ label:before {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      -webkit-transition: all .2s ease-in;
+      transition: all .2s ease-in; }
+    .filter_list .left .style .ig-control__cbx ~ label:before,
+    .filter_list .left .style .ig-control__cbx ~ label:after {
+      position: absolute;
+      content: '';
+      left: 0;
+      border-radius: 2px; }
+    .filter_list .left .style .ig-control__cbx:not(:checked) ~ label:before {
+      width: 9px;
+      height: 15px;
+      border: none;
+      top: 1px;
+      left: 0;
+      -webkit-transform: rotateZ(37deg) translate3d(0, 0, 0);
+      transform: rotateZ(37deg) scale(0.1);
+      -webkit-transform-origin: 20% 40%;
+      transform-origin: 100% 100%; }
+    .filter_list .left .style .ig-control__cbx:not(:checked) ~ label:after {
+      width: 15px;
+      height: 15px;
+      background-color: transparent;
+      border: 2px solid #757575;
+      z-index: 0; }
+    .filter_list .left .style .ig-control__cbx:checked ~ label:before {
+      top: -2px;
+      left: -2px;
+      width: 8px;
+      height: 15px;
+      border-top: 2px solid transparent;
+      border-left: 2px solid transparent;
+      border-bottom: 2.5px solid white;
+      border-right: 2.5px solid white;
+      z-index: 1;
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      -webkit-transform: rotateZ(37deg) scale(1);
+              transform: rotateZ(37deg) scale(1);
+      -webkit-transform-origin: 100% 100%;
+      transform-origin: 100% 100%; }
+    .filter_list .left .style .ig-control__cbx:checked ~ label:after {
+      width: 15px;
+      height: 15px;
+      background-color: #4d77af; }
+    .filter_list .left .style .ig-control__cbx:disabled ~ label {
+      color: #d1d1d1;
+      pointer-events: none; }
+    .filter_list .left .style .ig-control__cbx:disabled:not(:checked) ~ label:before {
+      background-color: transparent;
+      border: 2px solid transparent; }
+    .filter_list .left .style .ig-control__cbx:disabled:not(:checked) ~ label:after {
+      border-color: #D1D1D1;
+      background-color: transparent; }
+    .filter_list .left .style .ig-control__cbx:disabled:checked ~ label:before {
+      background-color: transparent; }
+    .filter_list .left .style .ig-control__cbx:disabled:checked ~ label:after {
+      background-color: #D1D1D1;
+      border-color: #D1D1D1; }
+  .filter_list .left .date-time_inp {
+    margin-top: 30px;
+    padding-bottom: 42px;
+    border-bottom: 1px solid #e5e5e5; }
+    .filter_list .left .date-time_inp .title_inp h2 {
+      font-size: 18px;
+      line-height: 26px;
+      color: #4c4c4c; }
+    .filter_list .left .date-time_inp span {
+      margin-top: 10px; }
+    .filter_list .left .date-time_inp .strat_inp {
+      margin-top: 22px;
+      font-size: 14px;
+      color: gray;
+      position: relative; }
+      .filter_list .left .date-time_inp .strat_inp i {
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        font-size: 18px;
+        line-height: 58px;
+        color: #4e77af; }
+      .filter_list .left .date-time_inp .strat_inp input {
+        padding-left: 36px;
+        outline: none;
+        width: 100%;
+        height: 40px;
+        border-radius: 3px;
+        background-color: #ffffff;
+        border: 1px solid #cccccc;
+        font-size: 14px;
+        color: #333; }
+    .filter_list .left .date-time_inp .end_inp {
+      font-size: 14px;
+      color: gray;
+      margin-top: 40px;
+      position: relative; }
+      .filter_list .left .date-time_inp .end_inp i {
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        font-size: 18px;
+        line-height: 58px;
+        color: #4c4c4c; }
+      .filter_list .left .date-time_inp .end_inp input {
+        padding-left: 36px;
+        outline: none;
+        width: 100%;
+        height: 40px;
+        border-radius: 3px;
+        background-color: #ffffff;
+        border: 1px solid #cccccc;
+        font-size: 14px;
+        color: #333; }
+  .filter_list .right .sort {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5; }
+    .filter_list .right .sort ul li {
+      display: inline-block;
+      margin-right: 18px; }
+      .filter_list .right .sort ul li span {
+        font-size: 14px;
+        color: #4d4d4d;
+        font-family: "Fira-Bold"; }
+      .filter_list .right .sort ul li a {
+        text-decoration: none;
+        font-size: 13px;
+        color: #4d4d4d;
+        font-family: "Fira-Regular"; }
+        .filter_list .right .sort ul li a i.down {
+          -webkit-transform: rotate(90deg);
+                  transform: rotate(90deg);
+          font-size: 16px;
+          vertical-align: -3px; }
+        .filter_list .right .sort ul li a i.up {
+          -webkit-transform: rotate(-90deg);
+                  transform: rotate(-90deg);
+          font-size: 16px;
+          vertical-align: -3px; }
+      .filter_list .right .sort ul li .active_a {
+        color: #4e77af; }
+  .filter_list .right .item_result {
+    padding: 30px 0 24px 0;
+    border-bottom: 1px solid #e5e5e5; }
+    .filter_list .right .item_result img {
+      width: 100%;
+      border-radius: 3px; }
+    .filter_list .right .item_result .tur_price {
+      margin-top: 8px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .filter_list .right .item_result .tur_price p {
+        font-size: 18px;
+        line-height: 26px;
+        color: gray; }
+        .filter_list .right .item_result .tur_price p span {
+          font-size: 18px;
+          line-height: 26px;
+          color: #ff7800;
+          font-family: "Fira-Bold"; }
+      .filter_list .right .item_result .tur_price .svg_manat {
+        width: 12px;
+        position: relative; }
+        .filter_list .right .item_result .tur_price .svg_manat svg {
+          position: absolute;
+          left: 4px;
+          top: 4px;
+          fill: #ff7800; }
+    .filter_list .right .item_result .right_ul {
+      margin-top: 8px; }
+    .filter_list .right .item_result .h_name a {
+      text-decoration: none; }
+    .filter_list .right .item_result .h_name h2 {
+      font-size: 22px;
+      line-height: 26px;
+      color: #4e77af;
+      font-family: "Fira-Bold"; }
+    .filter_list .right .item_result .reyting {
+      margin-top: 2px; }
+      .filter_list .right .item_result .reyting p {
+        font-size: 14px;
+        line-height: 26px;
+        color: gray;
+        font-family: "Fira-Regular"; }
+      .filter_list .right .item_result .reyting h4 {
+        font-size: 18px;
+        line-height: 26px;
+        color: gray;
+        font-family: "Fira-Regular"; }
+        .filter_list .right .item_result .reyting h4 span {
+          font-size: 18px;
+          line-height: 26px;
+          color: gray;
+          font-family: "Fira-Bold"; }
+      .filter_list .right .item_result .reyting i {
+        font-size: 24px;
+        line-height: 26px;
+        color: #b2b2b2;
+        margin-right: -4px; }
+    .filter_list .right .item_result .price {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .filter_list .right .item_result .price p {
+        font-size: 24px;
+        line-height: 26px;
+        color: #ff7800;
+        font-family: "Fira-Bold"; }
+      .filter_list .right .item_result .price .svg_manat {
+        width: 12px;
+        position: relative; }
+        .filter_list .right .item_result .price .svg_manat svg {
+          position: absolute;
+          top: 4px;
+          left: 4px;
+          fill: #ff7800; }
+    .filter_list .right .item_result .event_adress p {
+      font-size: 14px;
+      line-height: 26px;
+      color: gray; }
+      .filter_list .right .item_result .event_adress p i {
+        font-size: 20px;
+        line-height: 26px;
+        color: gray;
+        vertical-align: -2px; }
+    .filter_list .right .item_result .etrafli {
+      margin-top: 30px;
+      width: 100%;
+      text-align: center; }
+      .filter_list .right .item_result .etrafli a {
+        text-decoration: none;
+        padding: 12px 100px;
+        font-size: 14px;
+        color: white;
+        font-family: "Fira-Bold";
+        border-radius: 3px;
+        display: block;
+        background-color: #ff7800; }
+        .filter_list .right .item_result .etrafli a:hover {
+          border-radius: 3px;
+          -webkit-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+                  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+          background: #ff983d;
+          -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out; }
+    .filter_list .right .item_result .right_ul ul li {
+      margin-bottom: 8px; }
+      .filter_list .right .item_result .right_ul ul li i {
+        font-size: 20px;
+        color: #4e77af;
+        vertical-align: middle; }
+      .filter_list .right .item_result .right_ul ul li span {
+        margin-left: 8px;
+        font-size: 12px;
+        color: gray;
+        font-family: "Fira-Regular"; }
+    .filter_list .right .item_result .right_ul ul .str_li {
+      margin-bottom: 10px; }
+      .filter_list .right .item_result .right_ul ul .str_li i {
+        font-size: 24px;
+        color: #b2b2b2;
+        vertical-align: middle;
+        margin-right: -4px; }
+      .filter_list .right .item_result .right_ul ul .str_li span {
+        font-size: 14px;
+        color: gray;
+        font-family: "Fira-Regular"; }
+  .filter_list .right .pagination_ {
+    position: relative;
+    width: 100%;
+    text-align: right;
+    margin-top: 30px; }
+    .filter_list .right .pagination_ .pag_ul li {
+      display: inline-block; }
+      .filter_list .right .pagination_ .pag_ul li span {
+        font-size: 16px;
+        color: gray;
+        margin-right: 10px;
+        font-family: "Fira-Regular"; }
+      .filter_list .right .pagination_ .pag_ul li a {
+        margin-right: 8px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #4e77af;
+        font-family: "Fira-Bold"; }
+    .filter_list .right .pagination_ .pag_ul .lft_li {
+      margin-left: 22px; }
+      .filter_list .right .pagination_ .pag_ul .lft_li a {
+        margin: 0; }
+        .filter_list .right .pagination_ .pag_ul .lft_li a i {
+          padding: 4px;
+          border-radius: 50%;
+          font-size: 24px;
+          color: #b2b2b2;
+          vertical-align: middle; }
+          .filter_list .right .pagination_ .pag_ul .lft_li a i:hover {
+            background-color: whitesmoke; }
+      .filter_list .right .pagination_ .pag_ul .lft_li .dis {
+        opacity: .4; }
+    .filter_list .right .pagination_ .pag_ul .rght_li a {
+      margin: 0; }
+      .filter_list .right .pagination_ .pag_ul .rght_li a i {
+        padding: 4px;
+        border-radius: 50%;
+        font-size: 24px;
+        color: #b2b2b2;
+        vertical-align: middle; }
+        .filter_list .right .pagination_ .pag_ul .rght_li a i:hover {
+          background-color: whitesmoke; }
+    .filter_list .right .pagination_ .pag_ul .rght_li .activ_i {
+      color: #4e77af; }
+
+.map_pop {
+  position: fixed;
+  background-color: #000000;
+  display: none;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  z-index: 999; }
+
+.map_box {
+  display: none; }
+  .map_box .close_map {
+    position: absolute;
+    top: 4%;
+    right: 12%;
+    font-size: 24px;
+    line-height: 58px;
+    color: white;
+    z-index: 1000;
+    cursor: pointer; }
+  .map_box #map {
+    position: absolute !important;
+    overflow: hidden;
+    width: 72%;
+    height: 660px;
+    z-index: 1000;
+    top: 10%;
+    left: 14%;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out; }
+
+.hotel_detil {
+  margin-top: 50px; }
+  .hotel_detil .pad-30 {
+    padding-left: 30px; }
+  .hotel_detil .mar-top {
+    margin-top: 20px; }
+  .hotel_detil .mar-0 {
+    margin-top: 0 !important; }
+  .hotel_detil .mar-t10 {
+    margin-top: 10px !important; }
+  .hotel_detil .map_event {
+    width: 100%;
+    height: 162px; }
+  .hotel_detil .img_box {
+    margin-top: 40px; }
+    .hotel_detil .img_box img {
+      margin: auto; }
+    .hotel_detil .img_box .buy_tick {
+      margin-top: 20px;
+      text-align: center; }
+      .hotel_detil .img_box .buy_tick a {
+        text-decoration: none;
+        display: block;
+        padding: 18px 0;
+        border-radius: 3px;
+        background-color: #ff7700;
+        font-size: 14px;
+        line-height: 26px;
+        color: white;
+        font-family: "Fira-Bold"; }
+        .hotel_detil .img_box .buy_tick a:hover {
+          border-radius: 3px;
+          -webkit-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+                  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+          background: #ff983d;
+          -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out; }
+        .hotel_detil .img_box .buy_tick a i {
+          vertical-align: -6px;
+          margin-left: 12px; }
+    .hotel_detil .img_box .google_add {
+      margin-top: 10px;
+      text-align: center; }
+      .hotel_detil .img_box .google_add a {
+        display: block;
+        padding: 10px 0;
+        border-radius: 3px;
+        background-color: #f4f4f4;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 26px;
+        color: #4e77af; }
+        .hotel_detil .img_box .google_add a i {
+          margin-right: 12px;
+          vertical-align: -6px; }
+  .hotel_detil .left_txt {
+    text-align: left; }
+    .hotel_detil .left_txt h2 {
+      margin-top: 4px;
+      font-size: 30px;
+      color: #4c4c4c;
+      font-family: "Fira-Bold"; }
+  .hotel_detil .right_txt {
+    text-align: right; }
+    .hotel_detil .right_txt .reyting {
+      display: inline-block; }
+      .hotel_detil .right_txt .reyting p {
+        position: relative;
+        font-size: 30px;
+        color: #ff7800;
+        font-family: "Fira-Regular"; }
+        .hotel_detil .right_txt .reyting p i {
+          top: 5%;
+          position: absolute;
+          font-size: 30px;
+          color: #ff7800; }
+    .hotel_detil .right_txt .cav_box {
+      cursor: pointer;
+      display: inline-block;
+      margin-left: 50px;
+      padding: 8px 20px;
+      border-radius: 3px;
+      background-color: #f4f4f4;
+      vertical-align: bottom; }
+      .hotel_detil .right_txt .cav_box i {
+        font-size: 24px;
+        vertical-align: -7px;
+        color: #ff7800; }
+      .hotel_detil .right_txt .cav_box span {
+        text-transform: uppercase;
+        font-size: 14px;
+        color: #ff7800;
+        font-family: "Fira-Regular"; }
+    .hotel_detil .right_txt .favorit_box {
+      cursor: pointer;
+      display: inline-block;
+      margin-left: 50px;
+      padding: 8px 20px;
+      border-radius: 3px;
+      background-color: #f4f4f4;
+      vertical-align: bottom; }
+      .hotel_detil .right_txt .favorit_box i {
+        font-size: 24px;
+        vertical-align: -7px;
+        color: #ff7800; }
+      .hotel_detil .right_txt .favorit_box span {
+        text-transform: uppercase;
+        font-size: 14px;
+        color: #ff7800;
+        font-family: "Fira-Regular"; }
+  .hotel_detil #aniimated-thumbnials {
+    margin-top: 40px;
+    position: relative; }
+    .hotel_detil #aniimated-thumbnials a:hover img {
+      -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+              box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+      -webkit-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out; }
+    .hotel_detil #aniimated-thumbnials .big_a {
+      display: inline-block;
+      width: 750px;
+      height: 490px; }
+      .hotel_detil #aniimated-thumbnials .big_a .overlay_h {
+        position: absolute;
+        bottom: 6%;
+        left: 4%; }
+        .hotel_detil #aniimated-thumbnials .big_a .overlay_h i {
+          font-size: 16px;
+          line-height: 26px;
+          color: white;
+          vertical-align: -2px; }
+        .hotel_detil #aniimated-thumbnials .big_a .overlay_h span {
+          font-size: 14px;
+          line-height: 26px;
+          color: white;
+          font-family: "Fira-Regular"; }
+          .hotel_detil #aniimated-thumbnials .big_a .overlay_h span:hover {
+            text-decoration: underline; }
+      .hotel_detil #aniimated-thumbnials .big_a img {
+        border-radius: 5px;
+        width: 100%;
+        height: 100%; }
+    .hotel_detil #aniimated-thumbnials .sld_top {
+      width: 370px;
+      height: 238px;
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0; }
+      .hotel_detil #aniimated-thumbnials .sld_top img {
+        border-radius: 5px;
+        width: 100%;
+        height: 100%; }
+    .hotel_detil #aniimated-thumbnials .sld_bot {
+      width: 370px;
+      height: 238px;
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 51%; }
+      .hotel_detil #aniimated-thumbnials .sld_bot img {
+        border-radius: 5px;
+        width: 100%;
+        height: 100%; }
+  .hotel_detil .cinema_left {
+    width: 100%;
+    height: 270px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .hotel_detil .bok_left {
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 270px;
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5; }
+    .hotel_detil .bok_left h5 {
+      font-size: 16px;
+      line-height: 26px;
+      color: gray;
+      font-family: "Fira-Bold";
+      margin-bottom: 26px; }
+    .hotel_detil .bok_left img {
+      width: 160px;
+      margin: auto;
+      margin-bottom: 26px; }
+    .hotel_detil .bok_left a {
+      display: block; }
+    .hotel_detil .bok_left p {
+      margin-top: 22px;
+      font-size: 12px;
+      line-height: 14px;
+      color: #b2b2b2;
+      font-family: "Fira-Regular";
+      display: block; }
+    .hotel_detil .bok_left span {
+      margin-bottom: 14px;
+      font-size: 12px;
+      line-height: 14px;
+      color: gray;
+      font-family: "Fira-Regular";
+      display: block; }
+    .hotel_detil .bok_left .bok_link a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 14px;
+      line-height: 26px;
+      color: white;
+      font-family: "Fira-Bold";
+      padding: 14px 0;
+      border-radius: 3px;
+      background-color: #ff7800; }
+      .hotel_detil .bok_left .bok_link a:hover {
+        border-radius: 3px;
+        -webkit-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+                box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+        background: #ff983d;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; }
+  .hotel_detil .bok_right #map_h {
+    height: 162px;
+    width: 100%;
+    margin-top: 40px; }
+  .hotel_detil .info_h {
+    margin-top: 40px; }
+    .hotel_detil .info_h .right_txt {
+      float: right; }
+    .hotel_detil .info_h .tour_type {
+      margin-top: 6px; }
+      .hotel_detil .info_h .tour_type p {
+        font-size: 18px;
+        line-height: 26px;
+        color: gray; }
+    .hotel_detil .info_h .tour_price {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-top: 8px; }
+      .hotel_detil .info_h .tour_price p {
+        font-size: 24px;
+        line-height: 26px;
+        color: #ff7800;
+        font-family: "Fira-Bold"; }
+      .hotel_detil .info_h .tour_price .svg_manat {
+        margin-left: 4px;
+        width: 12px; }
+        .hotel_detil .info_h .tour_price .svg_manat svg {
+          fill: #ff7800; }
+    .hotel_detil .info_h .tour_firm {
+      width: 450px;
+      padding: 20px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      margin-top: 10px; }
+      .hotel_detil .info_h .tour_firm .l_txt {
+        display: inline-block;
+        float: left; }
+        .hotel_detil .info_h .tour_firm .l_txt p {
+          font-size: 16px;
+          line-height: 26px;
+          color: #4d4d4d; }
+          .hotel_detil .info_h .tour_firm .l_txt p a {
+            color: #4e77af;
+            text-decoration: none;
+            font-family: "Fira-Bold"; }
+      .hotel_detil .info_h .tour_firm .r_txt {
+        display: inline-block;
+        float: right; }
+        .hotel_detil .info_h .tour_firm .r_txt p {
+          font-size: 12px;
+          line-height: 26px;
+          color: #b3b3b3; }
+          .hotel_detil .info_h .tour_firm .r_txt p i {
+            font-size: 18px;
+            vertical-align: -4px;
+            color: #cccccc; }
+    .hotel_detil .info_h .right_txt {
+      float: none; }
+    .hotel_detil .info_h .pad-edit {
+      padding: 10px;
+      margin-left: 0; }
+    .hotel_detil .info_h .tour_title h1 {
+      margin-top: 12px;
+      font-size: 30px;
+      line-height: 36px;
+      color: #4c4c4c;
+      font-family: "Fira-Bold"; }
+    .hotel_detil .info_h .title_cinema h2 {
+      font-size: 30px;
+      line-height: 26px;
+      color: #4c4c4c;
+      font-family: "Fira-Bold"; }
+    .hotel_detil .info_h .title_cinema p {
+      margin-top: 12px;
+      font-size: 18px;
+      line-height: 26px;
+      color: gray;
+      font-family: "Fira-Regular"; }
+    .hotel_detil .info_h .price {
+      position: relative;
+      display: inline-block; }
+      .hotel_detil .info_h .price p {
+        font-size: 24px;
+        color: #ff7800;
+        font-family: "Fira-Bold"; }
+      .hotel_detil .info_h .price .svg_manat {
+        width: 12px;
+        position: absolute;
+        top: 0;
+        left: 106px; }
+        .hotel_detil .info_h .price .svg_manat svg {
+          fill: #ff7800; }
+    .hotel_detil .info_h .stars_h {
+      margin-left: 30px;
+      display: inline-block; }
+      .hotel_detil .info_h .stars_h i {
+        vertical-align: -2px;
+        font-size: 24px;
+        color: #ff7800;
+        margin-right: -4px; }
+      .hotel_detil .info_h .stars_h span {
+        margin-left: 6px;
+        vertical-align: 5px;
+        font-size: 14px;
+        line-height: 26px;
+        color: gray;
+        font-family: "Fira-Regular"; }
+    .hotel_detil .info_h .adress {
+      margin-top: 20px; }
+      .hotel_detil .info_h .adress i {
+        font-size: 24px;
+        line-height: 26px;
+        color: gray;
+        vertical-align: -7px; }
+      .hotel_detil .info_h .adress span {
+        margin-left: 6px;
+        font-size: 14px;
+        line-height: 26px;
+        color: gray;
+        font-family: "Fira-Regular"; }
+    .hotel_detil .info_h .phone_h {
+      margin-top: 16px;
+      display: inline-block; }
+      .hotel_detil .info_h .phone_h i {
+        vertical-align: -7px;
+        font-size: 24px;
+        line-height: 26px;
+        color: gray; }
+      .hotel_detil .info_h .phone_h a {
+        text-decoration: none;
+        margin-left: 6px;
+        font-size: 14px;
+        line-height: 26px;
+        color: #166de3;
+        font-family: "Fira-Regular"; }
+    .hotel_detil .info_h .tul_t {
+      position: relative;
+      padding-left: 14px;
+      display: inline-block;
+      margin-left: 20px;
+      border-left: 1px solid #e5e5e5; }
+      .hotel_detil .info_h .tul_t li {
+        display: inline-block;
+        margin-right: 14px; }
+        .hotel_detil .info_h .tul_t li:last-child {
+          padding-left: 6px;
+          margin-right: 0;
+          border-left: 1px solid #e5e5e5; }
+        .hotel_detil .info_h .tul_t li a {
+          text-decoration: none; }
+          .hotel_detil .info_h .tul_t li a:hover i {
+            color: #166de3; }
+          .hotel_detil .info_h .tul_t li a:hover .tul_hover {
+            visibility: visible; }
+          .hotel_detil .info_h .tul_t li a .col_b {
+            color: #4d76ae; }
+          .hotel_detil .info_h .tul_t li a i {
+            vertical-align: -6px;
+            font-size: 24px;
+            line-height: 26px;
+            color: gray; }
+          .hotel_detil .info_h .tul_t li a .tul_hover {
+            visibility: hidden;
+            padding: 8px 16px;
+            border-radius: 3px;
+            -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+                    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+            background-color: #f4f4f4;
+            position: absolute;
+            top: -50px;
+            width: 130px;
+            font-size: 14px;
+            line-height: 26px;
+            color: gray;
+            font-family: "Fira-Regular";
+            text-align: center; }
+    .hotel_detil .info_h .soc_ul {
+      margin-top: 20px; }
+      .hotel_detil .info_h .soc_ul li {
+        display: inline-block;
+        margin-right: 10px; }
+        .hotel_detil .info_h .soc_ul li .profile_facebook {
+          color: #3b5997; }
+        .hotel_detil .info_h .soc_ul li .profile_linkedin {
+          color: #007bb5; }
+        .hotel_detil .info_h .soc_ul li .profile_twitter {
+          color: #00abed; }
+        .hotel_detil .info_h .soc_ul li .profile_instagram {
+          color: #bb298d; }
+        .hotel_detil .info_h .soc_ul li a {
+          text-decoration: none; }
+          .hotel_detil .info_h .soc_ul li a i {
+            font-size: 21px; }
+  .hotel_detil .service_list li.passive_serv {
+    display: none; }
+  .hotel_detil .service_list li {
+    display: inline-block;
+    margin-top: 40px;
+    margin-right: 50px; }
+    .hotel_detil .service_list li i {
+      font-size: 48px;
+      line-height: 26px;
+      color: #4e77af;
+      margin-right: 10px;
+      display: inline-block;
+      vertical-align: middle; }
+    .hotel_detil .service_list li p {
+      display: inline-block;
+      width: 30px;
+      font-size: 12px;
+      line-height: 18px;
+      color: gray;
+      font-family: "Fira-Regular";
+      vertical-align: middle; }
+  .hotel_detil .more_b {
+    margin-top: 30px; }
+    .hotel_detil .more_b a {
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 26px;
+      color: #b3b3b3;
+      font-family: "Fira-Regular"; }
+      .hotel_detil .more_b a i {
+        vertical-align: -2px;
+        font-size: 18px;
+        line-height: 26px;
+        color: #b3b3b3; }
+  .hotel_detil .cinema_title {
+    margin-top: 60px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e5e5e5; }
+    .hotel_detil .cinema_title h2 {
+      font-size: 24px;
+      line-height: 26px;
+      color: gray;
+      font-family: "Fira-Bold"; }
+  .hotel_detil .cinema_af {
+    margin-top: 30px; }
+    .hotel_detil .cinema_af h3 {
+      font-size: 18px;
+      line-height: 20px;
+      color: #4c4c4c; }
+  .hotel_detil .txt-p {
+    margin-top: 30px; }
+    .hotel_detil .txt-p p {
+      font-size: 14px;
+      line-height: 22px;
+      color: gray; }
+  .hotel_detil .af_list {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e5e5e5; }
+    .hotel_detil .af_list .af_more {
+      margin-top: 30px; }
+      .hotel_detil .af_list .af_more a {
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 26px;
+        color: #b3b3b3; }
+        .hotel_detil .af_list .af_more a i {
+          vertical-align: -4px;
+          font-size: 18px;
+          line-height: 26px;
+          color: #b3b3b3; }
+  .hotel_detil .af_item {
+    text-decoration: none; }
+    .hotel_detil .af_item .photo {
+      margin-top: 30px; }
+      .hotel_detil .af_item .photo img {
+        width: 100%;
+        border-radius: 5px; }
+    .hotel_detil .af_item .item_name {
+      margin-top: 8px; }
+      .hotel_detil .af_item .item_name p {
+        font-size: 14px;
+        line-height: 20px;
+        color: #4e77af;
+        font-family: "Fira-Bold"; }
+    .hotel_detil .af_item .item_date {
+      margin-top: 4px; }
+      .hotel_detil .af_item .item_date p {
+        font-size: 14px;
+        line-height: 20px;
+        color: gray; }
+  .hotel_detil .services_list {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e5e5e5; }
+    .hotel_detil .services_list .serv_item {
+      margin-top: 30px; }
+      .hotel_detil .services_list .serv_item .img img {
+        width: 100%;
+        border-radius: 3px; }
+      .hotel_detil .services_list .serv_item .ser_title h3 {
+        font-size: 14px;
+        line-height: 22px;
+        color: #4c4c4c;
+        font-family: "Fira-Bold"; }
+      .hotel_detil .services_list .serv_item .ser_title p {
+        margin-top: 8px;
+        font-size: 14px;
+        line-height: 20px;
+        color: gray; }
+  .hotel_detil .cinema_sld_list {
+    margin-top: 30px; }
+    .hotel_detil .cinema_sld_list .m-r-0 {
+      margin-right: 0; }
+    .hotel_detil .cinema_sld_list a {
+      margin-right: 14px;
+      display: inline-block;
+      text-decoration: none; }
+      .hotel_detil .cinema_sld_list a .overlay_h {
+        position: absolute;
+        bottom: -26%; }
+        .hotel_detil .cinema_sld_list a .overlay_h i {
+          font-size: 16px;
+          line-height: 26px;
+          color: #4e77af; }
+        .hotel_detil .cinema_sld_list a .overlay_h span {
+          font-size: 14px;
+          line-height: 26px;
+          color: #4e77af; }
+
+.main_info {
+  margin-top: 60px; }
+  .main_info .title {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e5e5e5; }
+    .main_info .title h2 {
+      font-size: 24px;
+      line-height: 26px;
+      color: gray;
+      font-family: "Fira-Bold"; }
+  .main_info .item_info {
+    margin-top: 30px; }
+    .main_info .item_info .info_left h3 {
+      font-size: 18px;
+      line-height: 26px;
+      color: #4c4c4c;
+      font-family: "Fira-Regular"; }
+    .main_info .item_info .info_rght {
+      padding-left: 50px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #e5e5e5; }
+      .main_info .item_info .info_rght p {
+        font-size: 14px;
+        line-height: 22px;
+        color: gray;
+        font-family: "Fira-Regular"; }
+      .main_info .item_info .info_rght .stil {
+        margin-top: 24px; }
+        .main_info .item_info .info_rght .stil p {
+          font-size: 14px;
+          line-height: 22px;
+          color: #4c4c4c;
+          font-family: "Fira-Bold"; }
+          .main_info .item_info .info_rght .stil p span {
+            margin-right: 10px;
+            font-size: 14px;
+            line-height: 22px;
+            color: #4c4c4c;
+            font-family: "Fira-Regular"; }
+  .main_info .item_loc {
+    margin-top: 30px; }
+    .main_info .item_loc .loc_left h3 {
+      font-size: 18px;
+      line-height: 26px;
+      color: #4c4c4c;
+      font-family: "Fira-Regular"; }
+    .main_info .item_loc .loc_right {
+      padding-left: 50px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #e5e5e5; }
+      .main_info .item_loc .loc_right .icon {
+        width: 40px; }
+        .main_info .item_loc .loc_right .icon img {
+          width: 100%;
+          height: 40px; }
+      .main_info .item_loc .loc_right .box {
+        padding-left: 30px;
+        margin-bottom: 30px;
+        border-left: 1px solid #e5e5e5; }
+        .main_info .item_loc .loc_right .box .col_b {
+          margin-bottom: 20px; }
+        .main_info .item_loc .loc_right .box .item_title {
+          font-size: 14px;
+          line-height: 22px;
+          color: #4c4c4c;
+          font-family: "Fira-Bold"; }
+        .main_info .item_loc .loc_right .box .item_adress {
+          font-size: 14px;
+          line-height: 22px;
+          color: gray;
+          font-family: "Fira-Regular"; }
+        .main_info .item_loc .loc_right .box .item_km {
+          font-size: 14px;
+          line-height: 22px;
+          color: #b2b2b2;
+          font-family: "Fira-Regular"; }
+        .main_info .item_loc .loc_right .box .item_services {
+          font-size: 14px;
+          line-height: 22px;
+          color: gray;
+          font-family: "Fira-Regular"; }
+          .main_info .item_loc .loc_right .box .item_services:before {
+            font-family: 'Material Icons';
+            content: "chevron_right";
+            -webkit-font-feature-settings: 'liga';
+            font-size: 16px;
+            margin-right: 6px;
+            vertical-align: -3px; }
+
+.progres_sec {
+  margin-top: 80px; }
+  .progres_sec .progress_div {
+    background-color: #fafafa;
+    padding: 50px; }
+    .progres_sec .progress_div .title {
+      margin-bottom: 40px; }
+      .progres_sec .progress_div .title h3 {
+        font-size: 24px;
+        line-height: 26px;
+        color: #4c4c4c;
+        font-family: "Fira-Bold"; }
+    .progres_sec .progress_div .sm-right {
+      float: right; }
+    .progres_sec .progress_div .txt {
+      margin-bottom: 2px; }
+      .progres_sec .progress_div .txt h2 {
+        display: inline-block;
+        font-size: 16px;
+        line-height: 26px;
+        color: #4c4c4c;
+        font-family: "Fira-Regular"; }
+      .progres_sec .progress_div .txt span {
+        float: right;
+        font-size: 18px;
+        line-height: 26px;
+        color: #4e77af;
+        font-family: "Fira-Bold"; }
+    .progres_sec .progress_div .bar {
+      margin-bottom: 20px; }
+    .progres_sec .progress_div .progress {
+      margin: 0;
+      height: 8px;
+      border-radius: 4px;
+      background-color: #cccccc; }
+      .progres_sec .progress_div .progress .progress-bar {
+        background-color: #4d77af; }
+    .progres_sec .progress_div .main_rad {
+      width: 300px;
+      height: 280px;
+      border-radius: 100%;
+      background-position: center;
+      background-size: cover;
+      margin: auto; }
+      .progres_sec .progress_div .main_rad .radius_item {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        -webkit-transform: translate(50%, -50%);
+                transform: translate(50%, -50%); }
+        .progres_sec .progress_div .main_rad .radius_item h2 {
+          font-size: 60px;
+          line-height: 26px;
+          color: #4c4c4c;
+          font-family: "Fira-Bold"; }
+        .progres_sec .progress_div .main_rad .radius_item p {
+          margin-top: 20px; }
+          .progres_sec .progress_div .main_rad .radius_item p i {
+            font-size: 32px;
+            line-height: 26px;
+            color: #ff7800; }
+        .progres_sec .progress_div .main_rad .radius_item span {
+          font-size: 16px;
+          line-height: 26px;
+          color: gray;
+          font-family: "Fira-Regular"; }
+
+.others_sec {
+  margin-top: 80px; }
+  .others_sec .title p {
+    font-size: 30px;
+    color: gray;
+    font-family: "Fira-Bold"; }
+    .others_sec .title p a {
+      font-size: 16px;
+      color: #4e77af;
+      font-family: "Fira-Regular";
+      margin-left: 28px;
+      text-decoration: none; }
+      .others_sec .title p a i {
+        font-size: 18px;
+        color: #166de3;
+        vertical-align: text-bottom; }
+  .others_sec .item {
+    margin-top: 34px; }
+    .others_sec .item:hover img {
+      -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+              box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+      background-color: #b2b2b2; }
+    .others_sec .item:hover .info p {
+      color: #166de3; }
+    .others_sec .item a {
+      text-decoration: none; }
+      .others_sec .item a .photo {
+        margin-bottom: 16px; }
+        .others_sec .item a .photo img {
+          -webkit-transition: all .4s ease-in-out;
+          transition: all .4s ease-in-out;
+          width: 100%;
+          height: auto;
+          border-radius: 3px; }
+      .others_sec .item a .info p {
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        font-size: 16px;
+        color: #4e77af;
+        font-family: "Fira-Bold"; }
+      .others_sec .item a .info span {
+        font-size: 12px;
+        color: gray;
+        font-family: "Fira-Regular";
+        display: block; }
+        .others_sec .item a .info span i {
+          margin-top: 8px;
+          font-size: 18px;
+          vertical-align: -4px; }
+      .others_sec .item a .star_div i {
+        font-size: 18px;
+        line-height: 26px;
+        color: #ff7800;
+        vertical-align: -4px;
+        margin-right: -4px; }
+      .others_sec .item a .star_div span {
+        font-size: 12px;
+        line-height: 26px;
+        color: #b2b2b2; }
+      .others_sec .item a .stars i {
+        margin-right: -4px;
+        font-size: 18px;
+        color: #b2b2b2; }
+      .others_sec .item a .bott_tours {
+        margin-top: 8px;
+        border-radius: 5px;
+        background-color: #e5e5e5;
+        padding: 6px; }
+        .others_sec .item a .bott_tours p {
+          font-size: 12px;
+          line-height: 26px;
+          color: gray; }
+          .others_sec .item a .bott_tours p span {
+            font-family: "Fira-Bold"; }
+      .others_sec .item a .rent_inf p {
+        font-size: 14px;
+        line-height: 26px;
+        color: gray; }
+        .others_sec .item a .rent_inf p span {
+          font-family: "Fira-Bold"; }
+  .others_sec .more_tours {
+    margin-top: 30px;
+    position: relative; }
+    .others_sec .more_tours::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 0;
+      border-top: 1px solid #e5e5e5;
+      left: auto;
+      top: 12px;
+      right: 0; }
+    .others_sec .more_tours a {
+      position: relative;
+      display: inline-block;
+      background-color: #FFF;
+      padding: 0 20px;
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 26px;
+      color: #4e77af; }
+      .others_sec .more_tours a i {
+        vertical-align: -4px;
+        line-height: 26px;
+        color: #4e77af; }
+
+.comm_sec {
+  margin-top: 78px; }
+  .comm_sec .title p {
+    font-size: 30px;
+    color: gray;
+    font-family: "Fira-Bold"; }
+  .comm_sec .comments_area {
+    padding-top: 10px;
+    margin-bottom: 30px; }
+    .comm_sec .comments_area .comments_block.passive {
+      display: none; }
+    .comm_sec .comments_area .comments_block {
+      margin-top: 25px; }
+      .comm_sec .comments_area .comments_block .user_photo {
+        float: left;
+        margin-right: 15px;
+        width: 70px;
+        height: 70px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 3px;
+        background-color: #f9f9f9; }
+      .comm_sec .comments_area .comments_block .user_comment {
+        display: table; }
+        .comm_sec .comments_area .comments_block .user_comment .com_title h2 {
+          font-size: 16px;
+          line-height: 24px;
+          color: #4d4d4d;
+          font-family: "Fira-Bold"; }
+        .comm_sec .comments_area .comments_block .user_comment .comment_rewiev {
+          margin-bottom: 8px;
+          margin-top: 3px; }
+          .comm_sec .comments_area .comments_block .user_comment .comment_rewiev ul .average_point {
+            color: #4e77af;
+            font-family: "Fira-Bold";
+            font-size: 16px;
+            margin-right: 5px;
+            vertical-align: text-top; }
+          .comm_sec .comments_area .comments_block .user_comment .comment_rewiev ul li {
+            display: inline-block;
+            margin-right: -4px; }
+            .comm_sec .comments_area .comments_block .user_comment .comment_rewiev ul li i {
+              font-size: 16px;
+              color: #ff7800; }
+        .comm_sec .comments_area .comments_block .user_comment .comment p {
+          font-size: 14px;
+          line-height: 18px;
+          color: #7e8d9d;
+          font-family: "Fira-Regular"; }
+        .comm_sec .comments_area .comments_block .user_comment .write_comment {
+          margin-top: 5px; }
+          .comm_sec .comments_area .comments_block .user_comment .write_comment a {
+            color: #4e77af;
+            font-size: 14px;
+            text-decoration: none; }
+            .comm_sec .comments_area .comments_block .user_comment .write_comment a::after {
+              margin-left: 3px;
+              vertical-align: text-top;
+              font-size: 16px;
+              font-family: 'Material Icons';
+              content: "arrow_forward";
+              -webkit-font-feature-settings: 'liga'; }
+            .comm_sec .comments_area .comments_block .user_comment .write_comment a:hover {
+              -webkit-transition: all 0.3s ease-in-out;
+              transition: all 0.3s ease-in-out;
+              color: #3e90ff; }
+  .comm_sec .more_com {
+    position: relative; }
+    .comm_sec .more_com:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 0;
+      border-top: 1px solid #e5e5e5;
+      left: auto;
+      top: 12px;
+      right: 0; }
+    .comm_sec .more_com a {
+      position: relative;
+      display: inline-block;
+      background-color: #FFF;
+      padding: 0 20px;
+      text-decoration: none;
+      font-size: 12px;
+      line-height: 26px;
+      color: #4e77af;
+      font-family: "Fira-Regular"; }
+      .comm_sec .more_com a i {
+        vertical-align: -4px;
+        font-size: 16px;
+        line-height: 26px;
+        color: #4e77af; }
+  .comm_sec .rey_comm {
+    margin-top: 54px; }
+    .comm_sec .rey_comm .passive_user {
+      margin-top: 20px;
+      padding: 22px 0 22px 24px;
+      border-radius: 5px;
+      background-color: #f9f9f9; }
+      .comm_sec .rey_comm .passive_user p {
+        font-size: 16px;
+        color: #4d4d4d; }
+        .comm_sec .rey_comm .passive_user p a {
+          text-decoration: none;
+          font-size: 16px;
+          margin-left: 6px;
+          color: #4e90e9;
+          font-family: "Fira-Bold"; }
+          .comm_sec .rey_comm .passive_user p a i {
+            vertical-align: -4px;
+            font-size: 20px; }
+    .comm_sec .rey_comm label {
+      color: gray; }
+    .comm_sec .rey_comm .title_c h2 {
+      font-size: 18px;
+      line-height: 26px;
+      color: #4c4c4c;
+      font-family: "Fira-Regular"; }
+    .comm_sec .rey_comm textarea.materialize-textarea:focus:not([readonly]) + label {
+      -webkit-transform: translateY(-14px) scale(0.8) !important;
+      transform: translateY(-14px) scale(0.8) !important;
+      -webkit-transform-origin: 0 0 !important;
+      transform-origin: 0 0 !important; }
+    .comm_sec .rey_comm .title_fid {
+      margin-top: 18px;
+      border-bottom: 2px solid #e5e5e5; }
+      .comm_sec .rey_comm .title_fid h2 {
+        font-size: 16px;
+        line-height: 58px;
+        color: gray;
+        font-family: "Fira-Regular"; }
+      .comm_sec .rey_comm .title_fid .ray_stars {
+        padding-bottom: 18px; }
+        .comm_sec .rey_comm .title_fid .ray_stars i {
+          margin-right: -4px;
+          color: #ff7800; }
+    .comm_sec .rey_comm .rey_item {
+      margin-top: 26px;
+      border-bottom: 1px solid #e5e5e5;
+      padding-bottom: 20px; }
+      .comm_sec .rey_comm .rey_item .ray_tit {
+        float: left; }
+        .comm_sec .rey_comm .rey_item .ray_tit h3 {
+          font-size: 14px;
+          color: #4c4c4c;
+          font-family: "Fira-Regular"; }
+      .comm_sec .rey_comm .rey_item .rating-form {
+        text-align: right; }
+        .comm_sec .rey_comm .rey_item .rating-form i {
+          font-size: 22px;
+          vertical-align: -4px;
+          margin-right: -4px; }
+    .comm_sec .rey_comm .send {
+      margin-top: 30px; }
+      .comm_sec .rey_comm .send button {
+        padding: 15px 45px;
+        border: none;
+        outline: none;
+        border-radius: 3px;
+        background-color: #4d77af;
+        font-size: 14px;
+        line-height: 26px;
+        color: white;
+        font-family: "Fira-Bold";
+        text-transform: uppercase;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; }
+        .comm_sec .rey_comm .send button:hover {
+          -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+                  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+          background: #5c8bca; }
+        .comm_sec .rey_comm .send button i {
+          font-size: 24px;
+          line-height: 26px;
+          margin-left: 12px;
+          vertical-align: -7px;
+          color: white; }
+    .comm_sec .rey_comm .border-none {
+      border-bottom: none; }
+    .comm_sec .rey_comm .txt-left {
+      text-align: left !important; }
+
+.tours_detils {
+  margin-top: 60px; }
+  .tours_detils .tours_detil_title {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e5e5e5; }
+    .tours_detils .tours_detil_title h2 {
+      font-size: 24px;
+      line-height: 26px;
+      color: gray;
+      font-family: "Fira-Bold"; }
+  .tours_detils .tours_detils_item {
+    margin-top: 30px; }
+    .tours_detils .tours_detils_item .serv_item {
+      margin-bottom: 30px; }
+      .tours_detils .tours_detils_item .serv_item .img img {
+        border-radius: 3px;
+        width: 100%; }
+      .tours_detils .tours_detils_item .serv_item .ser_title h3 {
+        font-size: 14px;
+        line-height: 22px;
+        color: #4c4c4c;
+        font-family: "Fira-Bold"; }
+      .tours_detils .tours_detils_item .serv_item .ser_title p {
+        margin-top: 8px;
+        font-size: 14px;
+        line-height: 20px;
+        color: gray; }
+    .tours_detils .tours_detils_item .item_title {
+      margin-bottom: 30px; }
+      .tours_detils .tours_detils_item .item_title h3 {
+        font-size: 18px;
+        line-height: 26px;
+        color: #4c4c4c; }
+    .tours_detils .tours_detils_item .item_right_div {
+      padding-bottom: 30px;
+      border-bottom: 1px solid #e5e5e5; }
+      .tours_detils .tours_detils_item .item_right_div .desc p {
+        font-size: 14px;
+        line-height: 22px;
+        color: gray; }
+
+.tour_comp_detil {
+  margin-top: 50px; }
+  .tour_comp_detil .t_c_logo {
+    width: 100%;
+    height: 270px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .tour_comp_detil .t_c_title_c h2 {
+    font-size: 30px;
+    line-height: 26px;
+    color: #4c4c4c;
+    font-family: "Fira-Bold";
+    margin-bottom: 30px; }
+  .tour_comp_detil .t_c_right {
+    padding-left: 20px; }
+    .tour_comp_detil .t_c_right .fav_div {
+      text-align: right; }
+      .tour_comp_detil .t_c_right .fav_div .reyting {
+        display: inline-block; }
+        .tour_comp_detil .t_c_right .fav_div .reyting p {
+          position: relative;
+          font-size: 30px;
+          color: #ff7800;
+          font-family: "Fira-Regular"; }
+      .tour_comp_detil .t_c_right .fav_div .favorit_box {
+        cursor: pointer;
+        display: inline-block;
+        margin-left: 40px;
+        padding: 8px 20px;
+        border-radius: 3px;
+        background-color: #f4f4f4;
+        vertical-align: bottom; }
+        .tour_comp_detil .t_c_right .fav_div .favorit_box i {
+          font-size: 24px;
+          vertical-align: -7px;
+          color: #ff7800; }
+        .tour_comp_detil .t_c_right .fav_div .favorit_box span {
+          text-transform: uppercase;
+          font-size: 14px;
+          color: #ff7800; }
+    .tour_comp_detil .t_c_right .t_c_title h2 {
+      font-size: 30px;
+      line-height: 26px;
+      color: #4c4c4c;
+      font-family: "Fira-Bold"; }
+    .tour_comp_detil .t_c_right .t_c_title p {
+      margin-top: 10px;
+      font-size: 18px;
+      line-height: 26px;
+      color: gray; }
+    .tour_comp_detil .t_c_right .t_c_bott {
+      margin-top: 20px; }
+      .tour_comp_detil .t_c_right .t_c_bott .car_price {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-bottom: 10px; }
+        .tour_comp_detil .t_c_right .t_c_bott .car_price p {
+          font-size: 24px;
+          color: #ff7800;
+          font-family: "Fira-Bold"; }
+        .tour_comp_detil .t_c_right .t_c_bott .car_price .svg_manat {
+          position: relative;
+          width: 12px; }
+          .tour_comp_detil .t_c_right .t_c_bott .car_price .svg_manat svg {
+            position: absolute;
+            left: 4px;
+            fill: #ff7800; }
+      .tour_comp_detil .t_c_right .t_c_bott .adress i {
+        font-size: 24px;
+        line-height: 26px;
+        color: gray;
+        vertical-align: -7px; }
+      .tour_comp_detil .t_c_right .t_c_bott .adress span {
+        margin-left: 6px;
+        font-size: 14px;
+        line-height: 26px;
+        color: gray; }
+      .tour_comp_detil .t_c_right .t_c_bott .phone_h {
+        margin-top: 16px;
+        display: inline-block; }
+        .tour_comp_detil .t_c_right .t_c_bott .phone_h i {
+          vertical-align: -7px;
+          font-size: 24px;
+          line-height: 26px;
+          color: gray; }
+        .tour_comp_detil .t_c_right .t_c_bott .phone_h a {
+          text-decoration: none;
+          margin-left: 6px;
+          font-size: 14px;
+          line-height: 26px;
+          color: #166de3; }
+      .tour_comp_detil .t_c_right .t_c_bott .tul_t {
+        padding-left: 14px;
+        display: inline-block;
+        margin-left: 20px;
+        border-left: 1px solid #e5e5e5;
+        position: relative; }
+        .tour_comp_detil .t_c_right .t_c_bott .tul_t li {
+          display: inline-block;
+          margin-right: 14px; }
+          .tour_comp_detil .t_c_right .t_c_bott .tul_t li a {
+            text-decoration: none; }
+            .tour_comp_detil .t_c_right .t_c_bott .tul_t li a:hover .tul_hover {
+              visibility: visible; }
+            .tour_comp_detil .t_c_right .t_c_bott .tul_t li a .tul_hover {
+              visibility: hidden;
+              text-align: center;
+              padding: 8px 16px;
+              border-radius: 3px;
+              -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+              box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+              background-color: #f4f4f4;
+              position: absolute;
+              top: -50px;
+              width: 130px;
+              font-size: 14px;
+              line-height: 26px;
+              color: gray;
+              font-family: "Fira-Regular"; }
+            .tour_comp_detil .t_c_right .t_c_bott .tul_t li a i {
+              vertical-align: -6px;
+              font-size: 24px;
+              line-height: 26px;
+              color: gray; }
+      .tour_comp_detil .t_c_right .t_c_bott .soc_ul {
+        margin-top: 20px; }
+        .tour_comp_detil .t_c_right .t_c_bott .soc_ul li {
+          display: inline-block;
+          margin-right: 10px; }
+          .tour_comp_detil .t_c_right .t_c_bott .soc_ul li .profile_facebook {
+            color: #3b5997; }
+          .tour_comp_detil .t_c_right .t_c_bott .soc_ul li .profile_linkedin {
+            color: #007bb5; }
+          .tour_comp_detil .t_c_right .t_c_bott .soc_ul li .profile_twitter {
+            color: #00abed; }
+          .tour_comp_detil .t_c_right .t_c_bott .soc_ul li .profile_instagram {
+            color: #bb298d; }
+          .tour_comp_detil .t_c_right .t_c_bott .soc_ul li a {
+            text-decoration: none; }
+            .tour_comp_detil .t_c_right .t_c_bott .soc_ul li a i {
+              font-size: 21px; }
+
+.map_tour {
+  width: 100%;
+  height: 162px; }
+
+.car-price {
+  margin-top: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .car-price span {
+    font-size: 18px;
+    line-height: 26px;
+    color: #ff7800;
+    font-family: "Fira-Bold"; }
+  .car-price .svg_manat {
+    position: relative;
+    width: 12px; }
+  .car-price svg {
+    position: absolute;
+    top: 0;
+    left: 2px;
+    fill: #ff7800; }
+
+.tur-comp-map {
+  width: 100%;
+  height: 162px;
+  margin-top: 40px; }
+
+.az_banner {
+  position: relative;
+  height: 370px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .az_banner .az_overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #163156;
+    opacity: .4; }
+  .az_banner .title {
+    margin-top: 120px; }
+    .az_banner .title h1 {
+      font-size: 48px;
+      line-height: 36px;
+      color: white;
+      font-family: "Fira-Bold"; }
+  .az_banner .desc {
+    margin-top: 26px; }
+    .az_banner .desc p {
+      font-size: 16px;
+      line-height: 22px;
+      color: #c1cbca; }
+
+.az_section .az_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 60px; }
+  .az_section .az_item .photo {
+    margin-right: 30px; }
+    .az_section .az_item .photo img {
+      height: 320px;
+      width: 500px; }
+  .az_section .az_item .desc {
+    margin-right: 30px;
+    margin-top: 20px; }
+    .az_section .az_item .desc a {
+      text-decoration: none;
+      font-size: 22px;
+      line-height: 33px;
+      color: #4e77af;
+      font-family: "Fira-Bold"; }
+    .az_section .az_item .desc p {
+      margin-top: 20px;
+      font-size: 14px;
+      line-height: 22px;
+      color: gray; }
+
+.az_detil .az_item {
+  margin-top: 80px; }
+.az_detil .title h2 {
+  font-size: 30px;
+  line-height: 26px;
+  color: #4c4c4c;
+  font-family: "Fira-Bold"; }
+.az_detil .desc {
+  margin-top: 30px; }
+  .az_detil .desc img {
+    padding: 20px; }
+  .az_detil .desc p {
+    text-align: justify;
+    font-size: 15px;
+    line-height: 21px;
+    color: gray; }
+
+.blog_sec {
+  margin-top: 60px; }
+  .blog_sec .blog_title h1 {
+    font-size: 24px;
+    line-height: 32px;
+    color: #4e77af;
+    font-family: "Fira-Bold"; }
+  .blog_sec .detil_photo {
+    margin-top: 14px; }
+    .blog_sec .detil_photo img {
+      width: 100%; }
+    .blog_sec .detil_photo .date_detil {
+      margin-top: 20px;
+      font-size: 12px;
+      line-height: 26px;
+      color: gray; }
+      .blog_sec .detil_photo .date_detil i {
+        vertical-align: -4px;
+        font-size: 18px;
+        line-height: 26px;
+        color: gray;
+        width: 24px; }
+  .blog_sec .detil_desc {
+    margin-top: 30px; }
+    .blog_sec .detil_desc p {
+      font-size: 15px;
+      line-height: 21px;
+      color: gray; }
+  .blog_sec .sosial_i {
+    margin-top: 40px;
+    padding-bottom: 26px;
+    border-bottom: 1px solid #e5e5e5; }
+    .blog_sec .sosial_i .share {
+      margin-bottom: 14px; }
+      .blog_sec .sosial_i .share p {
+        font-size: 14px;
+        line-height: 22px;
+        color: #b2b2b2; }
+    .blog_sec .sosial_i .fb {
+      margin-right: 6px;
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      border-radius: 18px;
+      position: relative;
+      background-color: #3b5997; }
+      .blog_sec .sosial_i .fb img {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 16px;
+        height: 16px; }
+    .blog_sec .sosial_i .tw {
+      margin-right: 6px;
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      border-radius: 18px;
+      background-color: #00abed;
+      position: relative; }
+      .blog_sec .sosial_i .tw img {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 16px;
+        height: 16px; }
+    .blog_sec .sosial_i .yt {
+      margin-right: 6px;
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      border-radius: 18px;
+      background-color: #bb0000;
+      position: relative; }
+      .blog_sec .sosial_i .yt img {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 16px;
+        height: 16px; }
+    .blog_sec .sosial_i .inst {
+      margin-right: 6px;
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      border-radius: 18px;
+      background-color: #c13583;
+      position: relative; }
+      .blog_sec .sosial_i .inst img {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 16px;
+        height: 16px; }
+  .blog_sec .blog_left a {
+    text-decoration: none; }
+  .blog_sec .blog_left .news_row {
+    margin-top: 60px; }
+    .blog_sec .blog_left .news_row .img img {
+      width: 100%;
+      margin-bottom: 22px; }
+    .blog_sec .blog_left .news_row .news_title h2 {
+      font-size: 18px;
+      line-height: 26px;
+      color: #4e77af;
+      font-family: "Fira-Bold"; }
+    .blog_sec .blog_left .news_row .news_title p {
+      margin-top: 8px;
+      font-size: 12px;
+      line-height: 26px;
+      color: gray; }
+      .blog_sec .blog_left .news_row .news_title p i {
+        font-size: 18px;
+        vertical-align: -4px;
+        width: 24px; }
+    .blog_sec .blog_left .news_row .desc {
+      margin-top: 8px; }
+      .blog_sec .blog_left .news_row .desc p {
+        font-size: 14px;
+        line-height: 19px;
+        color: gray; }
+    .blog_sec .blog_left .news_row .btn_more {
+      margin-top: 8px; }
+      .blog_sec .blog_left .news_row .btn_more a {
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 26px;
+        color: #4e77af; }
+        .blog_sec .blog_left .news_row .btn_more a i {
+          vertical-align: -4px;
+          font-size: 18px;
+          line-height: 26px;
+          color: #4e77af; }
+  .blog_sec .blog_left .title h1 {
+    font-size: 30px;
+    line-height: 26px;
+    color: #4c4c4c;
+    font-family: "Fira-Bold"; }
+  .blog_sec .blog_left .big_item {
+    margin-top: 50px; }
+    .blog_sec .blog_left .big_item .blog_img {
+      position: relative;
+      padding: 40px;
+      height: 360px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+      .blog_sec .blog_left .big_item .blog_img .desc {
+        position: absolute;
+        top: 30%;
+        left: 8%; }
+        .blog_sec .blog_left .big_item .blog_img .desc p {
+          width: 581px;
+          font-size: 24px;
+          line-height: 30px;
+          color: white;
+          font-family: "Fira-Bold"; }
+        .blog_sec .blog_left .big_item .blog_img .desc .date {
+          margin-top: 10px; }
+          .blog_sec .blog_left .big_item .blog_img .desc .date span {
+            font-size: 12px;
+            line-height: 26px;
+            color: white; }
+            .blog_sec .blog_left .big_item .blog_img .desc .date span i {
+              width: 26px;
+              vertical-align: -4px;
+              font-size: 18px;
+              line-height: 26px; }
+        .blog_sec .blog_left .big_item .blog_img .desc .more {
+          margin-top: 30px; }
+          .blog_sec .blog_left .big_item .blog_img .desc .more a {
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 26px;
+            color: #4e77af;
+            font-family: "Fira-Bold";
+            text-align: center;
+            padding: 14px 20px;
+            background-color: #ffffff; }
+            .blog_sec .blog_left .big_item .blog_img .desc .more a:hover i {
+              margin-left: 20px; }
+            .blog_sec .blog_left .big_item .blog_img .desc .more a i {
+              -webkit-transition: all .4s ease-in-out;
+              transition: all .4s ease-in-out;
+              vertical-align: -6px;
+              margin-left: 12px; }
+  .blog_sec .blog_left .passive {
+    display: none; }
+  .blog_sec .item_photo {
+    margin-top: 60px; }
+    .blog_sec .item_photo img {
+      width: 100%; }
+  .blog_sec .item_title {
+    margin-top: 14px; }
+    .blog_sec .item_title h2 {
+      font-size: 16px;
+      line-height: 22px;
+      color: #4e77af;
+      font-family: "Fira-Bold"; }
+  .blog_sec .item_desc {
+    margin-top: 18px; }
+    .blog_sec .item_desc p {
+      font-size: 14px;
+      line-height: 19px;
+      color: gray; }
+  .blog_sec .more_com {
+    margin-top: 40px;
+    text-align: center;
+    position: relative; }
+    .blog_sec .more_com:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 0;
+      border-top: 1px solid #e5e5e5;
+      left: auto;
+      top: 12px;
+      right: 0; }
+    .blog_sec .more_com a {
+      position: relative;
+      display: inline-block;
+      background-color: #FFF;
+      padding: 0 20px;
+      text-decoration: none;
+      font-size: 12px;
+      line-height: 26px;
+      color: #4e77af; }
+      .blog_sec .more_com a i {
+        vertical-align: -4px;
+        font-size: 16px;
+        line-height: 26px;
+        color: #4e77af; }
+  .blog_sec .lef_blog {
+    margin-top: 70px; }
+    .blog_sec .lef_blog .left_title h2 {
+      font-size: 18px;
+      line-height: 26px;
+      color: #4c4c4c;
+      font-family: "Fira-Bold"; }
+  .blog_sec .left_item {
+    margin-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5; }
+    .blog_sec .left_item .left_photo img {
+      width: 100%; }
+    .blog_sec .left_item p {
+      font-size: 14px;
+      line-height: 20px;
+      color: #4d4d4d;
+      font-family: "Fira-Bold"; }
+  .blog_sec .reklam_blog {
+    margin-top: 50px; }
+  .blog_sec .item_date {
+    margin-top: 8px; }
+    .blog_sec .item_date p {
+      font-size: 12px;
+      line-height: 26px;
+      color: gray; }
+      .blog_sec .item_date p i {
+        vertical-align: -4px;
+        font-size: 18px;
+        line-height: 26px;
+        color: gray; }
+  .blog_sec .detil_title {
+    margin-bottom: 50px; }
+    .blog_sec .detil_title h1 {
+      font-size: 30px;
+      line-height: 26px;
+      color: #4c4c4c;
+      font-family: "Fira-Bold"; }
+  .blog_sec .mt {
+    margin-top: 20px; }
+
+.oth_news {
+  margin-top: 60px; }
+  .oth_news .passive {
+    display: none; }
+  .oth_news .title a {
+    text-decoration: none; }
+  .oth_news .title h1 {
+    font-size: 24px;
+    line-height: 26px;
+    color: #4d4d4d;
+    font-family: "Fira-Bold"; }
+  .oth_news .item {
+    margin-top: 50px; }
+    .oth_news .item .title h1 {
+      font-size: 16px;
+      line-height: 22px;
+      color: #4e77af;
+      font-family: "Fira-Bold"; }
+    .oth_news .item .title .date_news {
+      margin-top: 8px;
+      font-size: 12px;
+      line-height: 26px;
+      color: gray; }
+      .oth_news .item .title .date_news i {
+        font-size: 18px;
+        vertical-align: -4px; }
+    .oth_news .item .desc {
+      margin-top: 8px; }
+      .oth_news .item .desc p {
+        font-size: 13px;
+        line-height: 21px;
+        color: #4d4d4d; }
+    .oth_news .item .photo img {
+      width: 100%; }
+  .oth_news .more_com {
+    margin-top: 40px;
+    text-align: center;
+    position: relative; }
+    .oth_news .more_com:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 0;
+      border-top: 1px solid #e5e5e5;
+      left: auto;
+      top: 12px;
+      right: 0; }
+    .oth_news .more_com a {
+      position: relative;
+      display: inline-block;
+      background-color: #FFF;
+      padding: 0 20px;
+      text-decoration: none;
+      font-size: 12px;
+      line-height: 26px;
+      color: #4e77af; }
+      .oth_news .more_com a i {
+        vertical-align: -4px;
+        font-size: 16px;
+        line-height: 26px;
+        color: #4e77af; }
+
+.services_section {
+  margin-top: 70px; }
+  .services_section .block_h1 h1 {
+    font-size: 30px;
+    line-height: 26px;
+    color: #4c4c4c;
+    font-family: "Fira-Bold"; }
+  .services_section .block_desc {
+    margin-top: 30px; }
+    .services_section .block_desc p {
+      text-align: justify;
+      font-size: 14px;
+      line-height: 30px;
+      color: gray; }
+
+.services_in {
+  margin-top: 76px; }
+  .services_in .title h1 {
+    font-size: 30px;
+    line-height: 26px;
+    color: #4c4c4c;
+    font-family: "Fira-Bold"; }
+  .services_in .ser_item {
+    margin-top: 34px; }
+    .services_in .ser_item .photo_item {
+      border-radius: 30px;
+      background-color: #ffffff;
+      border: 2px solid #4d77af;
+      width: 60px;
+      height: 60px; }
+      .services_in .ser_item .photo_item .photo {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        border-radius: 30px; }
+    .services_in .ser_item p {
+      margin-top: 10px;
+      font-size: 16px;
+      line-height: 20px;
+      color: #4c4c4c; }
+  .services_in .all {
+    margin-top: 80px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f4f4f4; }
+    .services_in .all .all_block {
+      border: 4px solid #a6bbd7;
+      padding: 60px; }
+      .services_in .all .all_block .all_title {
+        display: inline-block; }
+        .services_in .all .all_block .all_title h1 {
+          font-size: 30px;
+          line-height: 26px;
+          color: #4c4c4c;
+          font-family: "Fira-Bold"; }
+        .services_in .all .all_block .all_title p {
+          margin-top: 8px;
+          font-size: 16px;
+          line-height: 26px;
+          color: gray; }
+      .services_in .all .all_block a {
+        float: right;
+        padding: 8px 30px;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 5px;
+        -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+                box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+        background-color: #4d77af;
+        font-size: 16px;
+        line-height: 26px;
+        color: white; }
+        .services_in .all .all_block a:hover {
+          -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+                  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+          -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+          background: #5c8bca; }
+        .services_in .all .all_block a i {
+          vertical-align: -4px;
+          font-size: 18px;
+          line-height: 26px; }
+
+.serv_banner {
+  padding-bottom: 50px;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  background-repeat: no-repeat;
+  position: relative; }
+  .serv_banner .az_overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #163156;
+    opacity: .4; }
+  .serv_banner .serv_title {
+    padding-top: 90px; }
+    .serv_banner .serv_title h1 {
+      font-size: 30px;
+      line-height: 36px;
+      color: white;
+      font-family: "Fira-Bold"; }
+  .serv_banner .serv_desc {
+    margin-top: 20px; }
+    .serv_banner .serv_desc p {
+      font-size: 16px;
+      line-height: 22px;
+      color: white; }
+  .serv_banner .serv_more {
+    margin-top: 30px; }
+    .serv_banner .serv_more a {
+      font-size: 14px;
+      color: white;
+      font-family: "Fira-Bold";
+      display: inline-block;
+      padding: 10px 36px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 22px;
+      -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+              box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+      background-color: #ff7700; }
+      .serv_banner .serv_more a:hover {
+        -webkit-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+                box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+        background: #ff983d;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; }
+      .serv_banner .serv_more a i {
+        vertical-align: -4px;
+        font-size: 20px;
+        line-height: 26px;
+        color: white; }
+
+.main_serv {
+  margin-top: 80px; }
+  .main_serv .title h1 {
+    font-size: 30px;
+    line-height: 26px;
+    color: #4c4c4c;
+    font-family: "Fira-Bold"; }
+  .main_serv .item {
+    overflow: hidden;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    height: 300px;
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+    margin-top: 36px; }
+    .main_serv .item:hover {
+      -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+              box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2); }
+      .main_serv .item:hover .bot_overlay {
+        background-color: #e59a39 !important; }
+      .main_serv .item:hover .title h2 {
+        margin-bottom: 26px; }
+      .main_serv .item:hover .title p {
+        display: none; }
+      .main_serv .item:hover .title .more {
+        opacity: 1 !important; }
+    .main_serv .item .top_photo {
+      height: 164px;
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    .main_serv .item .bot_photo {
+      height: 136px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative; }
+      .main_serv .item .bot_photo .bot_overlay {
+        background-color: #456c9e;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: .9; }
+      .main_serv .item .bot_photo .title {
+        height: 160px;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        -webkit-transform: translate(1%, -6%);
+                transform: translate(1%, -6%);
+        top: 50%;
+        right: 50%;
+        padding: 22px 16px 20px 16px; }
+        .main_serv .item .bot_photo .title h2 {
+          font-size: 20px;
+          line-height: 26px;
+          color: white;
+          font-family: "Fira-Bold"; }
+        .main_serv .item .bot_photo .title p {
+          margin-top: 14px;
+          font-size: 12px;
+          line-height: 18px;
+          color: white; }
+        .main_serv .item .bot_photo .title .more {
+          padding: 10px 30px;
+          opacity: 0;
+          text-align: center;
+          text-decoration: none;
+          border-radius: 17px;
+          -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+                  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+          background-color: #ffffff;
+          font-size: 14px;
+          line-height: 26px;
+          color: #4e77af;
+          font-family: "Fira-Bold"; }
+          .main_serv .item .bot_photo .title .more i {
+            vertical-align: -4px;
+            font-size: 16px;
+            line-height: 26px;
+            color: #4e77af; }
+
+.filter_list .left .distans .up_selec .caret,
+.down_selec .caret {
+  display: none !important; }
+.filter_list .left .distans .up_selec .select-dropdown,
+.down_selec .select-dropdown {
+  display: none !important; }
+
+.hotel_filter .filters li .caret {
+  display: none !important; }
+.hotel_filter .filters li .select-dropdown {
+  display: none !important; }
+
+.tur_plan_sec {
+  margin-top: 50px; }
+  .tur_plan_sec .tur_pl_title h1 {
+    font-size: 30px;
+    color: #4c4c4c;
+    font-family: "Fira-Bold"; }
+  .tur_plan_sec .tur_pl_item {
+    margin-top: 50px;
+    position: relative; }
+    .tur_plan_sec .tur_pl_item .tur_pl_name p {
+      font-size: 18px;
+      color: #ff7800;
+      font-family: "Fira-Bold";
+      border-bottom: 2px solid #e5e5e5;
+      padding-bottom: 30px; }
+    .tur_plan_sec .tur_pl_item .tur_ul .done {
+      margin-top: 30px;
+      display: block;
+      position: relative; }
+      .tur_plan_sec .tur_pl_item .tur_ul .done:last-child::before {
+        display: none; }
+      .tur_plan_sec .tur_pl_item .tur_ul .done .li_box {
+        display: inline-block;
+        margin-right: 30px;
+        margin-left: 20px; }
+        .tur_plan_sec .tur_pl_item .tur_ul .done .li_box:hover p a {
+          color: #166de3; }
+        .tur_plan_sec .tur_pl_item .tur_ul .done .li_box:hover .add_place a {
+          color: gray; }
+        .tur_plan_sec .tur_pl_item .tur_ul .done .li_box p {
+          width: 350px;
+          border: 1px solid #cccccc;
+          border-radius: 3px;
+          padding: 10px; }
+          .tur_plan_sec .tur_pl_item .tur_ul .done .li_box p a {
+            text-decoration: none;
+            font-size: 14px;
+            color: #4e77af;
+            font-family: "Fira-Bold"; }
+        .tur_plan_sec .tur_pl_item .tur_ul .done .li_box .add_place {
+          text-align: center;
+          background-color: #f9f9f9; }
+          .tur_plan_sec .tur_pl_item .tur_ul .done .li_box .add_place a {
+            font-size: 14px;
+            color: gray;
+            font-family: "Fira-Regular"; }
+            .tur_plan_sec .tur_pl_item .tur_ul .done .li_box .add_place a:hover {
+              color: gray; }
+            .tur_plan_sec .tur_pl_item .tur_ul .done .li_box .add_place a i {
+              vertical-align: -2px;
+              margin-right: 2px;
+              font-size: 14px;
+              color: gray; }
+      .tur_plan_sec .tur_pl_item .tur_ul .done .remove {
+        display: inline-block; }
+        .tur_plan_sec .tur_pl_item .tur_ul .done .remove a {
+          text-decoration: none;
+          font-size: 14px;
+          color: gray; }
+          .tur_plan_sec .tur_pl_item .tur_ul .done .remove a i {
+            margin-right: 8px;
+            vertical-align: -2px;
+            font-size: 14px;
+            color: gray; }
+      .tur_plan_sec .tur_pl_item .tur_ul .done .hover_box {
+        -webkit-transition: all .5s;
+        transition: all .5s;
+        opacity: 0;
+        visibility: hidden;
+        width: 270px;
+        border-radius: 5px;
+        margin: auto;
+        right: 0;
+        top: 0;
+        -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+                box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        border: 1px solid #e5e5e5;
+        position: absolute;
+        z-index: 99;
+        position: absolute;
+        top: -140px;
+        right: -100px; }
+        .tur_plan_sec .tur_pl_item .tur_ul .done .hover_box .back_img {
+          width: 100%;
+          height: 180px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center; }
+        .tur_plan_sec .tur_pl_item .tur_ul .done .hover_box .desc {
+          padding: 16px; }
+          .tur_plan_sec .tur_pl_item .tur_ul .done .hover_box .desc h3 {
+            font-size: 16px;
+            line-height: 26px;
+            color: #4e77af;
+            font-family: "Fira-Bold"; }
+          .tur_plan_sec .tur_pl_item .tur_ul .done .hover_box .desc span {
+            font-size: 14px;
+            line-height: 26px;
+            color: gray; }
+          .tur_plan_sec .tur_pl_item .tur_ul .done .hover_box .desc .star i {
+            font-size: 24px;
+            line-height: 26px;
+            color: #b2b2b2; }
+          .tur_plan_sec .tur_pl_item .tur_ul .done .hover_box .desc p {
+            margin-top: 8px;
+            font-size: 12px;
+            line-height: 18px;
+            color: gray; }
+        .tur_plan_sec .tur_pl_item .tur_ul .done .hover_box:hover {
+          opacity: 1;
+          visibility: visible; }
+      .tur_plan_sec .tur_pl_item .tur_ul .done .active_hover {
+        opacity: 1;
+        visibility: visible; }
+      .tur_plan_sec .tur_pl_item .tur_ul .done .add_list {
+        display: none;
+        overflow: hidden;
+        position: absolute;
+        width: 356px;
+        border-radius: 5px;
+        z-index: 99;
+        -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+                box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        border: 1px solid #e5e5e5;
+        top: 0;
+        left: 3%; }
+        .tur_plan_sec .tur_pl_item .tur_ul .done .add_list .top {
+          border: 1px solid #e5e5e5;
+          border-right: 0;
+          border-bottom: 0;
+          width: 20px;
+          height: 20px;
+          -webkit-transform: rotate(45deg);
+                  transform: rotate(45deg);
+          background-color: white;
+          position: absolute;
+          top: -10px;
+          right: 50%; }
+        .tur_plan_sec .tur_pl_item .tur_ul .done .add_list .list {
+          border-bottom: 1px solid #e5e5e5; }
+          .tur_plan_sec .tur_pl_item .tur_ul .done .add_list .list .no_result {
+            padding: 40px;
+            text-align: center; }
+            .tur_plan_sec .tur_pl_item .tur_ul .done .add_list .list .no_result p {
+              font-size: 14px;
+              color: #999999; }
+          .tur_plan_sec .tur_pl_item .tur_ul .done .add_list .list a {
+            text-decoration: none; }
+          .tur_plan_sec .tur_pl_item .tur_ul .done .add_list .list .list_img {
+            margin: 18px;
+            height: 80px;
+            width: 110px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: inline-block; }
+          .tur_plan_sec .tur_pl_item .tur_ul .done .add_list .list .desc {
+            display: inline-block;
+            vertical-align: 50px; }
+            .tur_plan_sec .tur_pl_item .tur_ul .done .add_list .list .desc p {
+              font-size: 14px;
+              line-height: 26px;
+              color: #4e77af;
+              font-family: "Fira-Bold"; }
+            .tur_plan_sec .tur_pl_item .tur_ul .done .add_list .list .desc span {
+              font-size: 14px;
+              color: gray; }
+      .tur_plan_sec .tur_pl_item .tur_ul .done::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: 70px;
+        left: 0;
+        top: 22px;
+        width: 2px;
+        background: #e5e5e5; }
+      .tur_plan_sec .tur_pl_item .tur_ul .done:after {
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: #ffffff;
+        border: 3px solid #cbcbcb;
+        top: 40%;
+        left: -4px;
+        content: "";
+        position: absolute;
+        -webkit-transition: all .25s ease 0s;
+        transition: all .25s ease 0s; }
+  .tur_plan_sec .right_img {
+    margin-top: 100px;
+    height: 280px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px; }
+
+.content_page {
+  margin-top: 80px; }
+  .content_page .top_100 {
+    margin-top: 80px; }
+
+.notification_sec {
+  margin-top: 90px; }
+  .notification_sec .sec_item {
+    width: 430px;
+    margin: auto;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; }
+    .notification_sec .sec_item .top {
+      padding: 14px 10px;
+      border-radius: 5px;
+      width: 430px;
+      background-color: #4d77af;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0; }
+      .notification_sec .sec_item .top p {
+        font-size: 16px;
+        line-height: 33px;
+        color: white;
+        font-family: "Fira-Bold"; }
+        .notification_sec .sec_item .top p i {
+          font-size: 24px;
+          margin-right: 6px;
+          color: white;
+          vertical-align: -6px; }
+    .notification_sec .sec_item .top_color {
+      padding: 14px 10px;
+      border-radius: 5px;
+      width: 430px;
+      background-color: #7f7f7f;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0; }
+      .notification_sec .sec_item .top_color p {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        font-size: 16px;
+        line-height: 33px;
+        color: white;
+        font-family: "Fira-Bold"; }
+        .notification_sec .sec_item .top_color p i {
+          font-size: 24px;
+          margin-right: 6px;
+          color: white;
+          vertical-align: -6px; }
+    .notification_sec .sec_item .bottom {
+      padding: 30px 20px 20px 30px; }
+      .notification_sec .sec_item .bottom p {
+        font-size: 14px;
+        line-height: 20px;
+        color: gray;
+        margin-bottom: 16px; }
+        .notification_sec .sec_item .bottom p span {
+          font-family: "Fira-Bold"; }
+        .notification_sec .sec_item .bottom p a {
+          text-decoration: none;
+          color: #4e77af;
+          font-family: "Fira-Bold"; }
+
+@media screen and (max-width: 1199px) {
+  .hotel_detil .cinema_sld_list a .overlay_h {
+    position: absolute;
+    bottom: -10%; } }
+@media screen and (min-width: 991px) and (max-width: 1199px) {
+  header .right-menu .currency.p_none {
+    margin-right: 14px !important; }
+    header .right-menu .currency.p_none p {
+      display: none; }
+
+  header .right-menu .sing_in {
+    margin-right: 20px !important; }
+    header .right-menu .sing_in p {
+      display: none; }
+
+  .cav_box {
+    margin-left: 30px !important; }
+
+  .hotel_detil .right_txt .favorit_box {
+    margin-left: 30px; }
+
+  .tur_plan_sec .tur_pl_item .tur_ul li .li_box p {
+    width: 280px !important; }
+
+  header .menu ul li {
+    margin-right: 18px !important; }
+    header .menu ul li a {
+      font-size: 15px !important; }
+
+  .filter_list .right .item_result .right_ul ul .str_li span {
+    display: none; }
+
+  .banner .menu_filter .main_ul .place {
+    width: 28%; }
+
+  .banner .menu_filter .main_ul .src {
+    width: 16%; }
+
+  .trip_plan .plan .plan_left .svg img {
+    width: 68% !important; }
+
+  .trip_plan .plan .plan_right {
+    height: 388px !important; }
+
+  .trip_plan .plan .plan_left .svg ul li {
+    margin-right: 20px; }
+
+  footer .middle .title p {
+    font-size: 14px; }
+
+  .hotel_filter .filters li {
+    margin-right: 10px; }
+    .hotel_filter .filters li:last-child {
+      margin-right: 0; }
+
+  .hotel_filter .input input {
+    width: 150px; }
+
+  .hotel_filter .selec_loc {
+    width: 140px; }
+
+  .hotel_filter .selec_stars {
+    width: 200px; }
+
+  .hotel_filter .s_butt button {
+    width: 80px; }
+
+  .hotel_detil #aniimated-thumbnials .big_a {
+    width: 100%;
+    height: auto; }
+  .hotel_detil #aniimated-thumbnials .sld_top {
+    visibility: hidden; }
+  .hotel_detil #aniimated-thumbnials .sld_bot {
+    visibility: hidden; }
+
+  .hotel_detil .info_h .stars_h span {
+    display: none; }
+
+  .progres_sec .progress_div .main_rad .radius_item {
+    -webkit-transform: translate(64%, -50%) !important;
+            transform: translate(64%, -50%) !important; }
+    .progres_sec .progress_div .main_rad .radius_item i {
+      font-size: 24px !important; } }
+@media screen and (max-width: 991px) and (min-width: 767px) {
+  .left .flex_div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: inherit !important;
+    -webkit-box-direction: inherit !important;
+        -ms-flex-direction: inherit !important;
+            flex-direction: inherit !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important; }
+    .left .flex_div .reklam_blog {
+      margin: 40px 10px; }
+
+  .comm_sec .flex_div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: inherit !important;
+    -webkit-box-direction: inherit !important;
+        -ms-flex-direction: inherit !important;
+            flex-direction: inherit !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important; }
+    .comm_sec .flex_div .reklam_blog {
+      margin: 40px 10px; }
+
+  .blog_sec .flex_div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: inherit !important;
+    -webkit-box-direction: inherit !important;
+        -ms-flex-direction: inherit !important;
+            flex-direction: inherit !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important; }
+    .blog_sec .flex_div .reklam_blog {
+      margin: 40px 10px; } }
+@media screen and (max-width: 991px) {
+  .az_section .az_item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .az_section .az_item .photo {
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1;
+      text-align: center;
+      margin-right: 0 !important; }
+    .az_section .az_item .desc {
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2;
+      margin-right: 0 !important; }
+
+  .tour_comp_detil .t_c_right {
+    padding: 0 !important; }
+
+  .hotel_detil .pad-30 {
+    padding: 0 !important; }
+
+  .cav_center {
+    text-align: center !important; }
+
+  .progres_sec .progress_div .main_rad {
+    margin-bottom: 30px; }
+
+  .hotel_filter .s_butt button {
+    width: 100%; }
+
+  .hotel_filter .filters {
+    float: inherit !important; }
+
+  .tur_plan_sec .tur_pl_item .tur_ul li .hover_box {
+    display: none !important; }
+
+  header .logo img {
+    margin: auto !important;
+    height: 28px !important; }
+
+  .services_in .all .all_block .all_title {
+    display: block !important; }
+
+  .services_in .all .all_block a {
+    float: none !important;
+    margin-top: 30px;
+    display: block; }
+
+  header .burger {
+    display: block !important; }
+
+  .menu_filter {
+    border-radius: 4px !important; }
+
+  .main_ul {
+    padding-top: 22px;
+    padding-bottom: 8px; }
+    .main_ul li {
+      display: block !important;
+      width: 100% !important;
+      padding: 0 !important;
+      border-right: 0 !important; }
+      .main_ul li:nth-last-child(2) {
+        border-bottom: none; }
+    .main_ul .location,
+    .main_ul .stars,
+    .main_ul .hotels {
+      margin-left: 0 !important; }
+      .main_ul .location .down,
+      .main_ul .stars .down,
+      .main_ul .hotels .down {
+        margin-right: 12px !important; }
+      .main_ul .location i,
+      .main_ul .stars i,
+      .main_ul .hotels i {
+        top: 0 !important; }
+    .main_ul .place {
+      padding-bottom: 18px !important;
+      border-bottom: 1px solid #e5e5e5;
+      margin-bottom: 16px !important; }
+      .main_ul .place i {
+        margin-left: 20px; }
+    .main_ul .location {
+      padding-bottom: 18px !important;
+      border-bottom: 1px solid #e5e5e5;
+      margin-bottom: 16px !important; }
+      .main_ul .location i {
+        margin-left: 20px; }
+    .main_ul .stars {
+      padding-bottom: 18px !important;
+      border-bottom: 1px solid #e5e5e5;
+      margin-bottom: 16px !important; }
+      .main_ul .stars i:first-child {
+        margin-left: 20px; }
+    .main_ul .hotels {
+      padding-bottom: 18px !important;
+      border-bottom: 1px solid #e5e5e5;
+      margin-bottom: 16px !important; }
+      .main_ul .hotels a {
+        margin-left: 24px; }
+      .main_ul .hotels .white {
+        display: none; }
+    .main_ul .src {
+      text-align: center;
+      float: none !important;
+      border-radius: 0 !important;
+      width: 95% !important;
+      margin: auto; }
+      .main_ul .src button {
+        padding-left: 0 !important; }
+      .main_ul .src i {
+        margin-left: 4px !important; }
+
+  .banner .menu_filter .main_ul .location .loc_ul {
+    top: 42px !important;
+    right: 0; }
+
+  .banner .menu_filter .main_ul .stars .star_ul {
+    top: 42px !important;
+    right: 0; }
+
+  .banner .menu_filter .main_ul .hotels .hot_ul {
+    top: 42px !important;
+    right: 0; }
+
+  .trip_plan {
+    background-image: url("../img/content-img/plan_img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; }
+    .trip_plan .plan {
+      background-color: transparent;
+      text-align: center; }
+      .trip_plan .plan .title h1 {
+        color: #9fc8ff !important; }
+      .trip_plan .plan .title p {
+        color: white !important; }
+    .trip_plan .bg {
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: #333333;
+      left: 0;
+      opacity: .8;
+      position: absolute; }
+
+  .betwen_item {
+    padding: 24px 0 !important; }
+    .betwen_item #betwen_sld .right {
+      text-align: center;
+      border: none !important; }
+      .betwen_item #betwen_sld .right .border {
+        margin: auto;
+        margin-top: 24px !important; }
+
+  footer {
+    text-align: center; }
+    footer .up .foot_logo img {
+      margin: auto; }
+    footer .up .pull-right {
+      float: none !important; }
+
+  footer .up .main_ul ul li a {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+
+  footer .up .main_ul h2 {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 18px;
+    cursor: pointer; }
+    footer .up .main_ul h2:last-child {
+      border-bottom: 1px solid #e5e5e5;
+      padding: 18px; }
+
+  footer .up .foot_logo {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 40px; }
+
+  footer .middle .title h2 {
+    display: none; }
+
+  footer .middle .title p {
+    padding: 18px 0; }
+
+  footer .last_footer ul li {
+    display: block;
+    margin: 0; }
+    footer .last_footer ul li a {
+      border-right: 0; }
+
+  footer .last_footer .nova_logo {
+    text-align: center;
+    margin-top: 52px; }
+
+  footer .up .main_ul ul {
+    max-height: 0;
+    overflow: hidden; }
+
+  .hotel_filter .filters {
+    text-align: center;
+    margin-top: 40px; }
+    .hotel_filter .filters li {
+      width: 100%;
+      display: block;
+      margin-right: 0;
+      margin-bottom: 20px; }
+    .hotel_filter .filters input {
+      width: 100%; }
+    .hotel_filter .filters .input i {
+      left: 10px; }
+
+  .hotel_filter .selec_loc .selec_ul {
+    width: 100%; }
+    .hotel_filter .selec_loc .selec_ul .top {
+      border: 1px solid #e5e5e5;
+      border-right: 0;
+      border-bottom: 0;
+      right: 49%; }
+    .hotel_filter .selec_loc .selec_ul li {
+      margin: 0; }
+
+  .hotel_filter .selec_stars .s_star_ul {
+    width: 100%; }
+    .hotel_filter .selec_stars .s_star_ul .top {
+      border: 1px solid #e5e5e5;
+      border-right: 0;
+      border-bottom: 0;
+      left: 49%; }
+    .hotel_filter .selec_stars .s_star_ul li {
+      text-align: left;
+      margin: 0; }
+
+  .item_result .h_name {
+    margin-top: 20px; }
+  .item_result .etrafli {
+    margin-top: 20px !important; }
+  .item_result .right_ul {
+    margin-top: 20px; }
+
+  .pagination_ {
+    text-align: center !important; }
+
+  .progres_sec .progress_div .sm-right {
+    float: none; }
+
+  .hotel_detil .info_h .title_cinema {
+    margin-top: 30px; }
+
+  .az_section .az_item .photo {
+    margin-top: 30px; }
+
+  .filter_list .reklam_div {
+    margin: 30px 0; }
+    .filter_list .reklam_div img {
+      margin: auto; }
+
+  .hotel_detil #aniimated-thumbnials .big_a {
+    width: 100%;
+    height: auto; }
+  .hotel_detil #aniimated-thumbnials .sld_top {
+    visibility: hidden; }
+  .hotel_detil #aniimated-thumbnials .sld_bot {
+    visibility: hidden; }
+
+  .main_info .item_info .info_rght {
+    margin-top: 30px !important; }
+
+  .main_info .item_loc .loc_right {
+    margin-top: 30px !important; }
+    .main_info .item_loc .loc_right .box {
+      margin-top: 0px !important; }
+
+  .tul_hover {
+    display: none !important; }
+
+  .resp_class {
+    margin-top: 50px !important;
+    float: none !important;
+    text-align: center !important; }
+    .resp_class i {
+      position: static !important; }
+    .resp_class .favorit_box {
+      margin-left: 20px !important; }
+
+  .fav_div {
+    margin: 30px 0 !important;
+    text-align: center !important; }
+
+  .m_t-30 {
+    margin-top: 30px !important; } }
+@media screen and (max-width: 767px) {
+  .left .flex_div .reklam_blog {
+    margin: 40px 10px;
+    text-align: center !important; }
+
+  .blog_sec .flex_div .reklam_blog {
+    margin: 40px 10px;
+    text-align: center !important; }
+
+  .comm_sec .flex_div .reklam_blog {
+    margin: 40px 10px;
+    text-align: center !important; }
+
+  .res_margin_top {
+    margin-top: 30px; }
+
+  .margin_auto img {
+    margin: auto; }
+
+  .oth_news .mrt_20 {
+    margin-top: 20px !important; }
+
+  .tour_comp_detil .t_c_right .t_c_bott .soc_ul {
+    text-align: center; }
+
+  .hotel_detil .cinema_sld_list a {
+    margin-right: 0 !important; }
+
+  .hotel_detil .cinema_sld_list a .overlay_h {
+    display: none !important; }
+
+  .hotel_detil .cinema_left {
+    margin-bottom: 50px !important; }
+
+  .cinema_sld_list {
+    text-align: center; }
+
+  .hotel_detil .info_h .tour_firm {
+    width: 100% !important; }
+
+  .m-top {
+    margin: 30px 0 !important; }
+
+  .az_detil .desc img {
+    width: 100% !important; }
+
+  .blog_sec .blog_left .big_item .blog_img {
+    height: 500px; }
+
+  .blog_sec .blog_left .big_item .blog_img .desc p {
+    width: inherit; }
+
+  .hotel_detil .right_txt {
+    text-align: center !important;
+    margin-top: 12px !important; }
+
+  .hotel_detil .left_txt {
+    text-align: center !important; }
+
+  .hotel_detil .right_txt .reyting p i {
+    position: static !important;
+    vertical-align: -4px; } }
+@media screen and (max-width: 480px) {
+  .hotel_detil .info_h .stars_h span {
+    display: none !important; }
+
+  .progres_sec .progress_div .main_rad {
+    width: 180px;
+    height: 200px; }
+    .progres_sec .progress_div .main_rad h2 {
+      font-size: 30px !important; }
+    .progres_sec .progress_div .main_rad p {
+      margin-top: 10px !important; }
+      .progres_sec .progress_div .main_rad p i {
+        font-size: 16px !important; }
+    .progres_sec .progress_div .main_rad span {
+      font-size: 12px !important; } }
+@media screen and (max-width: 420px) {
+  .tur_plan_sec .tur_pl_item .tur_ul .done .add_list {
+    width: auto !important;
+    text-align: center; }
+    .tur_plan_sec .tur_pl_item .tur_ul .done .add_list .list_img {
+      display: block; }
+    .tur_plan_sec .tur_pl_item .tur_ul .done .add_list .desc {
+      margin-right: 12px; } }
+@media screen and (max-width: 529px) {
+  .succses_pin p {
+    width: 100% !important; }
+
+  .error_pin p {
+    width: 100% !important; }
+
+  .information_pin p {
+    width: 100% !important; }
+
+  .notification_sec .sec_item {
+    width: 100% !important; }
+    .notification_sec .sec_item .top {
+      width: 100% !important; }
+      .notification_sec .sec_item .top p {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+    .notification_sec .sec_item .top_color {
+      width: 100% !important; }
+      .notification_sec .sec_item .top_color p {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+
+  .tur_plan_sec .tur_pl_item .tur_ul li .li_box {
+    margin-right: 12px !important; }
+
+  .tur_plan_sec .tur_pl_item .tur_ul li .li_box p {
+    width: 140px !important; }
+
+  .tur_plan_sec .tur_pl_item .tur_ul li::before {
+    height: 150% !important;
+    top: 30px !important; } }
+@media screen and (max-width: 377px) {
+  .respon_menu .header .burger i {
+    font-size: 20px;
+    margin-top: 2px; }
+
+  .respon_menu .header .logo img {
+    width: 160px !important; }
+
+  .hotel_detil .stars_h {
+    margin-left: 0 !important;
+    margin-top: 12px;
+    display: block !important; }
+  .hotel_detil .adress {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .hotel_detil .tul_t {
+    padding: 0 !important;
+    display: block !important;
+    border: none !important;
+    margin-left: 4px !important;
+    margin-top: 12px !important; }
+  .hotel_detil .soc_ul {
+    margin-left: 8px !important; } }
+@media screen and (max-width: 340px) {
+  .tour_comp_detil .t_c_right .t_c_bott .tul_t {
+    margin-left: 0 !important; }
+
+  .pagination_ .pag_ul .lft_li {
+    position: absolute;
+    top: 40px;
+    left: 35%;
+    margin-left: 0 !important; }
+
+  .pagination_ .pag_ul .rght_li {
+    position: absolute;
+    top: 40px;
+    left: 55%; } }
+.reklam_div {
+  margin-bottom: 30px;
+  margin-top: 30px; }
+  .reklam_div img {
+    margin: auto; }
+
+@media print {
+  footer {
+    display: none; }
+
+  header {
+    border-bottom: 0; }
+
+  #map_tur {
+    display: none; }
+
+  a[href]:after {
+    content: none !important; }
+
+  .tur_plan_sec .col-print-6 {
+    width: 50% !important;
+    float: left !important; }
+
+  .print_but {
+    display: none; }
+
+  .tur_plan_sec .tur_pl_item .tur_ul .done {
+    margin-top: 2px !important; }
+
+  .tur_plan_sec .col-md-offset-1.col-md-5 {
+    display: none !important; }
+
+  .done.none_print {
+    display: none !important; }
+
+  .tur_pl_title h1 {
+    font-size: 30px;
+    color: #4c4c4c !important;
+    font-family: "Fira-Bold"; }
+
+  .tur_pl_name p {
+    font-size: 18px;
+    color: #ff7800 !important;
+    font-family: "Fira-Bold";
+    border-bottom: 2px solid #e5e5e5;
+    padding-bottom: 30px; }
+
+  .remove {
+    display: none !important; }
+
+  .hover_box {
+    display: none !important; }
+
+  .r_done::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+    left: 0;
+    top: 22px;
+    width: 2px;
+    background: #e5e5e5 !important; }
+
+  .done p {
+    border: 0 !important; }
+    .done p a {
+      text-decoration: none;
+      font-size: 14px;
+      color: #4e77af !important;
+      font-family: "Fira-Bold"; }
+
+  .tur_pl_item {
+    width: 50% !important; }
+
+  .right_img {
+    width: 40% !important; } }
+.lg-thumb-outer {
+  background: transparent !important; }
+
+.lg-outer .lg-thumb-item {
+  border-radius: 0 !important; }
+
+.lg-outer .lg-toogle-thumb {
+  display: none !important; }
+
+.lg-outer .lg-thumb-item.active {
+  border-color: white; }
+
+.lg-outer .lg-thumb-item:hover {
+  border-color: white; }
+
+.lg-backdrop {
+  background-color: #474747; }
+
+.lg-toolbar {
+  background: transparent; }
+
+.lg-actions .lg-next,
+.lg-actions .lg-prev {
+  background: transparent; }
+
+.lg-backdrop.in {
+  opacity: .9 !important; }
+
+.mob_ul li {
+  text-align: left;
+  display: block !important;
+  margin-top: 30px;
+  margin-right: 0 !important; }
+  .mob_ul li img {
+    width: 12% !important; }
+  .mob_ul li a {
+    color: white !important;
+    vertical-align: 28px;
+    margin-left: 20px; }
+
+.sort_active {
+  font-family: "Fira-Bold" !important;
+  color: #4e77af !important; }
+
+[type="checkbox"].filled-in:checked + span:not(.lever):after {
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #4d77af;
+  background-color: #4d77af;
+  z-index: 0; }
+
+[type="checkbox"].filled-in:not(:checked) + span:not(.lever):after {
+  height: 15px;
+  width: 15px;
+  background-color: transparent;
+  border: 2px solid #5a5a5a;
+  top: 0px;
+  z-index: 0; }
+
+[type="checkbox"].filled-in:checked + span:not(.lever):before {
+  top: -2px;
+  left: -1px;
+  width: 8px;
+  height: 13px;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  -webkit-transform: rotateZ(37deg);
+  transform: rotateZ(37deg);
+  -webkit-transform-origin: 100% 100%;
+  transform-origin: 100% 100%; }
+
+[type="checkbox"] + span:not(.lever) {
+  padding-left: 26px; }
+
+label {
+  display: table; }
+  label span {
+    line-height: 1 !important;
+    color: #808080;
+    font-size: 14px !important;
+    font-family: "Fira-Regular"; }
+
+.hotel_detil .title_cinema h2 {
+  font-size: 30px;
+  line-height: 26px;
+  color: #4c4c4c;
+  font-family: "Fira-Bold"; }
+
+.hotel_detil .title_cinema p {
+  margin-top: 12px;
+  font-size: 18px;
+  line-height: 26px;
+  color: gray;
+  font-family: "Fira-Regular"; }
+
+.hotel_detil .respon_title {
+  margin: 40px 0; }
+  .hotel_detil .respon_title .tour_title h1 {
+    margin-top: 12px;
+    font-size: 30px;
+    line-height: 36px;
+    color: #4c4c4c;
+    font-family: "Fira-Bold"; }
+
+.c_i i {
+  position: absolute;
+  left: 40px !important; }
+
+.tour_title.res_title h1 {
+  margin-top: 12px;
+  font-size: 30px;
+  line-height: 36px;
+  color: #4c4c4c;
+  font-family: "Fira-Bold"; }
+
+.tour-com_respon_title h2 {
+  font-size: 30px;
+  line-height: 26px;
+  color: #4c4c4c;
+  font-family: "Fira-Bold";
+  margin-bottom: 30px;
+  text-align: center; }
+
+.t_c_title_c h2 {
+  font-size: 30px;
+  line-height: 26px;
+  color: #4c4c4c;
+  font-family: "Fira-Bold"; }
+
+.t_c_title_c p {
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 26px;
+  color: gray;
+  margin-bottom: 30px; }
+
+.others_sec .passive {
+  display: none; }
+
+.print_but {
+  margin-top: 86px; }
+  .print_but a {
+    text-transform: uppercase;
+    text-align: center;
+    outline: none;
+    width: 170px;
+    border: none;
+    font-size: 14px;
+    color: white;
+    font-family: "Fira-Bold";
+    border-radius: 3px;
+    background-color: #4d77af;
+    padding: 8px;
+    display: inline-block;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .print_but a:hover {
+      -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+              box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+      background: #5c8bca; }
+    .print_but a i {
+      margin-right: 8px;
+      vertical-align: -6px; }
+
+.hide_box {
+  display: none !important;
+  visibility: hidden; }
+
+.passive_serv {
+  display: none; }
+
+.none {
+  display: none; }
+
+@media screen and (max-width: 576px) {
+  .az_section .az_item .photo img {
+    height: auto;
+    width: 100%; }
+
+  .place_list .title p a {
+    display: block;
+    margin-left: 0; }
+
+  .enter_tours .title p a {
+    display: block;
+    margin-left: 0; }
+
+  .e_t_t .title p a {
+    display: block;
+    margin-left: 0; }
+
+  .max_inp {
+    float: right !important; }
+
+  #max {
+    float: right; } }
+.gm-style-iw {
+  text-align: center; }
+  .gm-style-iw h1 {
+    font-family: "Fira-Bold";
+    font-size: 14px;
+    color: #4d77af;
+    padding: 4px 0; }
+
+.map_rey {
+  font-size: 12px;
+  color: black; }
+  .map_rey i {
+    vertical-align: -2px;
+    font-size: 14px !important;
+    color: #ff7800;
+    line-height: 1; }
+
+.map_star i {
+  font-size: 14px !important;
+  margin-right: -3px;
+  color: #ff7800;
+  line-height: 1; }
+
+.gm-style-iw + div {
+  display: none; }
+
+#lg-download {
+  display: none; }
+
+.rey_comm .input-field label.active {
+  -webkit-transform: translateY(-14px) scale(0.8) !important;
+  transform: translateY(-14px) scale(0.8) !important;
+  -webkit-transform-origin: 0 0 !important;
+  transform-origin: 0 0 !important; }
+
+/* Rating Star Widgets Style */
+.rating-stars ul {
+  text-align: right;
+  list-style-type: none;
+  padding: 0;
+  -moz-user-select: none;
+  -webkit-user-select: none; }
+  .rating-stars ul a {
+    color: tomato;
+    text-decoration: none; }
+  .rating-stars ul a:hover {
+    color: #2196f3; }
+
+.rating-stars ul > li.star {
+  display: inline-block; }
+
+/* Idle State of the stars */
+.rating-stars ul > li.star > i.fa {
+  font-size: 20px;
+  margin-right: -6px;
+  /* Change the size of the stars */
+  color: #ccc;
+  /* Color on idle state */ }
+
+/* Hover state of the stars */
+.rating-stars ul > li.star.hover > i.fa {
+  color: #FFCC36; }
+
+/* Selected state of the stars */
+.rating-stars ul > li.star.selected > i.fa {
+  color: #FF912C; }
+
+#stars.left_important {
+  text-align: left !important;
+  padding-bottom: 20px; }
+
+input.min_inp {
+  border-radius: 3px !important;
+  background-color: #ffffff !important;
+  border: 1px solid #cccccc !important;
+  width: 110px !important;
+  height: 40px !important;
+  float: left !important;
+  padding: 0 14px !important; }
+
+input.max_inp {
+  border-radius: 3px !important;
+  background-color: #ffffff !important;
+  border: 1px solid #cccccc !important;
+  width: 110px !important;
+  height: 40px !important;
+  margin-left: 34px;
+  padding: 0 14px !important; }
+
+.reklam_blog {
+  margin-top: 40px; }
+
+.comm_sec .flex_div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.left .flex_div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.blog_sec .flex_div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.icons li {
+  display: inline-block;
+  margin-top: 40px;
+  margin-right: 50px; }
+  .icons li i {
+    font-size: 48px;
+    line-height: 26px;
+    color: #4e77af;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: -6px; }
+  .icons li p {
+    display: inline-block;
+    width: 30px;
+    font-size: 12px;
+    line-height: 18px;
+    color: gray;
+    font-family: "Fira-Regular"; }
+
+/*# sourceMappingURL=style.css.map */

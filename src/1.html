@@ -1,27 +1,28 @@
 //= template/head.html
-
+	
+	
 
 	<div class="col-md-4 col-md-offset-4 b-card__wrapper">
-		<div class="b-card">
+		<div class="b-card b-card--locked-max">
 			<div class="b-card__inner">
 				<h3 class="b-card__header">Xoş gəlmişsiniz!</h3>
-				<p class="b-card__text">Hər bir "Azercell" abunəçisi şəxsi kabinetinə giriş əldə edə bilər. Nömrənizə dair məlumatı əldə etmək və bir sıra əməliyyatları həyata keçirmək üçün kabinetə daxil olun.</p>
+				<p class="b-card__text text-center">Hər bir "Azercell" abunəçisi şəxsi kabinetinə giriş əldə edə bilər. Nömrənizə dair məlumatı əldə etmək və bir sıra əməliyyatları həyata keçirmək üçün kabinetə daxil olun.</p>
 				
 				<div class="b-card__form">
 					<form action="/">
 
 						
-						<div class="row b-card__form-row ">
-							<div class="col-xs-2 b-card__double-input b-card__double-input--first">
+						<div class="row b-card__form-row no-margin no-padding">
+							<div class="col-xs-2 b-card__double-input b-card__double-input--first ">
 								<!-- Google Material Style -->
 								<div class="material">
-									<input class="material__input" type="text" required>
+									<input class="material__input" type="text" disabled="disabled">
 
 									<label class="material__title">+994</label>
 								</div>
 								<!-- /Google Material Style -->
 							</div>	
-							<div class="col-sm-8 col-xs-10 b-card__double-input b-card__double-input--second">
+							<div class="col-md-8 col-xs-10 b-card__double-input b-card__double-input--second">
 								<!-- Google Material Style -->
 								<div class="material">
 									<input class="material__input" type="text" required>
@@ -31,10 +32,10 @@
 								<!-- /Google Material Style -->
 							</div>	
 							
-							<div class="col-sm-2 col-xs-12 b-card__button-container">
+							<div class="col-md-2 col-xs-12 b-card__button-container text-right no-padding">
 								
-								<button class="btn btn--round b-tooltip">
-									<img src="./img/Group 335.svg" alt="go" class="btn__go-icon">
+								<button class="btn btn--round b-tooltip btn__fast-login no-padding ">
+									<img src="./img/Group 335.svg" alt="go" class="btn__go-icon align-middle">
 									<span class="b-tooltip__text">Sürətli giriş</span>
 								</button>
 
@@ -45,7 +46,7 @@
 							<div class="col-xs-12">
 								<!-- Google Material Style -->
 								<div class="material">
-									<input class="material__input" type="text" required>
+									<input class="material__input" type="password" required>
 
 									<label class="material__title">Şifrə</label>
 									<img src="./img/lock.svg" alt="lock icon" class="material__icon"> 
@@ -58,14 +59,14 @@
 
 						</div>
 
-						<div class="row b-card__form-row b-card__form-row--third">
+						<div class="row b-card__form-row b-card__form-row--third no-margin">
 							<button href="#" class="btn btn__material btn__material--full" >DAXİL OL</button>
 						</div>
 
 						<div class="row b-card__form-row b-card__form-row--last">
 							<div class="col-xs-6 b-card__form-half--first">
 								<a href="/" class="b-card__link">
-									<img src="./img/Group 335-link.svg" alt="icon" class="img img__icon">
+									<img src="./img/Group 335-link.svg" alt="icon" class="img img__icon img-hover" hover-img="./img/Group 335-link-main.svg">
 									Sürətli giriş
 								</a>
 							</div>
@@ -85,15 +86,14 @@
 
 		<break-20></break-20>
 
-		<div class="b-card ">
+		<div class="b-card b-card--locked-max">
 			<div class="b-card__inner">
 				<div class="row b-card__form-row no-margin">
 					<button href="#" class="btn btn__material btn__material--hollow" data-icon="backup">KORPORATİV NÜMAYƏNDƏ</button>
 				</div>
 			</div>
     		
-    		<div class="footer-brand visible-xs visible-sm">© Azercell LLC, 2018</div>
-
+    		
 		</div>
 		
 

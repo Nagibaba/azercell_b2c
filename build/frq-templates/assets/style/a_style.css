@@ -1,0 +1,3437 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: "Fira-Bold";
+  src: url("../fonts/FiraSans-Bold.otf"); }
+@font-face {
+  font-family: "Fira-Regular";
+  src: url("../fonts/FiraSans-Regular.otf"); }
+body {
+  font-family: "Fira-Regular"; }
+
+.message_error {
+  color: #ff7676 !important;
+  margin-top: 5px;
+  font-size: 12px !important; }
+
+.notification_message {
+  color: #00ae62 !important;
+  font-size: 14px !important; }
+
+.input_notification {
+  color: #b2b2b2 !important;
+  font-size: 12px !important;
+  margin-top: 5px; }
+
+.input_error input {
+  border-bottom: 1px solid #ff7676 !important; }
+.input_error i {
+  color: #ff7676 !important; }
+  .input-field  select option {
+    color:#999999 !important;
+    }
+.input-field {
+  margin-top: 25px;
+  margin-bottom: 25px; }
+  .input-field i {
+    font-size: 20px !important;
+    color: #808080;
+    }
+  .input-field input {
+    border-bottom: 1px solid #e5e5e5;
+    padding-right: 20px !important;
+   }
+  .input-field .prefix {
+    right: 0;
+    text-align: right; }
+  .input-field label {
+    margin: 0;
+    font-size: 16px;
+    color: #999999; }
+  .input-field small {
+    position: absolute;
+    font-family: "Fira-Bold";
+    font-size: 12px;
+    color: #b2b2b2;
+    top: 52px;
+    left: 0; }
+    .input-field small span {
+      font-family: "Fira-Regular"; }
+
+.border_company {
+  border-radius: 5px !important; }
+
+.border_user {
+  border-radius: 100% !important; }
+
+.login_registration_area {
+  margin-top: 60px; }
+  .login_registration_area .modal-header {
+    padding: 0 !important;
+    border: 0 !important; }
+  .login_registration_area .modal {
+    top: 10%;
+    overflow: inherit !important; }
+    .login_registration_area .modal p {
+      font-size: 15px;
+      color: #808080;
+      line-height: 21px; }
+    .login_registration_area .modal h5 {
+      font-size: 18px;
+      color: #4c4c4c;
+      margin-bottom: 30px; }
+  .login_registration_area .modal .close {
+    position: absolute;
+    right: 0;
+    top: -25px;
+    color: white;
+    opacity: 1;
+    outline: 0;
+    background: transparent; }
+  .login_registration_area .modal-body {
+    padding: 30px; }
+
+.login_box {
+  width: 380px;
+  margin: 0 auto; }
+
+  .login_box label{
+   z-index: -1;
+  }
+  .login_box .password_recovery_title h1 {
+    font-family: "Fira-Bold";
+    color: #4c4c4c;
+    font-size: 25px;
+    margin-bottom: 45px; }
+  .login_box p {
+    color: #646464;
+    font-size: 14px; }
+  .login_box .user_password_recovery_send {
+    margin-top: 30px; }
+    .login_box .user_password_recovery_send button {
+      width: 100%;
+      font-size: 14px;
+      font-family: "Fira-Bold";
+      border-radius: 3px;
+      background-color: #4d77af;
+      color: white;
+      transition: all 0.3s ease-in-out;
+      padding: 15px 0;
+      border: 0; }
+      .login_box .user_password_recovery_send button:hover {
+        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+        background: #5c8bca; }
+    .login_box .user_password_recovery_send i {
+      font-size: 24px;
+      margin-left: 12px;
+      vertical-align: -7px; }
+  .login_box .user_password_recovery_description p {
+    font-size: 14px;
+    line-height: 21px;
+    color: #808080;
+    text-align: justify;
+    margin-top: 35px; }
+  .login_box .register_forgot {
+    margin-top: 15px; }
+    .login_box .register_forgot a {
+      font-size: 14px;
+      color: #4e77af;
+      text-decoration: none; }
+    .login_box .register_forgot h2 {
+      font-size: 14px;
+      color: #808080;
+      text-align: center; }
+    .login_box .register_forgot h2.background {
+      position: relative;
+      z-index: 1;
+      margin-top: 30px; }
+      .login_box .register_forgot h2.background:before {
+        border-top: 1px solid #e5e5e5;
+        content: "";
+        margin: 0 auto;
+        /* this centers the line to the full width specified */
+        position: absolute;
+        /* positioning must be absolute here, and relative positioning must be applied to the parent */
+        top: 50%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: -1; }
+      .login_box .register_forgot h2.background span {
+        /* to hide the lines from behind the text, you have to set the background color the same as the container */
+        background: #fff;
+        padding: 0 10px; }
+    .login_box .register_forgot .social_link_registration_bar {
+      margin-top: 35px; }
+      .login_box .register_forgot .social_link_registration_bar .facebook_login {
+        font-family: "Fira-Bold";
+        color: #3b5998;
+        font-size: 14px;
+        float: left; }
+        .login_box .register_forgot .social_link_registration_bar .facebook_login:before {
+          content: "\f230";
+          font-family: "Fontawesome";
+          margin-right: 10px; }
+      .login_box .register_forgot .social_link_registration_bar .gmail_login {
+        font-family: "Fira-Bold";
+        color: #dd4b39;
+        font-size: 14px;
+        float: right; }
+        .login_box .register_forgot .social_link_registration_bar .gmail_login:before {
+          content: "\f1a0";
+          font-family: "Fontawesome";
+          margin-right: 10px; }
+  .login_box .user_account {
+    margin-top: 40px; }
+    .login_box .user_account a {
+      text-decoration: none;
+      color: #4e77af;
+      font-size: 14px;
+      font-family: "Fira-Bold"; }
+      .login_box .user_account a::before {
+        font-family: 'Material Icons';
+        font-size: 18px;
+        vertical-align: text-bottom;
+        content: "input";
+        margin-right: 3px;
+        -webkit-font-feature-settings: 'liga'; }
+
+.login_banner {
+  width: 100%;
+  height: 100vh;
+  background-position: 25% 10%;
+  background-repeat: no-repeat;
+  background-size: contain; }
+  .login_banner .login_banner_title {
+    width: 460px;
+    margin: 0 auto;
+    padding-top: 120px; }
+    .login_banner .login_banner_title h1 {
+      font-size: 36px;
+      line-height: 42px;
+      font-family: "Fira-Bold";
+      text-align: right; }
+
+@media screen and (max-width: 480px) {
+  .login_box {
+    width: 100%; } }
+@media screen and (max-width: 991px) {
+  .login_banner {
+    display: none; } }
+.ig-control {
+  margin: 10px 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .ig-control p {
+    display: table;
+    font-size: 12px;
+    line-height: 20px; }
+    .ig-control p a {
+      text-decoration: none;
+      color: #4e77af;
+      font-family: "Fira-Bold";
+      outline: 0; }
+
+.check_login {
+  margin-top: 30px; }
+
+.ig-control__cbx:not(:checked),
+.ig-control__cbx:checked {
+  opacity: 0;
+  position: absolute;
+  margin: 0;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  left: 0;
+  pointer-events: none; }
+
+.ig-control__cbx ~ label {
+  margin-top: 3px;
+  position: relative;
+  cursor: pointer;
+  height: 20px;
+  line-height: 20px;
+  font-size: 1rem;
+  color: #484848;
+  padding-left: 25px;
+  float: left; 
+z-index: 1 !important;}
+.ig-control__cbx ~ label:before {
+  transform: translateZ(0);
+  transition: all .2s ease-in; }
+.ig-control__cbx ~ label:before,
+.ig-control__cbx ~ label:after {
+  position: absolute;
+  content: '';
+  left: 0;
+  border-radius: 2px; }
+.ig-control__cbx:not(:checked) ~ label:before {
+  width: 9px;
+  height: 15px;
+  border: none;
+  top: 1px;
+  left: 0;
+  -webkit-transform: rotateZ(37deg) translate3d(0, 0, 0);
+  transform: rotateZ(37deg) scale(0.1);
+  -webkit-transform-origin: 20% 40%;
+  transform-origin: 100% 100%; }
+.ig-control__cbx:not(:checked) ~ label:after {
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  border: 2px solid #757575;
+  z-index: 0; }
+.ig-control__cbx:checked ~ label:before {
+  top: -2px;
+  left: -2px;
+  width: 8px;
+  height: 15px;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-bottom: 2.5px solid white;
+  border-right: 2.5px solid white;
+  z-index: 1;
+  backface-visibility: hidden;
+  transform: rotateZ(37deg) scale(1);
+  -webkit-transform-origin: 100% 100%;
+  transform-origin: 100% 100%; }
+.ig-control__cbx:checked ~ label:after {
+  width: 15px;
+  height: 15px;
+  background-color: #4d77af; }
+.ig-control__cbx:disabled ~ label {
+  color: #d1d1d1;
+  pointer-events: none; }
+.ig-control__cbx:disabled:not(:checked) ~ label:before {
+  background-color: transparent;
+  border: 2px solid transparent; }
+.ig-control__cbx:disabled:not(:checked) ~ label:after {
+  border-color: #D1D1D1;
+  background-color: transparent; }
+.ig-control__cbx:disabled:checked ~ label:before {
+  background-color: transparent; }
+.ig-control__cbx:disabled:checked ~ label:after {
+  background-color: #D1D1D1;
+  border-color: #D1D1D1; }
+
+.select-wrapper .caret {
+  color: #808080; }
+
+.select-dropdown {
+  font-size: 16px;
+  color: #808080;
+  font-family: "Fira-Regular"; }
+
+@media screen and (max-width: 400px) {
+  .social_link_registration_bar a {
+    float: inherit !important;
+    display: block !important;
+    text-align: center;
+    line-height: 30px; } }
+
+  .map_area #map {
+    width: 100%;
+    height: 300px; }
+
+.contact_area {
+  padding-top: 70px; }
+  .contact_area .right_sidebar_adress {
+    padding: 35px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5; }
+    .contact_area .right_sidebar_adress .adress_title {
+      text-align: center;
+      margin-bottom: 30px; }
+      .contact_area .right_sidebar_adress .adress_title h1 {
+        color: #4c4c4c;
+        font-size: 16px;
+        font-family: "Fira-Bold"; }
+    .contact_area .right_sidebar_adress .list_contact dl dt {
+      float: left; }
+      .contact_area .right_sidebar_adress .list_contact dl dt i {
+        font-size: 24px;
+        color: #ff7800; }
+    .contact_area .right_sidebar_adress .list_contact dl dd {
+      margin-bottom: 15px;
+      padding-left: 35px; }
+      .contact_area .right_sidebar_adress .list_contact dl dd a {
+        color: #808080;
+        text-decoration: none;
+        display: block;
+        line-height: 20px;
+        font-size: 14px; }
+    .contact_area .right_sidebar_adress .social_link_list {
+      margin-top: 20px; }
+      .contact_area .right_sidebar_adress .social_link_list ul {
+        text-align: center; }
+        .contact_area .right_sidebar_adress .social_link_list ul .facebook_contact a {
+          background: #3b5997; }
+        .contact_area .right_sidebar_adress .social_link_list ul .twitter_contact a {
+          background: #00abed; }
+        .contact_area .right_sidebar_adress .social_link_list ul .linkedin_contact a {
+          background: #007bb5; }
+        .contact_area .right_sidebar_adress .social_link_list ul .instagram_contact a {
+          background: #c13583; }
+        .contact_area .right_sidebar_adress .social_link_list ul li {
+          position: relative;
+          display: inline-block;
+          margin: 0px 5px; }
+          .contact_area .right_sidebar_adress .social_link_list ul li a {
+            width: 40px;
+            height: 40px;
+            display: block;
+            border-radius: 100%;
+            color: white;
+            text-decoration: none; }
+            .contact_area .right_sidebar_adress .social_link_list ul li a i {
+              font-size: 22px;
+              position: absolute;
+              left: 26%;
+              top: 19%; }
+  .contact_area .contact_form_area {
+    margin-left: 20px; }
+    .contact_area .contact_form_area_title {
+      margin-bottom: 35px; }
+      .contact_area .contact_form_area_title h1 {
+        font-size: 30px;
+        color: #4c4c4c;
+        font-family: "Fira-Bold"; }
+    .contact_area .contact_form_area p {
+      color: #808080;
+      font-size: 14px; }
+    .contact_area .contact_form_area .login_box {
+      width: inherit !important; }
+      .contact_area .contact_form_area .login_box input {
+       padding-right: 20px !important; }
+
+       .contact_area .contact_form_area .login_box .input-field i {
+        background: transparent; }
+
+       
+    .contact_area .contact_form_area .contact_form_area_button {
+      margin-top: 30px; }
+      .contact_area .contact_form_area .contact_form_area_button button {
+        font-size: 14px;
+        font-family: "Fira-Bold";
+        border-radius: 3px;
+        background-color: #4d77af;
+        color: white;
+        transition: all 0.3s ease-in-out;
+        padding: 15px 40px;
+        border: 0; }
+        .contact_area .contact_form_area .contact_form_area_button button:hover {
+          box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease-in-out;
+          background: #5c8bca; }
+      .contact_area .contact_form_area .contact_form_area_button i {
+        font-size: 24px;
+        margin-left: 12px;
+        vertical-align: -7px; }
+
+@media screen and (max-width: 991px) {
+  .right_sidebar_adress {
+    margin-bottom: 40px; }
+
+  .contact_form_area {
+    margin-left: 0 !important;
+    margin-bottom: 30px; }
+
+  .contact_form_area_button {
+    text-align: center; } }
+.dashboard_settings {
+  padding-top: 50px; }
+  .dashboard_settings .company_adress {
+    margin-top: 45px; }
+    .dashboard_settings .company_adress h1 {
+      color: #4c4c4c;
+      font-size: 18px; }
+  .dashboard_settings .company_seen_map {
+    margin-top: 20px; }
+    .dashboard_settings .company_seen_map h1 {
+      font-size: 16px;
+      color: #808080;
+      margin-bottom: 15px; }
+    .dashboard_settings .company_seen_map a {
+      display: inline-block; }
+      .dashboard_settings .company_seen_map a img {
+        border-radius: 5px; }
+  .dashboard_settings .image_upload {
+    position: absolute;
+    width: 100%;
+    bottom: 0; }
+    .dashboard_settings .image_upload ul {
+      background: #7d7d7d;
+      text-align: center;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      padding: 4px; }
+    .dashboard_settings .image_upload li {
+      display: inline-block;
+      margin: 0 5px; }
+      .dashboard_settings .image_upload li a {
+        text-decoration: none;
+        display: inline-block; }
+      .dashboard_settings .image_upload li i {
+        color: #d8d8d8;
+        font-size: 20px; }
+  .dashboard_settings .password_recovery_title {
+    margin-top: 30px;
+    margin-left: 15px; }
+    .dashboard_settings .password_recovery_title h1 {
+      font-family: "Fira-Bold";
+      color: #4c4c4c;
+      font-size: 25px;
+      margin-bottom: 30px; }
+  .dashboard_settings .about_information_photo {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 270px;
+    height: 270px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5; }
+  .dashboard_settings .input-field i {
+    color: #b2b2b2; }
+  .dashboard_settings .input-field a {
+    color: #4e77af;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: block;
+    text-decoration: none; }
+  .dashboard_settings .caret {
+    color: #b2b2b2; }
+  .dashboard_settings .select-dropdown {
+    color: #b2b2b2; }
+  .dashboard_settings .login_box {
+    width: auto;
+    margin: 0;
+    margin-left: 10px; }
+  .dashboard_settings label {
+    color: #999999;
+    font-size: 16px;
+    z-index: -1; }
+  .dashboard_settings .select-wrapper input.select-dropdown {
+    border-bottom: 1px solid #e5e5e5; }
+  .dashboard_settings .first_information {
+    margin-bottom: 40px; }
+    .dashboard_settings .first_information h6 {
+      color: #808080;
+      font-size: 14px;
+      margin-bottom: 20px; }
+    .dashboard_settings .first_information p {
+      color: #b2b2b2;
+      font-size: 16px; }
+  .dashboard_settings .information_box {
+    margin-left: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5; }
+
+    @media screen and (max-width:991px){
+      .dashboard_settings .information_box {
+       margin-top: 20px; }
+    }
+    .dashboard_settings .information_box .information_block_title {
+      margin-bottom: 10px; }
+      .dashboard_settings .information_box .information_block_title i {
+        float: left;
+        font-size: 26px;
+        color: #4e77af;
+        margin-right: 8px; }
+      .dashboard_settings .information_box .information_block_title h4 {
+        float: left;
+        font-family: "Fira-Bold";
+        color: #4e77af;
+        font-size: 16px;
+        line-height: 26px; }
+    .dashboard_settings .information_box p {
+      text-align: justify;
+      color: #808080;
+      font-size: 14px;
+      line-height: 22px; }
+  .dashboard_settings .bottom_navigation_button {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 30px;
+    margin-top: 40px; }
+    .dashboard_settings .bottom_navigation_button ul li {
+      display: inline-block; }
+      .dashboard_settings .bottom_navigation_button ul li .page_back {
+        color: #4e77af;
+        font-size: 14px;
+        margin-right: 20px;
+        display: block;
+        font-family: "Fira-Bold";
+        text-decoration: none; }
+        .dashboard_settings .bottom_navigation_button ul li .page_back::before {
+          font-family: 'Material Icons';
+          font-size: 24px;
+          vertical-align: -7px;
+          margin-right: 8px;
+          content: "arrow_back";
+          -webkit-font-feature-settings: 'liga'; }
+      .dashboard_settings .bottom_navigation_button ul li button {
+        font-size: 14px;
+        font-family: "Fira-Bold";
+        border-radius: 3px;
+        background-color: #4d77af;
+        color: white;
+        transition: all 0.3s ease-in-out;
+        padding: 8px 45px;
+        border: 0; }
+        .dashboard_settings .bottom_navigation_button ul li button:hover {
+          box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease-in-out;
+          background: #5c8bca; }
+        .dashboard_settings .bottom_navigation_button ul li button i {
+          font-size: 24px;
+          vertical-align: -7px; }
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .dashboard_settings .about_information_photo {
+    width: 220px;
+    height: 220px; } }
+@media screen and (max-width: 991px) {
+  .dashboard_settings {
+    text-align: center; }
+
+  .dashboard_settings .about_information_photo {
+    margin: 0 auto; }
+
+  .page_back {
+    margin-bottom: 10px; }
+
+  .dashboard_settings .login_box {
+    margin-left: 0;
+    margin-right: 0; }
+
+  .information_box {
+    margin-left: 0px !important; } }
+.about_container {
+  margin-top: 45px; }
+  .about_container .about_text {
+    margin-bottom: 65px; }
+    .about_container .about_text h1 {
+      font-family: "Fira-Bold";
+      color: #4c4c4c;
+      font-size: 30px;
+      margin-bottom: 25px; }
+    .about_container .about_text p {
+      font-size: 14px;
+      line-height: 22px;
+      color: #808080;
+      margin-bottom: 15px;
+      text-align: justify; }
+  .about_container .about_blocks {
+    display: inline-block; }
+    .about_container .about_blocks h1 {
+      font-size: 30px;
+      font-family: "Fira-Bold";
+      color: #4c4c4c;
+      margin-bottom: 25px; }
+    .about_container .about_blocks .inner_block {
+      margin-bottom: 40px; }
+    .about_container .about_blocks .circle_icon {
+      margin-right: 20px;
+      float: left;
+      position: relative;
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      border: 2px solid #4d77af; }
+      .about_container .about_blocks .circle_icon i {
+        font-size: 36px;
+        color: #4d77af;
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        -ms-transform: translate(50%, -50%);
+        -webkit-transform: translate(50%, -50%);
+        -moz-transform: translate(50%, -50%);
+        -o-transform: translate(50%, -50%); }
+    .about_container .about_blocks .blocks_inner_information {
+      display: table; }
+      .about_container .about_blocks .blocks_inner_information h2 {
+        font-size: 16px;
+        line-height: 20px;
+        color: #4c4c4c;
+        font-family: "Fira-Bold";
+        margin-bottom: 5px;
+        margin-top: 15px; }
+      .about_container .about_blocks .blocks_inner_information p {
+        font-size: 16px;
+        line-height: 20px;
+        color: #808080; }
+  .about_container .about_video_block {
+    margin-top: 45px;
+    display: inline-block; }
+
+    @media screen and (max-width:991px){
+      .about_container .about_video_block {
+        margin-top: 0px;
+         }
+    }
+    .about_container .about_video_block .video_background {
+      float: left;
+      position: relative;
+      width: 470px;
+      height: 300px;
+      border-radius: 5px;
+      margin-right: 50px; }
+      .about_container .about_video_block .video_background a {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        -ms-transform: translate(50%, -50%);
+        -webkit-transform: translate(50%, -50%);
+        -moz-transform: translate(50%, -50%);
+        -o-transform: translate(50%, -50%);
+        text-decoration: none; }
+        .about_container .about_video_block .video_background a i {
+          font-size: 60px;
+          color: white; }
+    .about_container .about_video_block .about_video_block_content {
+      display: table; }
+      .about_container .about_video_block .about_video_block_content h1 {
+        font-size: 30px;
+        font-family: "Fira-Bold";
+        color: #4c4c4c;
+        margin-bottom: 25px;
+        margin-top: 25px; }
+      .about_container .about_video_block .about_video_block_content p {
+        font-size: 14px;
+        line-height: 22px;
+        color: #808080;
+        text-align: justify; }
+
+@media screen and (max-width: 991px) {
+  .about_container .about_video_block .video_background {
+    float: inherit !important;
+    margin-right: 0;
+    margin: 0 auto;
+    margin-bottom: 30px; }
+   }
+  .right_txt .edit_profile{
+     width: 110px;
+     margin: 0 auto;
+   }
+@media screen and (max-width: 480px) {
+  .about_container .about_video_block .video_background {
+    width: 290px;
+    height: 250px; } }
+.profile_page {
+  margin-top: 50px; }
+  .profile_page .profile_information_photo {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+    border: 1px solid #f4f4f4; }
+  .profile_page .company_information_photo {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 270px;
+    height: 270px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5; }
+    @media screen and (min-width:992px) and (max-width:1199px){
+      .profile_page .company_information_photo {
+        width:240px;
+      }
+    }
+
+    @media screen and (max-width:991px){
+      .profile_page .profile_information_area {
+        padding-left: 0px !important;
+      text-align: center; }
+        .profile_page .company_information_photo{
+          margin: 0 auto;
+          display: table;
+        }
+
+        .profile_information_area .user_info h1 {
+          float: inherit !important;
+        }
+        .message_page .user_info .profile_information_photo{
+          float: inherit !important;
+        }
+        .profile_page .profile_information_area .settings_bar{
+          float: inherit !important;
+        }
+
+        .profile_page .name {
+          text-align: center;
+        }
+        .profile_page .profile_information_area .settings_bar .admin_notfication{
+          width: 300px;
+          display: table;
+          margin: 0 auto;
+          margin-bottom: 10px;
+          float: inherit !important;
+        }
+
+        .profile_page .profile_information_area .settings_bar .otel_stars{
+          float: inherit !important;
+          margin-bottom: 20px;
+        }
+
+        .tours_plan .left_side {
+         margin-top: 40px !important;
+        }
+        .tours_plan .right_side{
+          margin-top: 40px !important;
+          margin-bottom: 30px;
+        }
+        .tours_plan .left_side .text_box{
+          text-align: center;
+        }
+
+        .tours_plan .left_side .text_box h1{
+          font-size: 30px !important;
+          margin-bottom: 20px !important;
+        }
+
+        .tours_plan .left_side .text_box p{
+          font-size: 16px !important;
+          line-height: 22px !important;
+          
+        }
+
+        .tours_plan .background{
+          position: absolute !important;
+            height: auto !important;
+        }
+
+    }
+
+    @media screen and (min-height:1023px) and (max-height:1025px){
+      
+      .tours_plan .background{
+        position: absolute !important;
+        height: 1024px !important;
+      }
+    }
+
+    @media screen and (min-width:992px){
+      .left_side .text_box{
+        position: absolute;
+        top: 190px;
+        width:550px;
+      }
+    }
+  .profile_page .profile_information_area {
+    padding-left: 30px; }
+    .profile_page .profile_information_area .info_h .price {
+      position: relative;
+      display: inline-block; }
+      .profile_page .profile_information_area .info_h .price p {
+        font-size: 24px;
+        color: #ff7800;
+        font-family: "Fira-Bold"; }
+      .profile_page .profile_information_area .info_h .price .svg_manat {
+        width: 12px;
+        position: absolute;
+        top: 0;
+        left: 106px; }
+        .profile_page .profile_information_area .info_h .price .svg_manat svg {
+          fill: #ff7800; }
+    .profile_page .profile_information_area .info_h .price_transport {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 15px; }
+      .profile_page .profile_information_area .info_h .price_transport p {
+        font-size: 24px;
+        color: #ff7800;
+        font-family: "Fira-Bold"; }
+      .profile_page .profile_information_area .info_h .price_transport .svg_manat {
+        width: 12px;
+        position: absolute;
+        top: 0;
+        left: 106px; }
+        .profile_page .profile_information_area .info_h .price_transport .svg_manat svg {
+          fill: #ff7800; }
+    .profile_page .profile_information_area .info_h .stars_h {
+      margin-left: 30px;
+      display: inline-block; }
+      .profile_page .profile_information_area .info_h .stars_h i {
+        vertical-align: -2px;
+        font-size: 24px;
+        color: #ff7800; }
+      .profile_page .profile_information_area .info_h .stars_h span {
+        margin-left: 6px;
+        vertical-align: 5px;
+        font-size: 14px;
+        line-height: 26px;
+        color: gray;
+        font-family: "Fira-Regular"; }
+    .profile_page .profile_information_area .info_h .adress i {
+      font-size: 24px;
+      line-height: 26px;
+      color: gray;
+      vertical-align: -7px; }
+    .profile_page .profile_information_area .info_h .adress span {
+      margin-left: 6px;
+      font-size: 14px;
+      line-height: 26px;
+      color: gray;
+      font-family: "Fira-Regular"; }
+    .profile_page .profile_information_area .info_h .phone_h {
+      margin-top: 16px;
+      display: inline-block; }
+      .profile_page .profile_information_area .info_h .phone_h i {
+        vertical-align: -7px;
+        font-size: 24px;
+        line-height: 26px;
+        color: gray; }
+      .profile_page .profile_information_area .info_h .phone_h a {
+        text-decoration: none;
+        margin-left: 6px;
+        font-size: 14px;
+        line-height: 26px;
+        color: #166de3;
+        font-family: "Fira-Regular"; }
+    .profile_page .profile_information_area .info_h .tul_t {
+      padding-left: 14px;
+      display: inline-block;
+      margin-left: 20px;
+      border-left: 1px solid #e5e5e5;
+    position: relative; }
+      .profile_page .profile_information_area .info_h .tul_t li {
+        display: inline-block;
+        margin-right: 14px; }
+        .profile_page .profile_information_area .info_h .tul_t li:last-child {
+          padding-left: 6px;
+          margin-right: 0;
+          border-left: 1px solid #e5e5e5; }
+        .profile_page .profile_information_area .info_h .tul_t li a {
+          text-decoration: none; }
+          .profile_page .profile_information_area .info_h .tul_t li a:hover i {
+            color: #166de3; }
+          .profile_page .profile_information_area .info_h .tul_t li a:hover .tul_hover {
+            visibility: visible; }
+          .profile_page .profile_information_area .info_h .tul_t li a .col_b {
+            color: #4d76ae; }
+          .profile_page .profile_information_area .info_h .tul_t li a i {
+            vertical-align: -6px;
+            font-size: 24px;
+            line-height: 26px;
+            color: gray; }
+          .profile_page .profile_information_area .info_h .tul_t li a .tul_hover {
+            visibility: hidden;
+            padding: 8px 16px;
+            border-radius: 3px;
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+            background-color: #f4f4f4;
+            position: absolute;
+            top: -50px;
+            width: 130px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 26px;
+            color: gray;
+            font-family: "Fira-Regular"; }
+    .profile_page .profile_information_area .info_h .soc_ul {
+      margin-top: 20px; }
+      .profile_page .profile_information_area .info_h .soc_ul li {
+        display: inline-block;
+        margin-right: 10px; }
+        .profile_page .profile_information_area .info_h .soc_ul li .profile_facebook {
+          color: #3b5997; }
+        .profile_page .profile_information_area .info_h .soc_ul li .profile_linkedin {
+          color: #007bb5; }
+        .profile_page .profile_information_area .info_h .soc_ul li .profile_twitter {
+          color: #00abed; }
+        .profile_page .profile_information_area .info_h .soc_ul li .profile_instagram {
+          color: #bb298d; }
+        .profile_page .profile_information_area .info_h .soc_ul li a {
+          text-decoration: none; }
+          .profile_page .profile_information_area .info_h .soc_ul li a i {
+            font-size: 21px; }
+    .profile_page .profile_information_area .bok_right .company_map {
+      width: 100%;
+      height: 160px; }
+    .profile_page .name h1 {
+      color: #4c4c4c;
+      font-size: 30px;
+      font-family: "Fira-Bold";
+      margin-bottom: 30px; }
+    .profile_page .profile_information_area .name_category {
+      font-size: 18px;
+      color: #808080;
+      margin-bottom: 15px;
+      margin-top: -15px; }
+    .profile_page .profile_information_area .settings_bar {
+      margin-bottom: 10px;
+      text-align: right; }
+      .profile_page .profile_information_area .settings_bar .otel_stars{
+        float: left;
+      }
+      .profile_page .profile_information_area .settings_bar .otel_stars ul {
+        margin-top: 10px; }
+        .profile_page .profile_information_area .settings_bar .otel_stars ul li {
+          display: inline-block;
+          margin-right: -5px; }
+          .profile_page .profile_information_area .settings_bar .otel_stars ul li i {
+            color: #ff7700; }
+        .profile_page .profile_information_area .settings_bar .otel_stars ul .otels-star {
+          vertical-align: 7px;
+          margin-left: 10px;
+          font-size: 14px;
+          color: gray;
+          font-family: "Fira-Regular"; }
+      .profile_page .profile_information_area .settings_bar .admin_notfication {
+        margin-top: 5px;
+        border-radius: 3px;
+        background-color: #4d77af;
+        color: #ffffff;
+        padding: 5px 15px;
+        float: left; }
+        .profile_page .profile_information_area .settings_bar .admin_notfication i {
+          float: left;
+          font-size: 20px;
+          margin-right: 5px; }
+        .profile_page .profile_information_area .settings_bar .admin_notfication p {
+          font-size: 13px;
+          line-height: 21px;
+          float: left; }
+      .profile_page .profile_information_area .settings_bar .profile {
+        margin-right: 25px;
+        font-size: 14px;
+        color: #4e77af;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease-in-out; }
+        .profile_page .profile_information_area .settings_bar .profile::before {
+          margin-right: 5px;
+          vertical-align: -6px;
+          font-size: 24px;
+          font-family: 'Material Icons';
+          content: "person";
+          -webkit-font-feature-settings: 'liga'; }
+        .profile_page .profile_information_area .settings_bar .profile:hover {
+          transition: all 0.3s ease-in-out;
+          color: #5c8bca; }
+      .profile_page .profile_information_area .settings_bar .profile_company {
+        margin-right: 25px;
+        font-size: 14px;
+        color: #4e77af;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease-in-out; }
+        .profile_page .profile_information_area .settings_bar .profile_company::before {
+          margin-right: 5px;
+          vertical-align: -6px;
+          font-size: 24px;
+          font-family: 'Material Icons';
+          content: "domain";
+          -webkit-font-feature-settings: 'liga'; }
+        .profile_page .profile_information_area .settings_bar .profile_company:hover {
+          transition: all 0.3s ease-in-out;
+          color: #5c8bca; }
+      .profile_page .profile_information_area .settings_bar .profile_seen {
+        margin-right: 25px;
+        font-size: 14px;
+        color: #4e77af;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease-in-out; }
+        .profile_page .profile_information_area .settings_bar .profile_seen::before {
+          margin-right: 5px;
+          vertical-align: -6px;
+          font-size: 24px;
+          font-family: 'Material Icons';
+          content: "remove_red_eye";
+          -webkit-font-feature-settings: 'liga'; }
+        .profile_page .profile_information_area .settings_bar .profile_seen:hover {
+          transition: all 0.3s ease-in-out;
+          color: #5c8bca; }
+      .profile_page .profile_information_area .settings_bar .profile_message {
+        margin-right: 25px;
+        position: relative;
+        font-size: 14px;
+        color: #4e77af;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease-in-out; }
+        .profile_page .profile_information_area .settings_bar .profile_message i {
+          vertical-align: -6px;
+          margin-right: 3px; }
+        .profile_page .profile_information_area .settings_bar .profile_message .message_notfication_badge {
+          width: 18px;
+          height: 18px;
+          border-radius: 9px;
+          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+          background-color: #ff7700;
+          text-align: center;
+          color: #ffffff;
+          font-size: 10px;
+          line-height: 18px;
+          position: absolute;
+          top: -8px;
+          left: -6px; }
+        .profile_page .profile_information_area .settings_bar .profile_message:hover {
+          transition: all 0.3s ease-in-out;
+          color: #5c8bca; }
+      .profile_page .profile_information_area .settings_bar .profile_setting {
+        position: relative;
+        font-size: 14px;
+        color: #4e77af;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 20px;
+        background-color: #f2f2f2;
+        padding: 8px;
+        border-radius: 20px;
+        background-color: #f2f2f2;
+        transition: all 0.3s ease-in-out; }
+        .profile_page .profile_information_area .settings_bar .profile_setting i {
+          vertical-align: -6px; }
+        .profile_page .profile_information_area .settings_bar .profile_setting:hover {
+          box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease-in-out;
+          color: #5c8bca; }
+    .profile_page .profile_information_area .profile_contact {
+      margin-top: 20px; }
+      .profile_page .profile_information_area .profile_contact h1 {
+        color: #4c4c4c;
+        font-size: 30px;
+        font-family: "Fira-Bold";
+        margin-bottom: 25px; }
+      .profile_page .profile_information_area .profile_contact a {
+        display: block;
+        text-decoration: none; }
+      .profile_page .profile_information_area .profile_contact .profile_phone {
+        margin-bottom: 15px;
+        color: #166de3;
+        font-size: 14px;
+        transition: all 0.3s ease-in-out; }
+        .profile_page .profile_information_area .profile_contact .profile_phone::before {
+          margin-right: 10px;
+          vertical-align: -7px;
+          font-size: 24px;
+          color: #808080;
+          font-family: 'Material Icons';
+          content: "phone";
+          -webkit-font-feature-settings: 'liga'; }
+        .profile_page .profile_information_area .profile_contact .profile_phone:hover {
+          transition: all 0.3s ease-in-out;
+          color: #3e90ff; }
+      .profile_page .profile_information_area .profile_contact .profile_email {
+        margin-bottom: 15px;
+        color: #166de3;
+        font-size: 14px;
+        transition: all 0.3s ease-in-out; }
+        .profile_page .profile_information_area .profile_contact .profile_email::before {
+          margin-right: 10px;
+          vertical-align: -7px;
+          font-size: 24px;
+          color: #808080;
+          font-family: 'Material Icons';
+          content: "email";
+          -webkit-font-feature-settings: 'liga'; }
+        .profile_page .profile_information_area .profile_contact .profile_email:hover {
+          transition: all 0.3s ease-in-out;
+          color: #3e90ff; }
+      .profile_page .profile_information_area .profile_contact .profile_social_link li {
+        display: inline-block; }
+        .profile_page .profile_information_area .profile_contact .profile_social_link li a {
+          text-decoration: none; }
+        .profile_page .profile_information_area .profile_contact .profile_social_link li .profile_facebook {
+          color: #3b5997; }
+        .profile_page .profile_information_area .profile_contact .profile_social_link li .profile_linkedin {
+          color: #007bb5; }
+        .profile_page .profile_information_area .profile_contact .profile_social_link li .profile_twitter {
+          color: #00abed; }
+        .profile_page .profile_information_area .profile_contact .profile_social_link li .profile_instagram {
+          color: #bb298d; }
+      .profile_page .profile_information_area .profile_contact .profile_social_link i {
+        font-size: 21px;
+        margin-right: 5px; }
+  .profile_page .tab_menu {
+    margin-top: 65px; }
+    .profile_page .tab_menu ul {
+      border-bottom: 1px solid #e5e5e5; }
+      .profile_page .tab_menu ul li {
+        display: inline-block;
+        line-height: 45px;
+        margin-bottom: -1px;
+        color: #4c4c4c;
+        font-size: 18px;
+        margin-right: 20px; }
+        .profile_page .tab_menu ul li a {
+          text-decoration: none;
+          color: #4c4c4c; }
+      .profile_page .tab_menu ul .active_tab {
+        border-bottom: 3px solid #ff7700;
+        font-family: "Fira-Bold"; }
+    .profile_page .tab_menu .add_tour {
+      margin-right: 0;
+    }
+
+    @media screen and (max-width:991px){
+      .profile_page .tab_menu .add_tour {
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .information_company .company_tour_page .item_result .block_edit{
+        position: inherit !important;
+        text-align: center;
+        margin-top:20px;
+      }
+    }
+
+  
+      .profile_page .tab_menu .add_tour a {
+        color: #4e77af !important;
+        font-size: 14px !important; }
+        .profile_page .tab_menu .add_tour .save {
+          width: 40px;
+          height: 40px;
+          border-radius: 20px;
+          background-color: #4d77af;
+          color: #ffffff!important;
+          text-align: center; 
+          display: inline-block;
+        }
+          .profile_page .tab_menu .add_tour .save i {
+            line-height: 40px;
+            font-size: 20px; }
+      .profile_page .tab_menu .add_tour .new::before {
+        margin-right: 8px;
+        vertical-align: -7px;
+        color: #4e77af !important;
+        font-size: 24px;
+        font-family: 'Material Icons';
+        content: "add_circle_outline";
+        -webkit-font-feature-settings: 'liga'; }
+        .profile_page .tab_menu .add_tour .edit::before {
+          margin-right: 8px;
+          vertical-align: -7px;
+          color: #4e77af !important;
+          font-size: 24px;
+          font-family: 'Material Icons';
+          content: "edit";
+          margin-left: 20px;
+          -webkit-font-feature-settings: 'liga'; }
+
+          .profile_page .tab_menu .add_tour .cancel{
+            vertical-align: 4px; }
+          .profile_page .tab_menu .add_tour .cancel::before {
+            margin-right: 8px;
+            vertical-align: -7px;
+            color: #4e77af !important;
+            font-size: 24px;
+            font-family: 'Material Icons';
+            content: "clear";
+            margin-left: 20px;
+            -webkit-font-feature-settings: 'liga'; }
+  .profile_page .right .sort {
+    padding: 15px 0;
+    border-bottom: 1px solid #e5e5e5;
+    margin-top: 15px; }
+    .profile_page .right .sort .sort_active {
+      font-family: "Fira-Bold" !important;
+      color: #4e77af !important; }
+    .profile_page .right .sort ul li {
+      display: inline-block;
+      margin-right: 18px; }
+      .profile_page .right .sort ul li span {
+        font-size: 14px;
+        color: #4d4d4d;
+        font-family: "Fira-Bold"; }
+      .profile_page .right .sort ul li a {
+        text-decoration: none;
+        font-size: 14px;
+        color: #4d4d4d;
+        font-family: "Fira-Regular"; }
+      .profile_page .right .sort ul li .active_a {
+        color: #4e77af; }
+  .profile_page .right .item_result {
+    padding: 30px 0 24px 0;
+    border-bottom: 1px solid #e5e5e5; }
+    .profile_page .right .item_result img {
+      width: 100%;
+      border-radius: 3px; }
+    .profile_page .right .item_result .h_name h2 {
+      font-size: 22px;
+      line-height: 26px;
+      color: #4e77af;
+      font-family: "Fira-Bold"; }
+
+      .h_name a {
+        
+            text-decoration: none ;
+            }
+    .profile_page .right .item_result .reyting p {
+      font-size: 14px;
+      line-height: 26px;
+      color: gray;
+      font-family: "Fira-Regular"; }
+    .profile_page .right .item_result .reyting i {
+      font-size: 24px;
+      line-height: 26px;
+      color: #b2b2b2;
+    margin-right: -4px; }
+    .profile_page .right .item_result .price {
+      position: relative; }
+      .profile_page .right .item_result .price p {
+        font-size: 24px;
+        line-height: 26px;
+        color: #ff7800;
+        font-family: "Fira-Bold"; }
+      .profile_page .right .item_result .price .svg_manat {
+        width: 12px;
+        position: absolute;
+        top: 0;
+        left: 106px; }
+        .profile_page .right .item_result .price .svg_manat svg {
+          fill: #ff7800; }
+    .profile_page .right .item_result .etrafli {
+      margin-top: 40px;
+      width: 100%;
+      text-align: center; }
+      .company_tour_page .item_result .tour_name p{
+       color:#808080;
+       font-size: 18px;
+      }
+
+      .company_tour_page .item_result .tur_price .svg_manat{
+        width: 12px;
+        position: relative;
+        display: inline-block;
+       }
+
+       .company_tour_page .item_result .tur_price {
+        margin-top: 5px;
+       }
+
+       .company_tour_page .item_result .tur_price .svg_manat svg{
+        position: absolute;
+        left: 0px;
+        top: -20px;
+        fill: #ff7800;
+       }
+       
+       .company_tour_page .item_result .tur_price span{
+        font-size: 24px;
+        color: #ff7800;
+        font-family: "Fira-Bold";
+       }
+      .profile_page .right .item_result .etrafli a {
+        text-decoration: none;
+        padding: 12px 100px;
+        font-size: 14px;
+        color: white;
+        font-family: "Fira-Bold";
+        border-radius: 3px;
+        display: block;
+        background-color: #ff7800;
+        transition: all 0.3s ease-in-out; }
+
+        .profile_page .right .item_result .etrafli a:hover{
+          box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+          background:  #ff983d;
+          transition: all 0.3s ease-in-out;
+        }
+    .profile_page .right .item_result .right_ul ul li {
+      margin-bottom: 8px; }
+      .profile_page .right .item_result .right_ul ul li i {
+        font-size: 20px;
+        color: #4e77af;
+        vertical-align: middle;
+      margin-right: -4px; }
+      .profile_page .right .item_result .right_ul ul li span {
+        margin-left: 8px;
+        font-size: 12px;
+        color: gray;
+        font-family: "Fira-Regular"; }
+    .profile_page .right .item_result .right_ul ul .str_li {
+      margin-bottom: 10px; }
+      .profile_page .right .item_result .right_ul ul .str_li i {
+        font-size: 24px;
+        color: #b2b2b2;
+        vertical-align: middle; }
+      .profile_page .right .item_result .right_ul ul .str_li span {
+        font-size: 14px;
+        color: gray;
+        font-family: "Fira-Regular"; }
+  .profile_page .right .pagination_ {
+    width: 100%;
+    text-align: right;
+    margin-top: 30px;
+    position: relative; }
+    .profile_page .right .pagination_ .pag_ul li {
+      display: inline-block; }
+      .profile_page .right .pagination_ .pag_ul li span {
+        font-size: 16px;
+        color: gray;
+        margin-right: 10px;
+        font-family: "Fira-Regular"; }
+      .profile_page .right .pagination_ .pag_ul li a {
+        margin-right: 8px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #4e77af;
+        font-family: "Fira-Bold"; }
+    .profile_page .right .pagination_ .pag_ul .lft_li {
+      margin-left: 22px; }
+      .profile_page .right .pagination_ .pag_ul .lft_li a {
+        margin: 0; }
+        .profile_page .right .pagination_ .pag_ul .lft_li a i {
+          font-size: 24px;
+          color: #b2b2b2;
+          padding: 4px;
+          border-radius: 50%;
+          vertical-align: middle; }
+          .profile_page .right .pagination_ .pag_ul .lft_li a i:hover {
+          background: whitesmoke; }
+          .profile_page .right .pagination_ .pag_ul .rght_li a i:hover {
+            background: whitesmoke; }
+          .profile_page .right .pagination_ .pag_ul .rght_li a i {
+            font-size: 24px;
+            color: #b2b2b2;
+            vertical-align: middle;
+            padding: 4px;
+            border-radius: 50%; }
+      .profile_page .right .pagination_ .pag_ul .lft_li .dis {
+        opacity: .4; }
+    .profile_page .right .pagination_ .pag_ul .rght_li a {
+      margin: 0; }
+      
+    .profile_page .right .pagination_ .pag_ul .rght_li .activ_i {
+      color: #4e77af; }
+  .profile_page .content_area .edit_tool {
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 30px; }
+    .profile_page .content_area .edit_tool a {
+      display: inline-block;
+      text-decoration: none; }
+    .profile_page .content_area .edit_tool .save {
+      margin-right: 15px;
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      background-color: #4d77af;
+      color: #ffffff;
+      text-align: center; }
+      .profile_page .content_area .edit_tool .save i {
+        line-height: 40px;
+        font-size: 20px; }
+    .profile_page .content_area .edit_tool .cancel {
+      color: #4d77af;
+      font-size: 14px; }
+      .profile_page .content_area .edit_tool .cancel span {
+        vertical-align: 5px; }
+      .profile_page .content_area .edit_tool .cancel i {
+        font-size: 20px; }
+    .profile_page .content_area .edit_tool .pinotification {
+      float: right;
+      background: #4d77af;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      padding: 5px 10px;
+      border-radius: 3px; }
+      .profile_page .content_area .edit_tool .pinotification i {
+        vertical-align: -7px; }
+  .profile_page .content_area .left_sidebar_menu {
+    margin-top: 15px; }
+    .profile_page .content_area .left_sidebar_menu ul li {
+      border-bottom: 1px solid #e5e5e5;
+      padding: 15px 0;
+      color: #808080; }
+      .profile_page .content_area .left_sidebar_menu ul li a {
+        font-size: 16px;
+        text-decoration: none;
+        color: #808080; }
+      .profile_page .content_area .left_sidebar_menu ul li:last-child {
+        border: 0; }
+    .profile_page .content_area .left_sidebar_menu ul .active_link a {
+      color: #4e77af;
+      font-family: "Fira-Bold"; }
+
+@media screen and (max-width: 991px) {
+  .profile_page .profile_information_photo {
+    margin: 0 auto; }
+
+  .profile_page .profile_information_area .settings_bar {
+    text-align: center;
+    margin-top: 30px; }
+
+  .profile_page .profile_information_area .profile_contact {
+    text-align: center; }
+
+  .h_name {
+    margin-top: 20px; }
+
+ 
+
+  .etrafli {
+    margin-top: 20px !important; }
+
+  .right_ul {
+    margin-top: 20px; } }
+.comments_area {
+  padding-top: 10px; }
+  .comments_area .more_com{
+    position: relative;
+    margin-top: 78px;
+  }
+
+  .comments_area .more_com a{
+    position: relative;
+    display: inline-block;
+    background-color: #FFF;
+    padding: 0 20px;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 26px;
+    color: #4e77af;
+    font-family: "Fira-Regular";
+  }
+
+  .comments_area  .more_com a i{
+    vertical-align: -4px;
+    font-size: 16px;
+    line-height: 26px;
+    color: #4e77af;
+  }
+
+  .comments_area .more_com:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    border-top: 1px solid #e5e5e5;
+    left: auto;
+    top: 12px;
+    right: 0;
+  }
+  .comments_area .passive{
+    display: none;
+  }
+  .comments_area .comments_block {
+    margin-top: 25px; }
+    .comments_area .comments_block .user_photo {
+      float: left;
+      margin-right: 15px;
+      width: 70px;
+      height: 70px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 3px;
+      background-color: #f9f9f9; }
+    .comments_area .comments_block .user_comment {
+      display: table; }
+      .comments_area .comments_block .user_comment .comment_rewiev {
+        margin-bottom: 8px;
+        margin-top: 3px; }
+        .comments_area .comments_block .user_comment .comment_rewiev ul .average_point {
+          color: #4e77af;
+          font-family: "Fira-Bold";
+          font-size: 16px;
+          margin-right: 5px;
+          vertical-align: text-top; }
+        .comments_area .comments_block .user_comment .comment_rewiev ul li {
+          display: inline-block; }
+          .comments_area .comments_block .user_comment .comment_rewiev ul li i {
+            font-size: 16px;
+            color: #ff7800; }
+      .comments_area .comments_block .user_comment .comment {
+        color: #7e8d9d;
+        font-size: 14px;
+        line-height: 18px; }
+      .comments_area .comments_block .user_comment .write_comment {
+        margin-top: 5px; }
+        .comments_area .comments_block .user_comment .write_comment a {
+          color: #4e77af;
+          font-size: 14px;
+          text-decoration: none; }
+          .comments_area .comments_block .user_comment .write_comment a::after {
+            margin-left: 3px;
+            vertical-align: text-top;
+            font-size: 16px;
+            font-family: 'Material Icons';
+            content: "arrow_forward";
+            -webkit-font-feature-settings: 'liga'; }
+          .comments_area .comments_block .user_comment .write_comment a:hover {
+            transition: all 0.3s ease-in-out;
+            color: #3e90ff; }
+
+.message_page {
+  margin-bottom: 50px; }
+  .message_page .user_info h1 {
+    margin-top: 25px;
+    margin-left: 25px;
+    display: inline-block;
+    float: left;
+    color: #4c4c4c;
+    font-size: 18px;
+    font-family: "Fira-bold"; }
+  .message_page .user_info .profile_information_photo {
+    float: left;
+    width: 70px;
+    height: 70px;
+    box-shadow: none;
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5; }
+  .message_page .settings_bar {
+    float: right; }
+
+.messages_area .chat_members .active_tab_chat {
+  color: #4e77af !important;
+  font-family: "Fira-bold";
+  font-size: 16px; }
+.messages_area .chat_members .notfication_chat {
+  background-color: #f9f9f9; }
+.messages_area .chat_members .chat_notfication_badge {
+  width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  background-color: #ff7700;
+  text-align: center;
+  color: #ffffff;
+  font-size: 10px;
+  line-height: 18px; }
+.messages_area .chat_members .title {
+  color: #808080;
+  font-size: 18px;
+  font-family: "Fira-bold";
+  padding: 15px 0;
+  margin-bottom: 15px; }
+.messages_area .chat_members ul {
+  border-top: 1px solid #e5e5e5; }
+  .messages_area .chat_members ul li {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px;
+    position: relative; }
+    .messages_area .chat_members ul li:last-child {
+      border: 0; }
+    .messages_area .chat_members ul li a {
+      text-decoration: none;
+      display: flex; }
+      .messages_area .chat_members ul li a .user_image {
+        margin-right: 15px;
+        float: left;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: #ffffff;
+        border: 1px solid #e5e5e5; }
+      .messages_area .chat_members ul li a .name {
+        margin-top: 12px;
+        color: #808080;
+        font-size: 16px;
+        display: table; }
+
+.chat_box .chat_message_write {
+  margin-top: 30px; }
+  .chat_box .chat_message_write textarea {
+    font-size: 14px;
+    font-family: "Fira-Regular";
+    resize: none;
+    height: auto;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc; }
+    .chat_box .chat_message_write textarea:focus {
+      outline: 0 !important; }
+  .chat_box .chat_message_write button {
+    margin-top: 15px;
+    padding: 15px 45px;
+    font-size: 14px;
+    font-family: "Fira-Bold";
+    border-radius: 3px;
+    background-color: #4d77af;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    border: 0; }
+    .chat_box .chat_message_write button:hover {
+      box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+      background: #5c8bca; }
+  .chat_box .chat_message_write i {
+    font-size: 24px;
+    margin-left: 12px;
+    vertical-align: -7px; }
+.chat_box .active_user_tab .active_user_tab_head {
+  border-bottom: 1px solid #e5e5e5; }
+  .chat_box .active_user_tab .active_user_tab_head .active_user_tab_photo {
+    float: left; }
+    .chat_box .active_user_tab .active_user_tab_head .active_user_tab_photo .photo {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      background-color: #ffffff;
+      border: 1px solid #e5e5e5;
+      float: left;
+      margin-right: 15px; }
+    .chat_box .active_user_tab .active_user_tab_head .active_user_tab_photo .name {
+      padding: 10px 0px 0 0;
+      margin-bottom: 8px;
+      display: table; }
+      .chat_box .active_user_tab .active_user_tab_head .active_user_tab_photo .name a {
+        text-decoration: none; }
+      .chat_box .active_user_tab .active_user_tab_head .active_user_tab_photo .name h1 {
+        color: #4c4c4c;
+        font-family: "Fira-bold";
+        font-size: 16px; }
+  .chat_box .active_user_tab .active_user_tab_head .user_tab_settings {
+    position: relative;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    float: right;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: #f9f9f9; }
+    .chat_box .active_user_tab .active_user_tab_head .user_tab_settings i {
+      font-size: 24px;
+      line-height: 32px;
+      color: #808080; }
+    .chat_box .active_user_tab .active_user_tab_head .user_tab_settings:hover {
+      box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out; }
+      .chat_box .active_user_tab .active_user_tab_head .user_tab_settings:hover i {
+        color: #5c8bca;
+        transition: all 0.3s ease-in-out; }
+    .chat_box .active_user_tab .active_user_tab_head .user_tab_settings .settings_submenu {
+      display: none;
+      z-index: 2;
+      text-align: left;
+      width: 200px;
+      right: 0;
+      position: absolute;
+      top: 40px;
+      padding: 30px;
+      border-radius: 3px;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+      background-color: #ffffff; }
+      .chat_box .active_user_tab .active_user_tab_head .user_tab_settings .settings_submenu a {
+        color: #4d4d4d;
+        font-size: 14px;
+        text-decoration: none;
+        line-height: 36px; }
+.chat_box .chat_box_inner {
+  max-height: 600px;
+  overflow: hidden;
+  border-bottom: 1px solid #e5e5e5; }
+  .chat_box .chat_box_inner .opposite_side {
+    text-align: left; }
+    .chat_box .chat_box_inner .opposite_side .opposite_side_text {
+      margin-bottom: 20px;
+      position: relative;
+      background-color: #f4f4f4;
+      color: #7e8d9d;
+      font-size: 14px;
+      line-height: 22px;
+      max-width: 520px;
+      padding: 30px;
+      display: inline-block;
+      word-wrap: break-word;
+      border-radius: 10px;
+      border-bottom-left-radius: 0; }
+      .chat_box .chat_box_inner .opposite_side .opposite_side_text::before {
+        content: url("../img/chat1.png");
+        position: absolute;
+        bottom: -17px;
+        left: -1px; }
+      .chat_box .chat_box_inner .opposite_side .opposite_side_text .date {
+        font-size: 12px;
+        color: #7e8d9d;
+        margin-top: 10px;
+        opacity: .5; }
+  .chat_box .chat_box_inner .user_side {
+    text-align: right; }
+    .chat_box .chat_box_inner .user_side .user_side_text {
+      margin-bottom: 20px;
+      position: relative;
+      background-color: #4d77af;
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 22px;
+      max-width: 520px;
+      padding: 30px;
+      display: inline-block;
+      word-wrap: break-word;
+      border-radius: 10px;
+      border-bottom-right-radius: 0; }
+      .chat_box .chat_box_inner .user_side .user_side_text::after {
+        content: url("../img/chat2.png");
+        position: absolute;
+        bottom: -17px;
+        right: -1px; }
+      .chat_box .chat_box_inner .user_side .user_side_text .date {
+        font-size: 12px;
+        color: #ffffff;
+        margin-top: 10px;
+        opacity: .5; }
+
+.more_b {
+  margin-top: 30px; }
+  .more_b a {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 26px;
+    color: #b3b3b3;
+    font-family: "Fira-Regular"; }
+    .more_b a i {
+      vertical-align: -2px;
+      font-size: 18px;
+      line-height: 26px;
+      color: #b3b3b3; }
+
+.faq {
+  margin-top: 60px; }
+  .faq .title-faq {
+    margin-bottom: 35px; }
+    .faq .title-faq h1 {
+      color: #4c4c4c;
+      font-size: 30px;
+      font-family: "Fira-Bold"; }
+  .faq .panel {
+    border-bottom: 1px solid #e5e5e5;
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+    margin: 0;
+    box-shadow: none;
+    margin: 0 !important;
+    border-radius: 0 !important; }
+    .faq .panel .panel-heading {
+      background: #ffffff;
+      padding: 14px 0; }
+      .faq .panel .panel-heading a::before {
+        font-family: 'Fontawesome';
+        content: "\f107";
+        float: right;
+        transition: all 0.5s;
+        color: #999999;
+        line-height: 22px; }
+    .faq .panel .active a::before {
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      transform: rotate(180deg);
+      color: #4e77af !important; }
+    .faq .panel .panel-body {
+      border: 0 !important;
+      padding: 15px 30px;
+      font-size: 16px;
+      line-height: 22px;
+      color: #808080; }
+  .faq .panel-title a {
+    text-decoration: none; }
+    .faq .panel-title a .title-collaps .collapse-number {
+      float: left;
+      color: #4e77af;
+      font-size: 16px;
+      line-height: 22px; }
+    .faq .panel-title a .title-collaps dd {
+      padding-left: 30px;
+      color: #4e77af;
+      font-size: 16px;
+      line-height: 22px; }
+
+.information_company .add {
+  margin-bottom: 50px;
+  display: inline-block; }
+  .information_company .add a {
+    text-align: center;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    color: #4e77af; }
+    .information_company .add a:hover {
+      box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+      color: #5c8bca; }
+    .information_company .add a i {
+      line-height: 40px; }
+.information_company .company_tour_page .item_result {
+  position: relative;
+  padding: 20px 0 20px 0;
+  border-bottom: 1px solid #e5e5e5; }
+  .information_company .company_tour_page .item_result img {
+    width: 100%;
+    border-radius: 3px; }
+  .information_company .company_tour_page .item_result .block_edit {
+    z-index: 2;
+    position: absolute;
+    right: 0; }
+    .information_company .company_tour_page .item_result .block_edit a {
+      text-decoration: none;
+      display: inline-block; }
+      .information_company .company_tour_page .item_result .block_edit a i {
+        font-size: 20px;
+        color: #4e77af; }
+  .information_company .company_tour_page .item_result .h_name {
+    z-index: -1;
+  margin-bottom: 5px; }
+    .information_company .company_tour_page .item_result .h_name h2 {
+      font-size: 22px;
+      line-height: 26px;
+      color: #4e77af;
+      font-family: "Fira-Bold"; }
+  .information_company .company_tour_page .item_result .title_name p {
+    font-size: 18px;
+    line-height: 26px;
+    color: #808080; }
+  .information_company .company_tour_page .item_result .event_adress p {
+    font-size: 14px;
+    line-height: 26px;
+    color: gray; }
+    .information_company .company_tour_page .item_result .event_adress p i {
+      font-size: 20px;
+      line-height: 26px;
+      color: gray;
+      vertical-align: -2px; }
+  .information_company .company_tour_page .item_result .reyting p {
+    font-size: 18px;
+    line-height: 26px;
+    color: gray;
+    font-family: "Fira-Regular"; }
+  .information_company .company_tour_page .item_result .reyting i {
+    font-size: 24px;
+    line-height: 26px;
+    color: #b2b2b2; }
+  .information_company .company_tour_page .item_result .price {
+    position: relative; }
+    .information_company .company_tour_page .item_result .price p {
+      font-size: 24px;
+      line-height: 26px;
+      color: #ff7800;
+      font-family: "Fira-Bold"; }
+    .information_company .company_tour_page .item_result .price .svg_manat {
+      width: 12px;
+      position: absolute;
+      top: 0;
+      left: 106px; }
+      .information_company .company_tour_page .item_result .price .svg_manat svg {
+        fill: #ff7800; }
+  .information_company .company_tour_page .item_result .etrafli {
+    margin-top: 50px;
+    width: 100%;
+    text-align: center; }
+    .information_company .company_tour_page .item_result .etrafli a {
+      text-decoration: none;
+      padding: 12px 100px;
+      font-size: 14px;
+      color: white;
+      font-family: "Fira-Bold";
+      border-radius: 3px;
+      display: block;
+      background-color: #ff7800;
+      transition: all 0.3s ease-in-out; }
+      .information_company .company_tour_page .item_result .etrafli a:hover {
+        box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+        background:  #ff983d;
+        transition: all 0.3s ease-in-out;
+         }
+  .information_company .company_tour_page .item_result .etrafli_event {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center; }
+    .information_company .company_tour_page .item_result .etrafli_event a {
+      text-decoration: none;
+      padding: 12px 100px;
+      font-size: 14px;
+      color: white;
+      font-family: "Fira-Bold";
+      border-radius: 3px;
+      display: block;
+      background-color: #ff7800;
+      transition: all 0.3s ease-in-out; }
+
+      .information_company .company_tour_page .item_result .etrafli_event a:hover{
+        box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+        background:  #ff983d;
+        transition: all 0.3s ease-in-out;
+      }
+  .information_company .company_tour_page .item_result .right_ul ul li {
+    margin-bottom: 8px; }
+    .information_company .company_tour_page .item_result .right_ul ul li i {
+      font-size: 20px;
+      color: #4e77af;
+      vertical-align: middle; }
+    .information_company .company_tour_page .item_result .right_ul ul li span {
+      margin-left: 8px;
+      font-size: 12px;
+      color: gray;
+      font-family: "Fira-Regular"; }
+  .information_company .company_tour_page .item_result .right_ul ul .str_li {
+    margin-bottom: 10px; }
+    .information_company .company_tour_page .item_result .right_ul ul .str_li i {
+      font-size: 24px;
+      color: #b2b2b2;
+      vertical-align: middle;
+    margin-right: -4px; }
+    .information_company .company_tour_page .item_result .right_ul ul .str_li span {
+      font-size: 14px;
+      color: gray;
+      font-family: "Fira-Regular"; }
+.information_company .save_button {
+  padding-top: 30px;
+  border-top: 1px solid #e5e5e5e5; }
+  .information_company .save_button button {
+    font-size: 14px;
+    font-family: "Fira-Bold";
+    border-radius: 3px;
+    background-color: #4d77af;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    padding: 8px 45px;
+    border: 0; }
+    .information_company .save_button button:hover {
+      box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+      background: #5c8bca; }
+  .information_company .save_button i {
+    font-size: 24px;
+    vertical-align: -7px; }
+.information_company .list_title {
+  color: #4c4c4c;
+  font-size: 18px;
+  margin-top: 30px;
+  line-height: 26px; }
+.information_company .edit-list .input-field {
+  margin-top: 8px;
+  margin-bottom: 0px; }
+.information_company .description_text .custom_text {
+  display: block !important; }
+.information_company .list_inner {
+  padding: 30px 0;
+  border-bottom: 1px solid #e5e5e5; }
+  .tariff_custom .input-field input {
+    border-bottom: 2px solid #e5e5e5;
+  }
+
+  .tariff_custom .input-field .select-dropdown {
+    border-bottom: 2px solid #e5e5e5 !important;
+  }
+
+
+  .list_inner .tariff_block .price_transport {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px; }
+    .list_inner .tariff_block .price_transport p {
+      font-size: 24px;
+      color: #ff7800;
+      font-family: "Fira-Bold"; }
+      .list_inner .tariff_block .price_transport .svg_manat {
+      width: 12px;
+      position: absolute;
+      top: 0;
+      left: 106px; }
+      .list_inner .tariff_block .price_transport .svg_manat svg {
+        fill: #ff7800; }
+
+  .information_company .list_inner .booking_link {
+    color: #166de3;
+    text-decoration: none; }
+    .information_company .services_inner .custom_services {
+      margin-bottom: 30px;
+      position: relative; }
+
+      .information_company .services_inner .custom_services .cancel {
+        position: absolute;
+        right: 0;
+        top: 20px;
+        color: #4d77af; }
+
+        .information_company .services_inner .custom_services .cancel i {
+          font-size: 20px;}
+    .information_company .list_inner .custom_services .table_list input {
+      border: 0;
+      height: auto; }
+    .information_company .list_inner .custom_services .table_list tr {
+      position: relative;
+      border: 1px solid #cccccc;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px; }
+    .information_company .list_inner .custom_services .table_list th {
+      width: 50%;
+      padding: 15px;
+      border-right: 1px solid #cccccc;
+      color: #4c4c4c;
+      font-size: 16px; }
+    .information_company .list_inner .custom_services .table_list td {
+      width: 50%;
+      padding: 15px;
+      color: #4c4c4c;
+      font-size: 16px; }
+    .information_company .list_inner .custom_services .input-field {
+      margin-top: 0; }
+  .information_company .list_inner .standart_services {
+    margin-top: 20px; }
+    .information_company .list_inner .standart_services .image_category {
+      display: inline-block;
+      margin-bottom: 15px; }
+      .information_company .list_inner .standart_services .image_category img {
+        float: left; }
+      .information_company .list_inner .standart_services .image_category h4 {
+        float: left;
+        line-height: 22px;
+        font-size: 14px;
+        color: #4c4c4c;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-family: "Fira-Bold"; }
+    .information_company .list_inner .standart_services .table_list tr {
+      background-color: #f9f9f9;
+      border: 1px solid #cccccc;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px; }
+    .information_company .list_inner .standart_services .table_list th {
+      width: 50%;
+      padding: 15px;
+      border-right: 1px solid #cccccc;
+      color: #4c4c4c;
+      font-size: 16px; }
+    .information_company .list_inner .standart_services .table_list td {
+      width: 50%;
+      padding: 15px;
+      color: #4c4c4c;
+      font-size: 16px; }
+@media screen and (max-width:991px){
+  .information_company .list_inner .add_row a {
+
+  margin-right: 0px !important;
+  }
+}
+      .information_company .list_inner .add_row a {
+       display: block;
+      text-align: center;
+      color:#808080;
+      background: #f9f9f9;
+      font-size: 12px;
+      padding: 8px 0px;
+      text-decoration: none;
+     border: 1px solid #cccccc; 
+     margin-right: 1px;
+     border-top:0;}
+
+     .information_company .list_inner .add_row a::before {
+      font-size: 16px;
+      font-family: 'Material Icons';
+      vertical-align: text-bottom;
+      content: "add";
+      margin-right: 3px;
+      -webkit-font-feature-settings: 'liga';}
+  .information_company .list_inner .poster_box {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -webkit-flex-flow: row wrap; }
+    .information_company .list_inner .poster_box .poster {
+      width: 150px; }
+      .information_company .list_inner .poster_box .poster .poster_image {
+        width: 150px;
+        height: 215px;
+        border-radius: 5px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 15px;
+       }
+
+
+
+      .information_company .list_inner .poster_box .poster .poster_name {
+        font-size: 14px;
+        line-height: 20px;
+        color: #4e77af;
+        font-family: "Fira-Bold"; }
+      .information_company .list_inner .poster_box .poster .film_year {
+        font-size: 14px;
+        line-height: 30px;
+        color: #808080; }
+    .information_company .list_inner .poster_box .poster_custom {
+      width: 150px; }
+      .information_company .list_inner .poster_box .poster_custom .poster_image {
+        position: relative;
+        width: 150px;
+        height: 215px;
+        border-radius: 5px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 15px; }
+        .information_company .list_inner .poster_box .poster_custom .poster_image ul {
+          width: 100%;
+          background: #000000;
+          text-align: center;
+          opacity: .5;
+          padding: 5px 0px;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+          position: absolute;
+          bottom: 0; }
+          .information_company .list_inner .poster_box .poster_custom .poster_image ul li {
+            display: inline-block; }
+            .information_company .list_inner .poster_box .poster_custom .poster_image ul li a {
+              color: white !important;
+              line-height: inherit;
+              margin: 0 5px; }
+              .information_company .list_inner .poster_box .poster_custom .poster_image ul li a i {
+                margin: 0;
+                font-size: 20px;
+                line-height: inherit; }
+      .information_company .list_inner .poster_box .poster_custom .poster_edit input {
+        border-bottom: 2px solid #e5e5e5;
+        height: 35px; }
+      .information_company .list_inner .poster_box .poster_custom .poster_edit_tab {
+        margin-top: 15px; }
+        .information_company .list_inner .poster_box .poster_custom .poster_edit_tab a {
+          text-decoration: none;
+          color: #4e77af;
+          display: inline-block;
+          font-size: 14px; }
+          .information_company .list_inner .poster_box .poster_custom .poster_edit_tab a i {
+            font-size: 20px; }
+        .information_company .list_inner .poster_box .poster_custom .poster_edit_tab .save {
+          float: left;
+          font-family: "Fira-bold"; }
+          .information_company .list_inner .poster_box .poster_custom .poster_edit_tab .save i {
+            vertical-align: -5px; }
+        .information_company .list_inner .poster_box .poster_custom .poster_edit_tab .cancel {
+          float: right; }
+  .information_company .list_inner .add {
+    text-align: center;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    color: #4e77af;
+    margin-bottom: 0;
+    vertical-align: -10px;
+    margin-right: 25px; }
+    .information_company .list_inner .add:hover {
+      box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+      color: #5c8bca; }
+    .information_company .list_inner .add i {
+      line-height: 40px; }
+  .information_company .list_inner .map_adress {
+    margin-top: 30px; }
+    .information_company .list_inner .map_adress p {
+      color: #808080;
+      font-size: 16px;
+      margin-bottom: 15px; }
+    .information_company .list_inner .map_adress img {
+      border-radius: 5px; }
+  .information_company .list_inner .check_ticket span  {
+
+    height: auto;
+    margin: 0; }
+  .information_company .list_inner .check_ticket .ig-control__cbx ~ label {
+    margin-top: 2px; }
+  .information_company .list_inner .add_services .add {
+    text-align: center;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    color: #4e77af;
+    margin-bottom: 0;
+    vertical-align: -10px;
+    margin-right: 25px; }
+    .information_company .list_inner .add_services .add:hover {
+      box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+      color: #5c8bca; }
+    .information_company .list_inner .add_services .add i {
+      line-height: 40px; }
+  .information_company .list_inner .add_services .active_icon {
+    color: #808080; }
+  .information_company .list_inner .add_services .select_icon {
+    line-height: 18px;
+    padding: 10px 0;
+    position: relative;
+    cursor: pointer;
+    border-bottom: 1px solid #e5e5e5; }
+    .information_company .list_inner .add_services .select_icon::after {
+      content: "\f0d7";
+      font-family: "Fontawesome";
+      position: absolute;
+      right: 0;
+      top: 15px;
+      color: #808080;
+      font-size: 14px; }
+    .information_company .list_inner .add_services .select_icon .dropdown_iconbox {
+      display: none; }
+      .information_company .list_inner .add_services .select_icon .dropdown_iconbox ul {
+        width: 340px;
+        padding: 20px;
+        position: absolute;
+        top: 45px;
+        border-radius: 5px;
+        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        border: 2px solid #e5e5e5;
+        z-index: 2; }
+        .information_company .list_inner .add_services .select_icon .dropdown_iconbox ul li {
+          display: inline-block;
+          padding-right: 5px;
+          padding-bottom: 5px; }
+          .information_company .list_inner .add_services .select_icon .dropdown_iconbox ul li a {
+            display: inline-block;
+            line-height: inherit;
+            color: #808080; }
+          .information_company .list_inner .add_services .select_icon .dropdown_iconbox ul li i {
+            color: #808080;
+            line-height: inherit;
+            font-size: 24px;
+            margin-right: 0;
+            vertical-align: inherit; }
+  .information_company .list_inner .add_services .input-field {
+    margin-top: 0px; }
+    .information_company .list_inner .add_services .input-field label {
+      z-index: -1;
+    }
+  .information_company .list_inner .icons ul {
+    display: flex;
+    flex-wrap: wrap; }
+    .information_company .list_inner .icons ul li {
+      margin-right: 40px;
+      display: flex;
+      width: 90px; }
+      .information_company .list_inner .icons ul li .icon i {
+        font-size: 48px;
+        color: #4d77af; }
+      .information_company .list_inner .icons ul li .title {
+        margin-left: 10px;
+        margin-top: 5px;
+        width: 60px;
+        font-size: 12px;
+        line-height: 18px;
+        color: #808080; }
+  .information_company .list_inner .photo_box .photo {
+    position: relative;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    display: inline-block;
+    width: 170px;
+    height: 170px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px; }
+
+    @media screen and (max-width:767px){
+      .list_inner .photo_box{
+        text-align: center;
+      }
+    }
+    .information_company .list_inner .photo_box .photo ul {
+      width: 100%;
+      background: #000000;
+      text-align: center;
+      opacity: .5;
+      padding: 5px 0px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      position: absolute;
+      bottom: 0; }
+      .information_company .list_inner .photo_box .photo ul li {
+        display: inline-block; }
+        .information_company .list_inner .photo_box .photo ul li a {
+          color: white !important;
+          line-height: inherit;
+          margin: 0 5px; }
+          .information_company .list_inner .photo_box .photo ul li a i {
+            margin: 0;
+            font-size: 20px;
+            line-height: inherit; }
+  .information_company .list_inner .upload_img {
+    width: 100%;
+    height: 180px;
+    border-radius: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; }
+    .information_company .list_inner .upload_img ul {
+      width: 100%;
+      background: #000000;
+      text-align: center;
+      opacity: .5;
+      padding: 5px 0px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      position: absolute;
+      bottom: 0; }
+      .information_company .list_inner .upload_img ul li {
+        display: inline-block; }
+        .information_company .list_inner .upload_img ul li a {
+          color: white !important;
+          line-height: inherit;
+          margin: 0 5px; }
+          .information_company .list_inner .upload_img ul li a i {
+            margin: 0;
+            font-size: 20px;
+            line-height: inherit;
+          color:white; }
+  .information_company .list_inner .edit_contact p {
+    margin-top: 15px; }
+    .information_company .list_inner .edit_contact .route_blocks label {
+      z-index: -1;
+      }
+      .information_company .list_inner .edit_contact .route_blocks .social_link {
+        position: relative;
+        }
+        .information_company .list_inner .edit_contact .route_blocks .social_link .list-delete {
+          position: absolute;
+          top: 15px;
+          right: -20px;
+          }
+
+          @media screen and (max-width:991px){
+            .information_company .list_inner .edit_contact .route_blocks .social_link .list-delete {
+             
+              right: 0px;
+              }
+          }
+
+          .information_company .list_inner .edit_contact .route_blocks .input-field {
+      margin-top: 0;
+            }
+
+          .information_company .list_inner .edit_contact .route_blocks .social_link .list-delete a {
+            color: #4e77af;
+            }
+            .information_company .list_inner .edit_contact .route_blocks .social_link .list-delete i {
+              font-size: 20px;
+              }
+  .information_company .list_inner .edit_contact .update {
+    margin-top: 35px; }
+    .information_company .list_inner .edit_contact .update .add {
+      text-align: center;
+      text-decoration: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      background-color: #f2f2f2;
+      display: inline-block;
+      transition: all 0.3s ease-in-out;
+      color: #4e77af;
+      margin-bottom: 0;
+      vertical-align: -10px;
+      margin-right: 25px; }
+      .information_company .list_inner .edit_contact .update .add:hover {
+        box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+        color: #5c8bca; }
+      .information_company .list_inner .edit_contact .update .add i {
+        line-height: 40px; }
+  .information_company .list_inner .edit_contact .social_blocks {
+    position: relative;
+    display: inline-block; }
+    .information_company .list_inner .edit_contact .social_blocks .social_link {
+      margin-bottom: 30px; }
+    .information_company .list_inner .edit_contact .social_blocks .input-field {
+      margin-bottom: -25px; }
+    .information_company .list_inner .edit_contact .social_blocks .list-delete {
+      position: absolute;
+      top: 42px;
+      right: -10px; }
+      .information_company .list_inner .edit_contact .social_blocks .list-delete i {
+        color: #4d77af;
+        font-size: 20px; }
+      .information_company .list_inner .edit_contact .social_blocks .list-delete a {
+        display: inline-block; }
+  .information_company .list_inner .select-wrapper input.select-dropdown {
+    border-bottom: 1px solid #e5e5e5; }
+ 
+    .information_company .list_inner .custom-box-link p {
+      margin-top: 15px; }
+    .information_company .list_inner .custom-box-link .update {
+      margin-top: 35px; }
+      .information_company .list_inner .custom-box-link .update .add {
+        text-align: center;
+        text-decoration: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: #f2f2f2;
+        display: inline-block;
+        transition: all 0.3s ease-in-out;
+        color: #4e77af;
+        margin-bottom: 0;
+        vertical-align: -10px;
+        margin-right: 25px; }
+        .information_company .list_inner .custom-box-link .update .add:hover {
+          box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease-in-out;
+          color: #5c8bca; }
+        .information_company .list_inner .custom-box-link .update .add i {
+          line-height: 40px; }
+    .information_company .list_inner .custom-box-link .social_blocks {
+      position: relative;
+      display: inline-block; }
+
+ 
+      .information_company .list_inner .custom-box-link .social_blocks .input-field {
+        margin-bottom: -25px; }
+      .information_company .list_inner .custom-box-link .social_blocks .list-delete {
+        position: absolute;
+        top: 30px;
+        right: -10px; }
+        .information_company .list_inner .custom-box-link .social_blocks .list-delete i {
+          color: #4d77af;
+          font-size: 20px; }
+        .information_company .list_inner .custom-box-link .social_blocks .list-delete a {
+          display: inline-block; }
+  .information_company .list_inner p {
+    color: #808080;
+    font-size: 14px; }
+  .information_company .list_inner ul li a {
+    color: #166de3 !important;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 58px; }
+    .information_company .list_inner ul li a i {
+      font-size: 18px;
+      vertical-align: top;
+      margin-right: 5px;
+      line-height: 58px;
+      color: #808080; }
+  .information_company .list_inner .box p {
+    margin-bottom: 15px; }
+  .information_company .list_inner .text-box .rent_house {
+    margin-bottom: 30px; }
+    .information_company .list_inner .text-box .rent_house p {
+      color: #4c4c4c;
+      font-family: "Fira-Bold";
+      font-size: 16px;
+      margin-bottom: 10px; }
+    .information_company .list_inner .text-box .rent_house span {
+      color: #808080;
+      font-size: 16px; }
+  .information_company .list_inner .text-box .stars_for_otel {
+    margin-bottom: 20px; }
+    .information_company .list_inner .text-box .stars_for_otel .active_star i {
+      color: #ff7700 !important; }
+    .information_company .list_inner .text-box .stars_for_otel li {
+      display: inline-block;
+      margin-right: -5px; }
+      .information_company .list_inner .text-box .stars_for_otel li i {
+        color: #e5e5e5; }
+  .information_company .list_inner .text-box .tag {
+    margin-top: 30px; }
+    .information_company .list_inner .text-box .tag .still {
+      color: #4c4c4c;
+      font-family: "Fira-Bold";
+      font-size: 16px;
+      margin-bottom: 10px; }
+    .information_company .list_inner .text-box .tag .tags {
+      font-size: 16px; }
+
+    .information_company .list_inner .text-box .custom_text .otel_stars {
+      list-style: none;
+      position: relative;
+      margin-bottom: 25px; 
+    display: inline-block;}
+      .information_company .list_inner .text-box .custom_text .otel_stars a i {
+        color: #ff7700;
+        font-size: 24px;
+        line-height: inherit; }
+      .information_company .list_inner .text-box .custom_text .otel_stars .hot_star {
+        cursor: pointer; }
+        .information_company .list_inner .text-box .custom_text .otel_stars .hot_star i {
+          color: #ff7700; }
+      .information_company .list_inner .text-box .custom_text .otel_stars .otel_star_ul {
+        min-width: 251px;
+        z-index: 9;
+        left: 0px;
+        top: 40px;
+        display: none;
+        position: absolute;
+        padding: 24px 10px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        border: 1px solid #e5e5e5; }
+        .information_company .list_inner .text-box .custom_text .otel_stars .otel_star_ul li a {
+          line-height: 35px; }
+      .information_company .list_inner .text-box .custom_text .otel_stars .top {
+        border: 1px solid #e5e5e5;
+        border-right: 0;
+        border-bottom: 0;
+        width: 20px;
+        height: 20px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        background-color: #f9f9f9;
+        position: absolute;
+        top: -10px;
+        right: 46%; }
+  .information_company .list_inner .text-box p {
+    color: #808080;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: justify; }
+  .information_company .list_inner .text-box textarea {
+    padding: 0;
+    font-family: "Fira-Regular";
+    min-height: 8rem;
+    color: #808080;
+    line-height: 22px;
+    text-align: justify;
+    overflow-y: inherit; }
+  .information_company .list_inner dl p {
+    margin-bottom: 15px; }
+    .information_company .list_inner dl  {
+      margin-top: 25px; }
+  .information_company .list_inner dl dt {
+    float: left;
+    color: #808080;
+    font-size: 16px;
+    line-height: 45px; }
+    .information_company .list_inner dl dt i {
+      font-size: 21px;
+      margin-right: 5px;
+      vertical-align: -2px; }
+    .information_company .list_inner dl dt .facebook {
+      color: #3b5997; }
+    .information_company .list_inner dl dt .instagram {
+      color: #bb298d; }
+    .information_company .list_inner dl dt .linkedin {
+      color: #007bb5; }
+  .information_company .list_inner dl dd {
+    padding-left: 120px;
+    line-height: 45px; }
+    .information_company .list_inner dl dd a {
+      color: #166de3 !important;
+      text-decoration: none;
+      font-size: 16px; }
+  .information_company .list_inner .update {
+    margin-top: 15px; }
+    .information_company .list_inner .update .cancel {
+      margin-left: 15px; }
+    .information_company .list_inner .update a {
+      display: inline-block;
+      color: #4e77af;
+      text-decoration: none; }
+    .information_company .list_inner .update i {
+      font-size: 20px;
+      vertical-align: text-bottom; }
+    .information_company .list_inner .update .save_tab::after {
+      font-size: 20px;
+      font-family: 'Material Icons';
+      vertical-align: text-bottom;
+      content: "done";
+      margin-right: 3px;
+      -webkit-font-feature-settings: 'liga'; }
+  .information_company .list_inner .edit_box {
+    min-height: 230px; }
+.custom_box  .text .cancel  {
+margin: 0px 0 40px 0;
+}
+
+@media screen and (max-width:767px){
+  .custom_box  .text .cancel i  {
+    font-size: 40px;
+    }
+}
+    .information_company .list_inner .edit_box .standart_box,
+    .information_company .list_inner .edit_box .custom_box {
+      padding: 0 15px; }
+      .information_company .list_inner .edit_box .standart_box .photo,
+      .information_company .list_inner .edit_box .custom_box .photo {
+        position: relative;
+        width: 70px;
+        height: 70px;
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: -15px; }
+
+        @media screen and (max-width:767px){
+          .information_company .list_inner .edit_box .standart_box .photo, .information_company .list_inner .edit_box .custom_box .photo{
+            margin: 0 auto;
+            margin-bottom: 20px;
+          }
+          .information_company .list_inner .edit_box .standart_box, .information_company .list_inner .edit_box .custom_box{
+            margin-bottom: 30px;
+          }
+          .save_button{
+            text-align: center;
+          }
+
+          .information_company .list_inner .update{
+            text-align: center;
+          }
+
+          .information_company .list_inner .update .add{
+            margin-right: 0;
+          }
+        }
+        .information_company .list_inner .edit_box .standart_box .photo .file_upload,
+        .information_company .list_inner .edit_box .custom_box .photo .file_upload {
+          background: #000000;
+          display: inline-block;
+          text-align: center;
+          padding: 4px 0px;
+          opacity: .5;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+          position: absolute;
+          width: 100%;
+          bottom: 0; }
+          .information_company .list_inner .edit_box .standart_box .photo .file_upload a,
+          .information_company .list_inner .edit_box .custom_box .photo .file_upload a {
+            text-decoration: none;
+            margin: 0px 5px;
+            display: inline-block; }
+          .information_company .list_inner .edit_box .standart_box .photo .file_upload i,
+          .information_company .list_inner .edit_box .custom_box .photo .file_upload i {
+            font-size: 20px;
+            color: white; }
+      .information_company .list_inner .edit_box .standart_box .text textarea,
+      .information_company .list_inner .edit_box .custom_box .text textarea {
+        padding: 0;
+        height: auto;
+        font-size: 14px;
+        font-family: "Fira-Regular";
+        color: #808080;
+        line-height: 20px;
+        resize: none;
+        border-right: 0;
+        border-left: 0;
+      
+        border-bottom: 2px solid #e5e5e5; }
+
+        .information_company .list_inner .edit_box .custom_box .text textarea {
+          border-top:0;
+        }
+ 
+        .information_company .list_inner .edit_box .standart_box .text textarea:focus,
+        .information_company .list_inner .edit_box .custom_box .text textarea:focus {
+          outline: 0; }
+      .information_company .list_inner .edit_box .standart_box h1,
+      .information_company .list_inner .edit_box .custom_box input {
+        color: #4c4c4c;
+        font-size: 14px;
+        line-height: 22px;
+        font-family: "Fira-Bold";
+        margin-top: 7px; }
+
+        .information_company .list_inner .edit_box .custom_box input{
+          margin-bottom: 15px;
+          border-bottom:2px solid #e5e5e5;
+        }
+      .information_company .list_inner .edit_box .standart_box p,
+      .information_company .list_inner .edit_box .custom_box p {
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 20px;
+        color: #808080; }
+      .information_company .list_inner .edit_box .standart_box .upload a,
+      .information_company .list_inner .edit_box .custom_box .upload a {
+        text-decoration: none;
+        font-size: 20px; }
+
+.tours_plan .background {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 69px);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+.tours_plan .left_side {
+  margin-top: 100px; }
+  .tours_plan .left_side .text_box h1 {
+    color: #ffffff;
+    font-size: 48px;
+    font-family: "Fira-Bold";
+    margin-bottom: 35px; }
+  .tours_plan .left_side .text_box p {
+    color: #ffffff;
+    font-family: "Fira-Bold";
+    font-size: 24px;
+    line-height: 36px; }
+.tours_plan .right_side {
+  margin-top: 70px; }
+  .tours_plan .right_side .tour_region_select_box {
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff; }
+    .tours_plan .right_side .tour_region_select_box .save_button button {
+      position: relative;
+      font-size: 14px;
+      font-family: "Fira-Bold";
+      border-radius: 3px;
+      background-color: #4d77af;
+      color: white;
+      transition: all 0.3s ease-in-out;
+      height: 40px;
+      line-height: 40px;
+      border: 0;
+      width: 100%; }
+      .tours_plan .right_side .tour_region_select_box .save_button button i {
+        position: absolute;
+        left: 3%;
+        top: 8px; }
+      .tours_plan .right_side .tour_region_select_box .save_button button:hover {
+        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+        background: #5c8bca; }
+    .tours_plan .right_side .tour_region_select_box .box_title p {
+      font-size: 14px;
+      color: #808080; }
+    .tours_plan .right_side .tour_region_select_box .add_region {
+      margin-top: 10px;
+      margin-bottom: 40px;
+      display: inline-block; }
+      .tours_plan .right_side .tour_region_select_box .add_region a {
+        text-align: center;
+        text-decoration: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: #f2f2f2;
+        display: inline-block;
+        transition: all 0.3s ease-in-out;
+        color: #4e77af; }
+        .tours_plan .right_side .tour_region_select_box .add_region a:hover {
+          box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease-in-out;
+          color: #5c8bca; }
+        .tours_plan .right_side .tour_region_select_box .add_region a i {
+          line-height: 40px; }
+    .tours_plan .right_side .tour_region_select_box .form_section {
+      height: 310px; }
+      .tours_plan .right_side .tour_region_select_box .form_section .select-dropdown {
+        border-bottom: 2px solid #e5e5e5; }
+
+.notification_popup {
+  width: 430px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  z-index: 2;
+  border-radius: 5px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1); }
+  .notification_popup .notification_title {
+    padding: 20px; }
+    .notification_popup .notification_title h1 {
+      font-size: 16px;
+      font-family: "Fira-Bold";
+      color: #4e77af; }
+      .notification_popup .notification_title h1::before {
+        font-size: 24px;
+        font-family: 'Material Icons';
+        content: "info_outline";
+        vertical-align: -6px;
+        margin-right: 5px;
+        -webkit-font-feature-settings: 'liga'; }
+  .notification_popup .notification_body {
+    border-top: 1px solid #e5e5e5; }
+    .notification_popup .notification_body p {
+      font-size: 14px;
+      line-height: 20px;
+      color: #808080;
+      padding: 30px 30px 0 30px; }
+    .notification_popup .notification_body .button_panel {
+      text-align: right;
+      padding: 30px; }
+      .notification_popup .notification_body .button_panel .cancel {
+        font-family: "Fira-Bold";
+        font-size: 14px;
+        color: #808080;
+        text-decoration: none;
+        padding: 10px 40px;
+        transition: all 0.3s ease-in-out; }
+        .notification_popup .notification_body .button_panel .cancel:hover {
+          color: #4e77af;
+          transition: all 0.3s ease-in-out; }
+      .notification_popup .notification_body .button_panel .accept {
+        color: white;
+        background-color: #4d77af;
+        padding: 10px 40px;
+        text-decoration: none;
+        border-radius: 3px;
+        font-family: "Fira-Bold";
+        font-size: 14px;
+        transition: all 0.3s ease-in-out; }
+        .notification_popup .notification_body .button_panel .accept:hover {
+          box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease-in-out;
+          background: #5c8bca; }
+
+.notification_overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: #000000;
+  top: 0;
+  bottom: 0;
+  opacity: .5; }
+
+@media screen and (max-width: 430px) {
+  .notification_popup {
+    width: 95% !important; } }
+.content_page h1 {
+  font-size: 30px;
+  font-family: "Fira-Bold";
+  margin-bottom: 30px;
+  color: #4c4c4c; }
+.content_page h2 {
+  font-size: 24px;
+  color: #808080;
+  margin-bottom: 30px; }
+.content_page h3 {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #4c4c4c; }
+.content_page p {
+  font-size: 16px;
+  color: #808080;
+  line-height: 20px;
+  margin-bottom: 10px; }
+.content_page ul {
+  padding-left: 20px; }
+  .content_page ul li {
+    font-size: 16px;
+    color: #808080;
+    line-height: 20px;
+    list-style: outside; }
+
+.non-content p {
+  font-family: "Fira-Bold";
+  font-size: 16px;
+  color: #b2b2b2;
+  background: #f5f5f5;
+  padding: 22px;
+  border-radius: 5px; }
+
+.succses_pin p {
+  font-size: 14px;
+  font-family: "Fira-Bold";
+  color: #fff;
+  background: #34b065;
+  width: 400px;
+  opacity: .9;
+  padding: 22px;
+  border-radius: 4px;
+  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.2); }
+  .succses_pin p::before {
+    font-size: 24px;
+    font-family: 'Material Icons';
+    content: "done_all";
+    vertical-align: -6px;
+    margin-right: 5px;
+    -webkit-font-feature-settings: 'liga'; }
+
+.error_pin p {
+  font-size: 14px;
+  font-family: "Fira-Bold";
+  color: #fff;
+  background: #ff9435;
+  width: 400px;
+  opacity: .9;
+  padding: 22px;
+  border-radius: 4px;
+  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.2); }
+  .error_pin p::before {
+    font-size: 24px;
+    font-family: 'Material Icons';
+    content: "error_outline";
+    vertical-align: -6px;
+    margin-right: 5px;
+    -webkit-font-feature-settings: 'liga'; }
+
+.information_pin p {
+  font-size: 14px;
+  font-family: "Fira-Bold";
+  color: #fff;
+  background: #78a0d6;
+  width: 400px;
+  opacity: .9;
+  padding: 22px;
+  border-radius: 4px;
+  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.2); }
+  .information_pin p::before {
+    font-size: 24px;
+    font-family: 'Material Icons';
+    content: "info_outline";
+    vertical-align: -6px;
+    margin-right: 5px;
+    -webkit-font-feature-settings: 'liga'; }
+
+/*# sourceMappingURL=style.css.map */
+.right_txt .edit_profile
+{
+  display: block;
+  font-size: 14px;
+  font-family: "Fira-Bold";
+  border-radius: 3px;
+  background-color: #4d77af;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  padding: 12px 0;
+  border: 0;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.right_txt .edit_profile::before
+{
+  font-size: 24px;
+  font-family: 'Material Icons';
+  content: "edit";
+  vertical-align: -6px;
+  margin-right: 12px;
+  -webkit-font-feature-settings: 'liga';
+}
+
+.hotel_detil .info_h .right_txt .edit_profile:hover{
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  background: #5c8bca;
+}
+
+@media screen and (max-width:576px){
+  .edit_tool .save{
+    float: left;
+
+  }
+
+  .edit_tool .cancel{
+    float: right;
+    margin-top: 10px;
+
+  }
+
+  .profile_page .content_area .edit_tool .pinotification{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+.m-edit{
+  margin-top:17px;
+}
+
+.social_site .facebook {
+  width: 100px;
+  display: inline-block;
+}
+.social_site .instagram {
+  width: 100px;
+  display: inline-block;
+}
+.social_site .linkedin {
+  width: 100px;
+  display: inline-block;
+}
+
+.social_site .facebook i {
+  float: left;
+  color: #3b5997;
+  font-size: 21px;
+  margin-right: 8px;
+}
+
+.social_site .facebook p {
+  float: left;
+  margin-top: 0 !important;
+  font-size: 16px;font-size: 16px;
+}
+
+
+
+.social_site .instagram i {
+  float: left;
+  color: #bb298d;
+  font-size: 21px;
+  margin-right: 8px;
+  font-size: 21px;
+}
+
+.social_site .instagram p {
+  float: left;
+  margin-top: 0 !important;
+  font-size: 16px;
+}
+
+
+
+
+.social_site .linkedin i {
+  float: left;
+  font-size: 21px;
+  color: #007bb5;
+  font-size: 21px;
+  margin-right: 8px;
+  font-size: 21px;
+
+}
+
+.social_site .linkedin p {
+  float: left;
+  margin-top: 0 !important;
+  font-size: 16px;
+}
+
+.social_blocks .social_link .input-field {
+  margin-top: 0
+}
+
+.bold_style{
+  font-family: "Fira-Bold"; 
+}
+
+.full_width{
+width:100%;
+}
+
+.cusine_box .input-field {
+  margin-top: 0;
+}
+
+
+  .cusine_box .tag .still {
+    color: #4c4c4c;
+    font-family: "Fira-Bold";
+    font-size: 16px;
+    margin-bottom: 10px; }
+  .cusine_box .tag .tags {
+    font-size: 16px; }
+
+    .dashboard_settings .input-field{
+      margin-bottom: 0;
+    }
+
+    .dz-message .upload {
+      text-decoration: none;
+      display: block;
+      width: 145px;
+      margin: 0 auto;
+      background: #4e77af;
+      border-radius: 3px;
+      font-size: 14px;
+      padding: 10px;
+      font-family: "Fira-Bold";
+      color:white;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .note{
+      font-size: 12px;
+      color: #808080;
+    }
+
+    .contact_message .active{
+      -webkit-transform: translateY(-14px) scale(0.8) !important;
+      transform: translateY(-14px) scale(0.8) !important; 
+      -webkit-transform-origin: 0 0 !important;
+      transform-origin: 0 0 !important;
+  
+    }
+
+.pad-0{
+  padding: 0 !important;
+}
+
+.route_plan .os-scrollbar-handle{
+  right: auto !important;
+  
+}
+
+.chat_box .os-scrollbar-horizontal {
+  height: 0 !important;
+}
+.error_page{
+  margin-top: 80px;
+}
+.error_page h1 {
+  color:#4e77af;
+  font-family: "Fira-Bold";
+  font-size: 72px;
+}
+
+.error_page p {
+  color:#808080;
+  font-size: 15px;
+  line-height: 21px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.error_page a {
+  font-family: "Fira-Bold";
+  font-size: 14px;
+  border-radius: 3px;
+  background-color: #ff7800;
+  text-decoration: none;
+  color:#fff;
+  display: inline-block;
+  width: 170px;
+  padding: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.error_page a:hover {
+  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+  background: #ff983d;
+  transition: all 0.3s ease-in-out;}
+  .information_company .list_inner .add_services .list-delete{
+    margin-top: 15px;
+    display: inline-block;
+  }
+
+
+.information_company .list_inner .add_services .list-delete a {
+  color: #4e77af; }
+
+  .information_company .list_inner .add_services .list-delete i {
+    font-size: 20px;}
+
+
+@media screen and (max-width:425px){
+  .information_company .list_inner .photo_box .photo{
+    margin:0 10px;
+    width: 120px;
+    height: 130px;
+    margin-bottom: 10px;
+  }
+
+  .information_company .list_inner .poster_box .poster{
+    text-align: center;
+  }
+
+ 
+}
+
+@media screen and (max-width:767px){
+  .information_company .list_inner .poster_box{
+    justify-content: center;
+
+  }
+
+  .information_company .list_inner .poster_box .poster_list{
+   margin-right: 10px;
+   margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width:991px) and (min-width:767px){
+  .information_company .company_tour_page .item_result{
+    padding: 20px 15px 20px 15px;
+  }
+}
+
+.multiple_tags .dropdown-content li.active {
+  font-family: "Fira-Bold";
+  color:#4e77af !important;
+  background: white !important;
+  
+ }
+
+ .multiple_tags .dropdown-content li.active span {
+
+  color:#4e77af !important;
+
+  
+ }
+ .multiple_tags .dropdown-content li.selected {
+  font-family: "Fira-Bold";
+  color:#4e77af !important;
+  
+ }
+
+
+
+ 

@@ -1,5 +1,7 @@
 //= template2/head.html
-<link rel="stylesheet" href="./css/pikaday.css">
+
+<!-- this part is automatically added to navigation header via JS. Please refer to your version if needed -->
+<b-nav__header>AYARLAR</b-nav__header> 
 	
 <div class="nagi-container ">
 
@@ -11,17 +13,20 @@
 		<div class="b-card no-top-padding">
 
 			<div class="row b-card__top">
-				<div class="col-xs-6 b-card__top--left">
+				<div class="col-xs-11 b-card__top--left">
 					<h3 class="b-card__top--header">
-						KəsCell+
-						<img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon">
+						PUK kodlar
+						<span class="b-tooltip">
+							<img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon">
+							<span class="b-tooltip__text">Məlumat</span>
+						</span>
 					</h3>
-					<p class="simple-p no-margin">Gələn zənglərin filtrlənməsi.</p>
+					<p class="simple-p no-margin">Lorem ipsum dolor sit amet consecteur</p>
 
 
 				</div>
 
-				<div class="col-xs-6 b-card__top--right">
+				<div class="col-xs-1 b-card__top--right">
 					
 				</div>
 			</div>
@@ -30,14 +35,14 @@
 				
 				<break-30></break-30>
 				
-				<div class="col-md-6">
-					<div class="b-jumbotron b-jumbotron--bordered clearfix">
+				<div class="col-md-7 no-padding">
+					<div class="b-jumbotron b-jumbotron--bordered b-jumbotron--puk clearfix">
 						<div class="col-xs-6 puk">
 							<span class="simple-p simple-p--giant puk__number pull-left">1</span>
 
 							<div class="puk__right-wrapper">
 								<p class="simple-p no-margin puk__header">PUK1</p>
-								<p class="simple-p simple-p--secondary main-color no-margin puk__code">0125</p>
+								<p class="simple-p simple-p--secondary main-color no-margin puk__code"><b>0125</b></p>
 							</div>
 
 						</div>
@@ -46,7 +51,7 @@
 
 							<div class="puk__right-wrapper">
 								<p class="simple-p no-margin puk__header">PUK1</p>
-								<p class="simple-p simple-p--secondary main-color no-margin puk__code">0125</p>
+								<p class="simple-p simple-p--secondary main-color no-margin puk__code"><b>0125</b></p>
 							</div>
 						
 						</div>
@@ -73,7 +78,7 @@
 							</h3>
 							<p class="simple-p no-margin">Dolor sit amet aliquam.</p>
 						</div>
-
+						<m-break-20></m-break-20>
 						<button href="#" class="btn btn__material btn__material--full btn__material--right">BALANSI ARTIR</button>
 
 					</div>
@@ -86,17 +91,20 @@
 		<div class="b-card no-top-padding">
 
 			<div class="row b-card__top">
-				<div class="col-xs-10 b-card__top--left">
+				<div class="col-xs-11 b-card__top--left">
 					<h3 class="b-card__top--header">
 						Nömrəyə göndərilən xüsusi xəbərdarlıqlar
-						<img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon">
+						<span class="b-tooltip">
+							<img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon">
+							<span class="b-tooltip__text">Məlumat</span>
+						</span>
 					</h3>
 					<p class="simple-p no-margin">Dolor sit amet aliquam.</p>
 
 
 				</div>
 
-				<div class="col-xs-2 b-card__top--right">
+				<div class="col-xs-1 b-card__top--right">
 					
 				</div>
 			</div>
@@ -146,24 +154,30 @@
 		<div class="b-card no-padding">
 			<div class="b-card__inner b-card__inner--switch no-margin">
 
+
 					<div class="clearfix relative">
-						<div class="col-xs-8 switch__header">
+						<div class="col-md-9 col-sm-12 switch__header switch__header--bordered">
 							<h3 class="b-card__top--header">
 								Reklam tipli SMS-lər
-								<img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon">
-							</h3>
-							<p class="simple-p no-margin">Dolor sit amet aliquam.</p>
-						</div>
+								<span class="b-tooltip">
+									<img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon">
+									<span class="b-tooltip__text">Məlumat</span>
+								</span>
 
-						<div class="col-xs-4 vertically-center-right">
-							<span class="">DEAKTİVDİR</span>
+							</h3>
+							<p class="simple-p no-margin">Telefonla danışdığınız zaman ikinci gələn zəngə cavab vermə imkanı.</p>
+							<m-break-15></m-break-15>
+						</div>
+						<div class="col-sm-12 switch-parent">
+							<m-break-15></m-break-15>
 							<label class="switch__label "> 
-							  <input type="checkbox" class="switch__checkbox">
+							  <input type="checkbox" class="switch__checkbox" >
 							  <span class="switch__slider"></span>
 							</label>
+							<span class="switch__text">DEAKTİVDİR</span>
 						</div>
-
 					</div>
+
 
 			</div> <!-- /b-card__inner -->
 		</div> <!-- /b-card -->
@@ -173,17 +187,20 @@
 		<div class="b-card no-top-padding">
 
 			<div class="row b-card__top">
-				<div class="col-xs-6 b-card__top--left">
+				<div class="col-xs-11 b-card__top--left">
 					<h3 class="b-card__top--header">
 						Mənim profilim
-						<img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon">
+						<span class="b-tooltip">
+							<img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon">
+							<span class="b-tooltip__text">Məlumat</span>
+						</span>
 					</h3>
 					<p class="simple-p no-margin">Dolor sit amet aliquam.</p>
 
 
 				</div>
 
-				<div class="col-xs-6 b-card__top--right">
+				<div class="col-xs-1 b-card__top--right">
 					
 				</div>
 			</div>
@@ -212,29 +229,13 @@
 
 
 		
-	<div class="nagi-container">
-		<div class="col-md-1 col-md-offset-11">
-			<break-40></break-40>
-			<break-20></break-20>
-
-			<button class="btn btn--help btn--round b-tooltip">
-				<img src="./img/icons/Group 565.svg" alt="go" class="btn__go-icon btn__go-icon--help img-hover" hover-img="/img/icons/Group 566.svg" style="">
-				<span class="b-tooltip__text">Yardım</span>
-			</button>
-		</div>
-	</div>
+	//= template2/help.html
 
 
 
 </div>
 
 
-
-<script src="./js/pikaday.js"></script>
-<script>
-    var picker = new Pikaday({ field: document.getElementById('datepicker1') });
-    var picker = new Pikaday({ field: document.getElementById('datepicker2') });
-</script>
 
 
 

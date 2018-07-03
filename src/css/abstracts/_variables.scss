@@ -17,10 +17,13 @@ $main-color : #994DC9;
 $second-main-color: #B465E6;
 $secondary-color: #C77DF6;
 $link-color: #6AA6FF;
-$main-border-color : #6A2C91;
+$main-border-color : rgba(106, 44, 145, .1);
 $blue: #6AA6FF;
 $light-green: #EFFEF0;
 $green: #4EB852; 
+$pink: #EDD2FF;
+$red: #FF477F;
+$second-border-color: rgba(226,181,255, .4);
 
 
 
@@ -51,7 +54,7 @@ $b-transition: all $b-trans-speed ease; //Transitions
 
 $b-font-size: 24px; //Font size of brand and links
 $b-font-family: Helvetica-Neue, Helvetica, Arial, sans-serif; //Font family of the brand and links
-$b-font-weight: 300; //Font weight of brand and links
+$b-font-weight: 500; //Font weight of brand and links
 $b-txt-pad: 30px; //Left padding on both brand and links
 
 $b-line-height: ($b-height / 2 - ($b-font-size / 2.8)); //Vertically centers brand to menu

@@ -16,9 +16,17 @@
     <!-- <link rel="stylesheet" type="text/css" href="libs/bootstrap/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" type="text/css" href="./css/bootstrap-3.3.7.min.css">
     <link rel="stylesheet" type="text/html"  href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css">
-    <link rel="stylesheet" href="./css/main/main.css">
+    <link rel="stylesheet" href="./css/main/main.min.css?v=2.0">
+    <style>
+      @media screen and (max-width: 991px) {
+        .b-card{
+          box-shadow: none;
+        }
+      }
+        
+    </style>
 </head>
-<body>
+<body class="first-body">
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -26,25 +34,32 @@
     <div class="nav-container white-back ">
         <div class="nagi-container ">
             <!-- Navigation -->
-            <div class="b-nav col-md-10 col-md-offset-1"> 
-                <ul class="b-nav__left">
-                  <li class="b-nav__list b-nav__list--brand">
-                    <a class="b-nav__link" href="">
-                        <img src="./img/Group 21.svg" alt="logo Azercell" width="86px" class="b-nav__logo">
-                    </a>
-                  </li>
-                  <li class="b-nav__list b-nav__list--first"><a class="b-nav__link" href="">Fərdi</a></li>
-                  <li class="b-nav__list"><a class="b-nav__link" href="">Korporativ</a></li>
+            <div class="b-nav col-md-10 col-xs-11 col-md-offset-1"> 
+              <ul class="b-nav__langs">
+                <li class="b-nav__list inline-wrapper b-nav__list--brand ">
+                  <a class="b-nav__link effect-underline" href="/">
+                      <img src="./img/Group 117.svg" alt="logo Azercell" width="86px" class="b-nav__logo b-nav__logo--mobile">
+                  </a>
+                </li>
+                <li class="b-nav__list inline-wrapper b-nav__lang b-nav__lang--first "><a class="b-nav__link effect-underline" href="">EN</a></li>
+                <li class="b-nav__list inline-wrapper b-nav__lang"><a class="b-nav__link effect-underline" href="">RU</a></li>
 
-                  <li class="b-nav__list"><a class="b-nav__link" href="">Şirkət haqqında</a></li>
-                </ul>
+              </ul>
 
-                <ul class="b-nav__right pull-right">
-                  
-                  <li class="b-nav__list b-nav__list--first"><a class="b-nav__link" href="">EN</a></li>
-                  <li class="b-nav__list"><a class="b-nav__link" href="">RU</a></li>
+              <ul class="b-nav__left  ">
+                <li class="b-nav__list inline-wrapper b-nav__list--brand visible-desktop">
+                  <a class="b-nav__link " href="/">
+                      <img src="./img/Group 21.svg" alt="logo Azercell" width="86px" class="b-nav__logo">
+                      
+                  </a>
+                </li>
+                <m-break-15></m-break-15>
+                <li class="b-nav__list b-nav__list--smaller inline-wrapper b-nav__list--first"><a class="b-nav__link b-nav__link--no-margin effect-underline" href="">Fərdi</a></li>
+                <li class="b-nav__list b-nav__list--smaller inline-wrapper"><a class="b-nav__link b-nav__link--no-margin effect-underline" href="">Korporativ</a></li>
 
-                </ul>
+                <li class="b-nav__list b-nav__list--smaller inline-wrapper"><a class="b-nav__link b-nav__link--no-margin effect-underline" href="">Şirkət haqqında</a></li>
+              </ul>
+
 
                 
                 
@@ -52,21 +67,21 @@
             
             </div>
                     
-                    
+                          
 
-            <img src="./img/Group 21.svg" alt="logo Azercell" width="86px" class="b-nav__logo b-nav__logo--xs">
+            <img src="./img/Group 21.svg" alt="logo Azercell" width="86px" class="b-nav__logo b-nav__logo--xs b-nav__logo--center">
             
             <!-- Burger-Icon -->
             
-            <!-- <div class="b-burger">
+            <div class="b-burger pull-left">
               <div class="b-menu">
                 <div class="b-bun b-bun--top"></div>
                 <div class="b-bun b-bun--mid"></div>
                 <div class="b-bun b-bun--bottom"></div>
-              </div> -->
+              </div>
 
-               <!-- <a href="#" class="b-brand">Azercell</a> 
-            </div> -->
+               <!-- <a href="#" class="b-brand">Azercell</a>  -->
+            </div>
         </div>
     </div>
 

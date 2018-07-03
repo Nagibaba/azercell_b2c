@@ -1,4 +1,7 @@
 //= template2/head.html
+
+<!-- this part is automatically added to navigation header via JS. Please refer to your version if needed -->
+<b-nav__header>KAMPANİYALAR</b-nav__header> 
 	
 <div class="nagi-container ">
 
@@ -15,7 +18,10 @@
 
 				<h3 class="b-card__top--header">
 					Bank kartı ilə ödəniş
-					<!-- <img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon"> -->
+					<!-- <span class="b-tooltip">
+							<img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon">
+							<span class="b-tooltip__text">Məlumat</span>
+						</span> -->
 				</h3>
 
 				<break-30></break-30>
@@ -23,14 +29,14 @@
 				<div class="col-md-4 break-10-between">
 					<a href="">
 						<div class="payment-option">
-							<img src="./img/komis.svg" alt="" class="img payment-option__img">
+							<img src="./img/komis@2x.png" alt="Government payment logo" class="img payment-option__img">
 						</div>			
 					</a>
 				</div>	
 				<div class="col-md-4 break-10-between">
 					<a href="">
 						<div class="payment-option">
-							<img src="./img/12.svg" alt="" class="img payment-option__img">
+							<img src="./img/12@2x.png" alt="Azericard logo" class="img payment-option__img">
 						</div>			
 					</a>
 				</div>	
@@ -38,7 +44,7 @@
 				<div class="col-md-4 break-10-between">
 					<a href="">
 						<div class="payment-option">
-							<!-- <img src="./img/12.svg" alt="" class="img payment-option__img"> -->
+							<img src="./img/2golden@2x.png" alt="Golden Pay logo" class="img payment-option__img">
 						</div>			
 					</a>
 				</div>	
@@ -60,7 +66,10 @@
 
 				<h3 class="b-card__top--header">
 					Səyyar xidməti
-					<!-- <img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon"> -->
+					<!-- <span class="b-tooltip">
+							<img src="./img/icons/info_outline_blue.svg" class="img img__info" width="18px" alt="info icon">
+							<span class="b-tooltip__text">Məlumat</span>
+						</span> -->
 				</h3>
 
 				<break-30></break-30>
@@ -71,16 +80,21 @@
 				</div>
 
 
-				<break-30></break-30>
+
+
+				<div class="" id="first">
+					<!-- empty -->
+				</div>
 				
-				<div class="tabContent" id="first">
+				<div class="tabContent" id="second">
+					<break-30></break-30>
 					<p class="simple-p simple-p--main"><b>Digər nömrə:</b></p>
 
 					<div class="col-md-6 no-padding ">
 						<div class="col-xs-2 b-card__double-input b-card__double-input--first no-left-padding">
 							<!-- Google Material Style -->
 							<div class="material">
-								<input class="material__input" type="text" required>
+								<input class="material__input" type="text" disabled="disabled">
 
 								<label class="material__title">+994</label>
 							</div>
@@ -188,10 +202,10 @@
 
 					</div>
 				</div> <!--/tabContent-->
-
-				<!-- <break-30></break-30> -->
 				
-				<div class="col-md-6 no-padding tabContent" id="second">
+				<break-30></break-30>
+
+				<div class="col-md-6 no-padding">
 					<p class="simple-p simple-p--main"><b>Danışıq kartının 13 rəqəmli şifrəsi:</b></p>
 					<!-- Google Material Style -->
 					<div class="material">
@@ -202,6 +216,9 @@
 					</div>
 					<!-- /Google Material Style -->
 				</div>
+
+				<!-- <break-30></break-30> -->
+				
 
 				<break-30></break-30>
 
@@ -224,17 +241,7 @@
 
 
 		
-	<div class="nagi-container">
-		<div class="col-md-1 col-md-offset-11">
-			<break-40></break-40>
-			<break-20></break-20>
-
-			<button class="btn btn--help btn--round b-tooltip">
-				<img src="./img/icons/Group 565.svg" alt="go" class="btn__go-icon btn__go-icon--help img-hover" hover-img="/img/icons/Group 566.svg" style="">
-				<span class="b-tooltip__text">Yardım</span>
-			</button>
-		</div>
-	</div>
+	//= template2/help.html
 
 
 

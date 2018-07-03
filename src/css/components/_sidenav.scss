@@ -1,9 +1,5 @@
-$main-color : rgba(153,77,201,1);
-$main-color-80 : rgba(153,77,201,.8);
 
-$second-color: #064579;
-$first-border-color: #6A2C91;
-$second-border-color: #E2B5FF;
+
 
 
 .sidenav {
@@ -14,28 +10,37 @@ $second-border-color: #E2B5FF;
   text-align: left;
   padding-top: 10px;
   /*overflow-x: hidden;*/
+  background-color: $main-color;
+  background: linear-gradient(to bottom right, $main-color, mainColor(.8));
   padding: 8px 0;
   border-radius: 10px;
-  /*background-color: $main-color;*/
-  background: linear-gradient(to bottom right, $main-color, $main-color-80);
-
+  
+  display: inline-block;
+  box-shadow: 0px 20px 20px rgba(0,0,0,.2);
   &--with-icon{
+    background-color: transparent;
+    background: transparent;
     padding: 0;
     text-align: center;
     margin-top: 10px; 
   }
   &__element {
+
+    position: relative;
     padding: 19px 23px;
     text-decoration: none;
     font-size: $secondary-font-size;
     display: block;
-    border-bottom: 1px solid #6A2C91;
+    border-bottom: 1px solid $main-border-color;
     color: white;
     transition: .4s background-color, color;
 
     &:hover {
       color: $main-color;
       background-color: white;
+      & .white-dot{
+        background-color: $main-color;
+      }
     }
     &--last{
       border-bottom: none;
@@ -61,12 +66,30 @@ $second-border-color: #E2B5FF;
       border-top-left-radius: 10px;
       border-bottom-left-radius: 10px;
     }
+    &--second{
+      width: 50%;
+    }
     &:hover {
       color: $main-color;
       background-color: white;
     }
   }
 }
+.white-dot{
+  display: inline-block;
+  float: right;
+  position: relative;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  border-radius: 8px;
+  background-color: $pink;
+  
 
+
+}
 
 

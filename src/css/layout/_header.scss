@@ -16,23 +16,43 @@
 }
 body {
   width: 100%;
-  height: 100%;
+  /*height: 100%;*/
   box-sizing: border-box;
-  font-family: 'Proxima Nova';
+  font-family: 'Proxima Nova', Arial, sans-serif;
   font-weight: normal;
-  background-image: url('../../img/bg_illustration.svg'), url('../../img/Mask Group 23.jpg');
-  background-repeat: no-repeat, repeat;
-  background-size: 2996px, 300px;
+  background-image: url('../../img/background_image_illustration_full.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: top;
   color: $grey;
   font-size: $main-font-size;
   
 }
 .second-body{
-	background-image: url('../../img/Path 24.svg'), url('../../img/Mask Group 23.jpg');
-	background-repeat: no-repeat, repeat;
-  background-size: 1000px, 300px;
-  background-position: top;
+	background-image: url('../../img/background_image_full.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+	background-color: $dark-white;
+	/*removed for performance issues*/
+	/*&:before{
+		content: "";
+		position: fixed;
+		left: 0;
+		right: 0;
+		z-index: -1;
+
+		display: block;
+		background-image: url('../../img/Path 24.svg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
+
+
+		
+		filter: blur(15px);
+	}*/
   
 }
 input,
@@ -57,6 +77,10 @@ li{
 
 img{
 	vertical-align: top;
+}
+
+label{
+	margin-bottom: 0;
 }
 
 
@@ -105,49 +129,15 @@ img{
 }
 
 
-@media(min-width: 992px){
-	.visible-mobile{
-		display: none
-	}
-}
 
-@media(max-width: 991px){
-	.visible-desktop{
-		display: none
-	}
-	.full-container{
-		padding-left: $full-container-mobile-padding;
-		padding-right: $full-container-mobile-padding;
-
-	}
-
-	.break{
-		&-10-between{
-			padding: 5px 0;
-			
-		}
-
-		&-20-between{
-			padding: 10px 0;
-			
-			
-		}
-	}
-
-	m-break{
-		display: block;
-		clear: both;
-		&-30{
-			@extend m-break;
-			height: 30px;				
-		}
-	}
-
-}
 
 break{
 	display: block;
 	clear: both;
+	&-2{
+		@extend break;
+		height: 2px;
+	}
 	&-5{
 		@extend break;
 		height: 5px;
@@ -196,15 +186,6 @@ break{
 }
 
 
-.text{
-	&-center{
-		text-align: center;
-	}
-
-	&-right{
-		text-align: right!important;
-	}
-}
 
 .blur{
 	filter: blur(8px);
@@ -231,11 +212,28 @@ b-hr{
 	&-top{
 		vertical-align: top;
 	}
+	&-middle{
+		vertical-align: middle;
+	}
 	&-bottom{
 		vertical-align: bottom;
 	}
+	&-text-bottom{
+		vertical-align: text-bottom;
+	}
 	
 
+}
+
+
+.text{
+	&-center{
+		text-align: center;
+	}
+
+	&-right{
+		text-align: right!important;
+	}
 }
 
 .full-relative{
@@ -256,6 +254,9 @@ b-hr{
 	background: none;
 	border: none;
 	
+}
+.no-hover{
+	pointer-events: none;
 }
 
 /*effect-underline*/
@@ -341,9 +342,7 @@ b-hr{
 	/*display: inline-block;*/
 }
 
-.mobile-full{
-	float: none!important;
-}
+
 
 .b-clearfix:after {
     clear: both;
@@ -351,4 +350,103 @@ b-hr{
 .b-clearfix:before, .b-clearfix:after {
     content: " ";
     display: table;
+}
+
+.footer{
+
+	background: white;
+	width: 100%;
+	height: 40px;
+	padding: 11px;
+	text-align: center;
+	
+	&__copyright{
+		text-align: left;
+	}
+	&-brand{
+		/*@extend .visible-xs .visible-sm;*/
+		margin-top: 90px;
+	}
+
+}
+
+b-nav__header{
+	display: none;
+}
+
+.rotate{
+	&-90{
+		transform: rotate(90deg)
+	}
+}
+
+@media(min-width: 992px){
+	.visible-mobile{
+		display: none
+	}
+}
+
+@media(max-width: 991px){
+	body, .second-body{
+		background-image: url('');
+	}
+	.visible-desktop{
+		display: none
+	}
+	.full-container{
+		padding-left: $full-container-mobile-padding;
+		padding-right: $full-container-mobile-padding;
+
+	}
+
+	.break{
+		&-10-between{
+			padding: 5px 0;
+			
+		}
+
+		&-20-between{
+			padding: 10px 0;
+			
+			
+		}
+	}
+
+	m-break{
+		display: block;
+		clear: both;
+		&-10{
+			@extend m-break;
+			height: 10px;				
+		}
+		&-15{
+			@extend m-break;
+			height: 15px;				
+		}
+		&-20{
+			@extend m-break;
+			height: 20px;				
+		}
+		&-30{
+			@extend m-break;
+			height: 30px;				
+		}
+		
+	}
+
+	.mobile-full{
+		float: none!important;
+	}
+
+	.footer{
+		
+		&__copyright{
+			text-align: center;
+		}
+		&-brand{
+		}
+
+	}
+
+
 }
