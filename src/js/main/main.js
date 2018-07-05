@@ -319,9 +319,11 @@ ready(function() {
 			if (input.checked) {
 				e.classList.add('b-card__inner--switch--checked')
 				switchText.innerText = 'AKTİVDİR'
+				switchText.classList.add('green')
 			} else {
 				e.classList.remove('b-card__inner--switch--checked')
 				switchText.innerText = 'DEAKTİVDİR'
+				switchText.classList.remove('green')
 
 			}
 		}
