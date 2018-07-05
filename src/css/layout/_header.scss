@@ -380,6 +380,21 @@ b-nav__header{
 	}
 }
 
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $grey;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $grey;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $grey;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $grey;
+}
+
+
+
 @media(min-width: 992px){
 	.visible-mobile{
 		display: none
