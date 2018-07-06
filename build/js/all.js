@@ -15,12 +15,17 @@ function ready(fn) {
 }
 
 ready(function () {
+	var popupButton = document.querySelector('.popup-button');
 	var popup = document.querySelector('.b-card--popup');
 	var fullContainer = document.querySelector('.full-container');
 	var showPopup = function showPopup() {
 		popup.style.display = '';
 		fullContainer.classList.add('blur');
 	};
+	popupButton.addEventListener('click', function (e) {
+		e.preventDefault();
+		showPopup();
+	});
 
 	var body = document.body;
 	var burgerMenu = document.getElementsByClassName('b-menu')[0];

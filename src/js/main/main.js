@@ -11,6 +11,7 @@ function ready(fn) {
 }
 
 ready(function() {
+	const popupButton = document.querySelector('.popup-button')
 	const popup = document.querySelector('.b-card--popup')
 	const fullContainer = document.querySelector('.full-container')
 	const showPopup = () => {
@@ -18,6 +19,10 @@ ready(function() {
 		fullContainer.classList.add('blur')
 
 	}
+	popupButton.addEventListener('click', e=>{
+		e.preventDefault()
+		showPopup()
+	})
 	
 
     
