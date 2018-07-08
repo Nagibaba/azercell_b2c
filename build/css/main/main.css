@@ -254,12 +254,22 @@ input {
   padding-bottom: 40px;
   -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
      -moz-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1); }
+          box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+  /*transition: padding .2s;*/ }
   .b-card__inner {
     /*max-width: 300px;*/
     margin: 0 auto;
+    /*overflow: hidden;*/
+    /*opacity: 1;*/
     padding-left: 40px;
-    padding-right: 40px; }
+    padding-right: 40px;
+    /*we'll add with js*/
+    /*max-height: 500px;*/
+    /*overflow: hidden;*/
+    /*transition: all .4s;*/
+    /*transition: .2s max-height;*/ }
+    .b-card__inner--overflow {
+      overflow: initial; }
     .b-card__inner--switch {
       padding: 25px 40px;
       -webkit-border-radius: 10px;
@@ -423,7 +433,15 @@ input {
   .b-card--shrink {
     padding-bottom: 0; }
     .b-card--shrink .b-card__inner {
-      display: none; }
+      /*display: none;*/
+      /*& *{
+				display: none!important;
+				transition: all .4s;
+			}*/
+      /*opacity: 0;*/
+      /*max-height: 0;*/
+      overflow: hidden;
+      /*transition: .2s max-height;*/ }
     .b-card--shrink .b-card__top {
       -webkit-border-bottom-left-radius: 10px;
          -moz-border-radius-bottomleft: 10px;
@@ -710,7 +728,8 @@ input {
 
 .img__info {
   width: 18px;
-  vertical-align: middle; }
+  vertical-align: middle;
+  cursor: pointer; }
 
 .b-tooltip {
   position: relative;
@@ -1362,7 +1381,8 @@ td {
       padding: 0; }
     .b-card__inner {
       padding-left: 20px;
-      padding-right: 20px; }
+      padding-right: 20px;
+      /*transition: all 2s;*/ }
     .b-card__header {
       font-size: 20px; }
     .b-card__text {

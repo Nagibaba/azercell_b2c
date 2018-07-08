@@ -8,7 +8,6 @@
 #### SMACSS 
 #### BABEL 
 
-## GULP
 
 
 

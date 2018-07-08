@@ -11,18 +11,26 @@ function ready(fn) {
 }
 
 ready(function() {
+
+	// Object.prototype.changeStyle = () => {
+	// 	if(this) 
+	// }
+
 	const popupButton = document.querySelector('.popup-button')
 	const popup = document.querySelector('.b-card--popup')
 	const fullContainer = document.querySelector('.full-container')
+	
 	const showPopup = () => {
-		popup.style.display = ''
-		fullContainer.classList.add('blur')
+		if(popup) popup.style.display = ''
+		if(fullContainer) fullContainer.classList.add('blur')
 
 	}
-	popupButton.addEventListener('click', e=>{
-		e.preventDefault()
-		showPopup()
-	})
+	if(popupButton){
+		popupButton.addEventListener('click', e=>{
+			e.preventDefault()
+			showPopup()
+		})
+	}
 	
 
     
@@ -70,18 +78,33 @@ ready(function() {
 
 
 	//show contacts
-	const contacts = document.querySelector('.b-card__contacts')
-	const contactButton = document.querySelector('.b-contact__button')
+	
+	const allContacts = document.querySelectorAll('.b-card__contacts')
+	const contactButton = document.querySelectorAll('.b-contact__button')
 
-	if(contactButton){
-		contactButton.onclick = e=>{
-			contacts.style.display = 'block'
-		}
+	if(contactButton.length>0){
+		contactButton.forEach(el=>{
+			const contacts = el.parentNode.querySelector('.b-card__contacts')
+			el.onclick = e=>{
+				contacts.style.display = 'block'
+			}
+		})
+		
 
 		document.body.onclick = e=>{
 			// console.log()
-			if(e.target.className.indexOf('b-contact__button')===-1 && getClosest(e.target, '.b-card__contacts')===null ) contacts.style.display = 'none'
 
+			// for contacts tooltip
+			if(e.target.className.indexOf('b-contact__button')===-1 
+				&& getClosest(e.target, '.b-card__contacts')===null
+			){ 
+				allContacts.forEach(c=>{
+					c.style.display = 'none'
+				})
+			}
+
+
+			// for blur effect
 			if((e.target.className.indexOf('popup-button')===-1 && getClosest(e.target, '.b-card--popup')===null) || e.target.className.indexOf('close-popup')>-1) {
 					popup.style.display = 'none'
 					fullContainer.classList.remove('blur')
@@ -135,8 +158,10 @@ ready(function() {
 			let number = t.querySelector('.b-contact__item-number')
 			number = number.innerText || number.textContent
 			number = number.substring(1)
-			document.querySelector('.phone-number-area').value = number
-			contacts.style.display = 'none'
+			getClosest(t,'.b-card__form-row').querySelector('.phone-number-area').value = number
+			allContacts.forEach(c=>{
+				c.style.display = 'none'
+			})
 		}
 			
 	)
@@ -254,16 +279,85 @@ ready(function() {
 	        sel.removeAllRanges()
 	    }
 	}
+	function animate(from=0, to=100, ms=1000, continuingCb, endedCb) {
+		// console.time()
+		// console.log(ms)
+		const animationInterval = Math.round(ms/(ms/1000*24))
+		const changingRate = Math.round((to-from)/(ms/1000*24))
+		let expanding
+		if(from < to) {
+        	expanding = true  // update parameters
+        } else {
+        	expanding = false  // update parameters
+        }
+	    function frame() {
+	    	
+
+	    	
+	    	
+	        if(expanding) {
+	        	from += changingRate
+	        } else {
+	        	from += changingRate
+	        }
+
+	        continuingCb(from)
+
+	        if ((expanding && from > to) 
+	        || (!expanding && from < to)){  // check finish condition
+	            clearInterval(id)
+	        	// console.timeEnd()
+	        	endedCb()
+
+	    	}
+	        
+	         // show frame
+	        
+	    }
+	    var id = setInterval(frame, animationInterval) // draw every * ms
+	}
 	const toNodes = html => new DOMParser().parseFromString(html, 'text/html').body.childNodes[0]
-	const expandCard = function(e) {
+	const expandCard = function(inner, innerInitialHeight, e) {
 		e.preventDefault
 		clearSelection()
+		console.log(innerInitialHeight)
 
 		// if (this.style.display!='none')
 		// 	this.style.display = 'none'
 		// else this.style.display = ''
-
 		const parentCard = getClosest (this, '.b-card')
+		// 
+		
+		// console.log(innerInitialHeight)
+
+		if(parentCard.classList.contains('b-card--shrink')){
+
+			animate(0, innerInitialHeight, 100,
+				function(num){
+					inner.style.maxHeight = num + 'px'
+				},	
+				function(){
+					parentCard.classList.remove('b-card--shrink')
+				}
+			)
+
+		} else {
+			animate(innerInitialHeight, 0, 100,
+				function(num){
+					inner.style.maxHeight = num + 'px'
+				},	
+				function(){
+					// parentCard.classList.remove('b-card--shrink')
+					inner.style.maxHeight = 0
+				}
+			)
+			parentCard.classList.add('b-card--shrink')
+
+		}
+			
+		
+		
+
 		const cardTop = parentCard.querySelector('.b-card__top--right')
 		if (cardTop) {
 			if (this.style.display!='none'){
@@ -275,27 +369,67 @@ ready(function() {
 			}
 			
 		}
-		parentCard.classList.toggle('b-card--shrink')
 	}
 
+	 /// corrected expanding effect
 	const expandCardIcon= toNodes('<img class="img img__icon pull-right no-margin rotate-90 expand-card-icon" src="./img/icons/code.svg" style="width:20px;height: auto">')
 	const cardTop = document.querySelectorAll('.b-card__top:not(.no-expand)')
 	const cardTopRight = document.querySelectorAll('.b-card__top--right')
-	if(cardTop){
-		Array.from(cardTopRight).forEach(el=>{
-			el.style.display = 'none'
-		})
-		Array.from(cardTop).forEach(el=>{
-			// shrink inner side of card
+	if(cardTop.length>0){
 
-			el.parentNode.classList.add('b-card--shrink')
+		// let ruleString = ''
+		
+		let addClickListenerToExpandCard
 
-			const expandCardIconClone = expandCardIcon.cloneNode()
-			
-			el.appendChild(expandCardIconClone)
 
-			getClosest(expandCardIconClone, '.b-card__top').addEventListener('click', expandCard.bind(expandCardIconClone))
-		})
+		(addClickListenerToExpandCard = function(){
+			Array.from(cardTop).forEach((el, i)=>{
+				// shrink inner side of card
+				// adding max height for transition effect
+
+				const parent = el.parentNode
+				const inner = parent.querySelector('.b-card__inner')
+				inner.style.maxHeight = 'fit-content'
+				const innerInitialHeight = parent.querySelector('.b-card__inner').offsetHeight // we do it here to get the height before shrinking
+				// if(innerHeight>higherInner) higherInner = innerHeight
+				// console.log(elHeight)
+				// ruleString += '.b-card__inner:nth-of-type(' + i + '){max-height: ' + elHeight + 'px}'
+				// el.style.maxHeight = elHeight
+				// console.log(innerInitialHeight)
+
+				parent.classList.add('b-card--shrink')
+				inner.style.maxHeight = 0
+
+				const expandCardIconClone = expandCardIcon.cloneNode()
+				
+				el.appendChild(expandCardIconClone)
+
+				const thisCardTop = getClosest(expandCardIconClone, '.b-card__top')
+				
+				// thisCardTop.removeEventListener('click', expandOrShrink)
+				// thisCardTop.addEventListener('click', expandOrShrink)
+				thisCardTop.onclick = expandCard.bind(expandCardIconClone, inner, innerInitialHeight)
+			})
+
+			Array.from(cardTopRight).forEach(el=>{
+				el.style.display = 'none'
+			})
+		})()
+
+		
+
+		
+
+
+		let resizeTimer
+		window.onresize = function(){
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(function() {
+
+				addClickListenerToExpandCard()
+			        
+			}, 250);
+		}
 	}
 
 
@@ -368,12 +502,25 @@ ready(function() {
 	const fullContainerHeight = fullContainer.offsetHeight
 	const windowHeight = window.innerHeight
 
-	console.log(fullContainerHeight, windowHeight)
 	if(windowHeight>fullContainerHeight){
 		footer.style.marginTop = (windowHeight-fullContainerHeight-footer.offsetHeight)+'px'
 	}
 
-	
+	const rules = document.querySelector('.b-card__rules')
+	if(rules){
+		rules.addEventListener('scroll', (event) =>
+		{
+		    const element = event.target;
+		    if (element.scrollHeight - Math.round(element.scrollTop) === element.clientHeight)
+		    {
+		    	const iAcceptButton = document.querySelector('.i-accept-button')
+		        if(iAcceptButton){
+		        	iAcceptButton.disabled = false
+		        }
+		    }
+		});
+		
+	}
 
 }) // document ready
 

@@ -92,6 +92,10 @@ gulp.task('html:build', function () {
 
 gulp.task('js:build', function () {
     gulp.src(path.src.js) //burdakileri al derle
+    .on('error', function(err) {
+        console.log(err)
+        this.emit('end')
+    })
     .pipe(babel({
         presets: ['env']
     }))

@@ -7,12 +7,22 @@
 	padding-top: 37px;
 	padding-bottom: 40px;
 	box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
-	
+	/*transition: padding .2s;*/
 	&__inner{
 		/*max-width: 300px;*/
 		margin: 0 auto;
+		/*overflow: hidden;*/
+		/*opacity: 1;*/
 		padding-left: 40px;
 		padding-right: 40px;
+		/*we'll add with js*/
+		/*max-height: 500px;*/
+		/*overflow: hidden;*/
+		/*transition: all .4s;*/
+		/*transition: .2s max-height;*/
+		&--overflow{
+			overflow: initial;
+		}
 		&--switch{
 			padding: 25px 40px;
 			border-radius: 10px;
@@ -218,13 +228,22 @@
 	&--shrink{
 		padding-bottom: 0;
 		& #{$b}__inner{
-			display: none;
+			/*display: none;*/
+			/*& *{
+				display: none!important;
+				transition: all .4s;
+			}*/
+			/*opacity: 0;*/
+			/*max-height: 0;*/
+			overflow: hidden;
+			/*transition: .2s max-height;*/
 
 		}
 		& #{$b}__top{
 			border-bottom-left-radius: 10px;
 			border-bottom-right-radius: 10px;
 		}
+		
 	}
 	&--locked-max{
 		max-width: 380px;
@@ -491,6 +510,7 @@
 	&__info{
 		width: 18px;
 		vertical-align: middle;
+		cursor: pointer;
 	}
 
 }
@@ -1200,6 +1220,7 @@ td{
 		&__inner{
 			padding-left: 20px;
     		padding-right: 20px;
+    		/*transition: all 2s;*/
 		}
 		&__header{
 			font-size: 20px;

@@ -15,17 +15,25 @@ function ready(fn) {
 }
 
 ready(function () {
+
+	// Object.prototype.changeStyle = () => {
+	// 	if(this) 
+	// }
+
 	var popupButton = document.querySelector('.popup-button');
 	var popup = document.querySelector('.b-card--popup');
 	var fullContainer = document.querySelector('.full-container');
+
 	var showPopup = function showPopup() {
-		popup.style.display = '';
-		fullContainer.classList.add('blur');
+		if (popup) popup.style.display = '';
+		if (fullContainer) fullContainer.classList.add('blur');
 	};
-	popupButton.addEventListener('click', function (e) {
-		e.preventDefault();
-		showPopup();
-	});
+	if (popupButton) {
+		popupButton.addEventListener('click', function (e) {
+			e.preventDefault();
+			showPopup();
+		});
+	}
 
 	var body = document.body;
 	var burgerMenu = document.getElementsByClassName('b-menu')[0];
@@ -68,18 +76,29 @@ ready(function () {
 	});
 
 	//show contacts
-	var contacts = document.querySelector('.b-card__contacts');
-	var contactButton = document.querySelector('.b-contact__button');
 
-	if (contactButton) {
-		contactButton.onclick = function (e) {
-			contacts.style.display = 'block';
-		};
+	var allContacts = document.querySelectorAll('.b-card__contacts');
+	var contactButton = document.querySelectorAll('.b-contact__button');
+
+	if (contactButton.length > 0) {
+		contactButton.forEach(function (el) {
+			var contacts = el.parentNode.querySelector('.b-card__contacts');
+			el.onclick = function (e) {
+				contacts.style.display = 'block';
+			};
+		});
 
 		document.body.onclick = function (e) {
 			// console.log()
-			if (e.target.className.indexOf('b-contact__button') === -1 && getClosest(e.target, '.b-card__contacts') === null) contacts.style.display = 'none';
 
+			// for contacts tooltip
+			if (e.target.className.indexOf('b-contact__button') === -1 && getClosest(e.target, '.b-card__contacts') === null) {
+				allContacts.forEach(function (c) {
+					c.style.display = 'none';
+				});
+			}
+
+			// for blur effect
 			if (e.target.className.indexOf('popup-button') === -1 && getClosest(e.target, '.b-card--popup') === null || e.target.className.indexOf('close-popup') > -1) {
 				popup.style.display = 'none';
 				fullContainer.classList.remove('blur');
@@ -123,8 +142,10 @@ ready(function () {
 		var number = t.querySelector('.b-contact__item-number');
 		number = number.innerText || number.textContent;
 		number = number.substring(1);
-		document.querySelector('.phone-number-area').value = number;
-		contacts.style.display = 'none';
+		getClosest(t, '.b-card__form-row').querySelector('.phone-number-area').value = number;
+		allContacts.forEach(function (c) {
+			c.style.display = 'none';
+		});
 	});
 
 	// show CRUD buttons
@@ -232,18 +253,77 @@ ready(function () {
 			sel.removeAllRanges();
 		}
 	}
+	function animate() {
+		var from = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+		var to = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 100;
+		var ms = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1000;
+		var continuingCb = arguments[3];
+		var endedCb = arguments[4];
+
+		// console.time()
+		// console.log(ms)
+		var animationInterval = Math.round(ms / (ms / 1000 * 24));
+		var changingRate = Math.round((to - from) / (ms / 1000 * 24));
+		var expanding = void 0;
+		if (from < to) {
+			expanding = true; // update parameters
+		} else {
+			expanding = false; // update parameters
+		}
+		function frame() {
+
+			if (expanding) {
+				from += changingRate;
+			} else {
+				from += changingRate;
+			}
+
+			continuingCb(from);
+
+			if (expanding && from > to || !expanding && from < to) {
+				// check finish condition
+				clearInterval(id);
+				// console.timeEnd()
+				endedCb();
+			}
+
+			// show frame
+		}
+		var id = setInterval(frame, animationInterval); // draw every * ms
+	}
 	var toNodes = function toNodes(html) {
 		return new DOMParser().parseFromString(html, 'text/html').body.childNodes[0];
 	};
-	var expandCard = function expandCard(e) {
+	var expandCard = function expandCard(inner, innerInitialHeight, e) {
 		e.preventDefault;
 		clearSelection();
+		console.log(innerInitialHeight);
 
 		// if (this.style.display!='none')
 		// 	this.style.display = 'none'
 		// else this.style.display = ''
-
 		var parentCard = getClosest(this, '.b-card');
+		// 
+
+		// console.log(innerInitialHeight)
+
+		if (parentCard.classList.contains('b-card--shrink')) {
+
+			animate(0, innerInitialHeight, 100, function (num) {
+				inner.style.maxHeight = num + 'px';
+			}, function () {
+				parentCard.classList.remove('b-card--shrink');
+			});
+		} else {
+			animate(innerInitialHeight, 0, 100, function (num) {
+				inner.style.maxHeight = num + 'px';
+			}, function () {
+				// parentCard.classList.remove('b-card--shrink')
+				inner.style.maxHeight = 0;
+			});
+			parentCard.classList.add('b-card--shrink');
+		}
+
 		var cardTop = parentCard.querySelector('.b-card__top--right');
 		if (cardTop) {
 			if (this.style.display != 'none') {
@@ -254,27 +334,60 @@ ready(function () {
 				cardTop.style.display = 'none';
 			}
 		}
-		parentCard.classList.toggle('b-card--shrink');
 	};
 
+	/// corrected expanding effect
 	var expandCardIcon = toNodes('<img class="img img__icon pull-right no-margin rotate-90 expand-card-icon" src="./img/icons/code.svg" style="width:20px;height: auto">');
 	var cardTop = document.querySelectorAll('.b-card__top:not(.no-expand)');
 	var cardTopRight = document.querySelectorAll('.b-card__top--right');
-	if (cardTop) {
-		Array.from(cardTopRight).forEach(function (el) {
-			el.style.display = 'none';
-		});
-		Array.from(cardTop).forEach(function (el) {
-			// shrink inner side of card
+	if (cardTop.length > 0) {
 
-			el.parentNode.classList.add('b-card--shrink');
+		// let ruleString = ''
 
-			var expandCardIconClone = expandCardIcon.cloneNode();
+		var addClickListenerToExpandCard = void 0;
 
-			el.appendChild(expandCardIconClone);
+		(addClickListenerToExpandCard = function addClickListenerToExpandCard() {
+			Array.from(cardTop).forEach(function (el, i) {
+				// shrink inner side of card
+				// adding max height for transition effect
 
-			getClosest(expandCardIconClone, '.b-card__top').addEventListener('click', expandCard.bind(expandCardIconClone));
-		});
+				var parent = el.parentNode;
+				var inner = parent.querySelector('.b-card__inner');
+				inner.style.maxHeight = 'fit-content';
+				var innerInitialHeight = parent.querySelector('.b-card__inner').offsetHeight; // we do it here to get the height before shrinking
+				// if(innerHeight>higherInner) higherInner = innerHeight
+				// console.log(elHeight)
+				// ruleString += '.b-card__inner:nth-of-type(' + i + '){max-height: ' + elHeight + 'px}'
+				// el.style.maxHeight = elHeight
+				// console.log(innerInitialHeight)
+
+				parent.classList.add('b-card--shrink');
+				inner.style.maxHeight = 0;
+
+				var expandCardIconClone = expandCardIcon.cloneNode();
+
+				el.appendChild(expandCardIconClone);
+
+				var thisCardTop = getClosest(expandCardIconClone, '.b-card__top');
+
+				// thisCardTop.removeEventListener('click', expandOrShrink)
+				// thisCardTop.addEventListener('click', expandOrShrink)
+				thisCardTop.onclick = expandCard.bind(expandCardIconClone, inner, innerInitialHeight);
+			});
+
+			Array.from(cardTopRight).forEach(function (el) {
+				el.style.display = 'none';
+			});
+		})();
+
+		var resizeTimer = void 0;
+		window.onresize = function () {
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(function () {
+
+				addClickListenerToExpandCard();
+			}, 250);
+		};
 	}
 
 	var bNavHeader = document.querySelector('.b-nav__header');
@@ -344,9 +457,21 @@ ready(function () {
 	var fullContainerHeight = fullContainer.offsetHeight;
 	var windowHeight = window.innerHeight;
 
-	console.log(fullContainerHeight, windowHeight);
 	if (windowHeight > fullContainerHeight) {
 		footer.style.marginTop = windowHeight - fullContainerHeight - footer.offsetHeight + 'px';
+	}
+
+	var rules = document.querySelector('.b-card__rules');
+	if (rules) {
+		rules.addEventListener('scroll', function (event) {
+			var element = event.target;
+			if (element.scrollHeight - Math.round(element.scrollTop) === element.clientHeight) {
+				var iAcceptButton = document.querySelector('.i-accept-button');
+				if (iAcceptButton) {
+					iAcceptButton.disabled = false;
+				}
+			}
+		});
 	}
 }); // document ready
 
