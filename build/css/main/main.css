@@ -728,7 +728,7 @@ input {
 
 .img__info {
   width: 18px;
-  vertical-align: middle;
+  vertical-align: top;
   cursor: pointer; }
 
 .b-tooltip {
@@ -1733,10 +1733,10 @@ body {
   font-size: 14px; }
 
 .second-body {
-  background-image: url("../../img/background_image_full.jpg");
-  background-repeat: no-repeat;
-  -moz-background-size: cover;
-       background-size: cover;
+  background-image: url("../../img/bg_grey_noise_2_cr.jpg");
+  background-repeat: repeat;
+  -moz-background-size: 400px;
+       background-size: 400px;
   background-position: top;
   background-color: #F5F5F5;
   /*removed for performance issues*/
@@ -2196,7 +2196,7 @@ b-nav__header {
     .b-nav__single-icon {
       vertical-align: baseline; }
     .b-nav__left-icon {
-      vertical-align: baseline;
+      vertical-align: text-bottom;
       margin-right: 15px; } }
 
 @media (max-width: 991px) {

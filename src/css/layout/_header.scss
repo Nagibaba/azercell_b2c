@@ -29,9 +29,9 @@ body {
   
 }
 .second-body{
-	background-image: url('../../img/background_image_full.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-image: url('../../img/bg_grey_noise_2_cr.jpg');
+	background-repeat: repeat;
+	background-size: 400px;
 	background-position: top;
 	background-color: $dark-white;
 	/*removed for performance issues*/

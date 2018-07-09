@@ -180,9 +180,9 @@ ready(function () {
 		Array.from(tabs).forEach(function (tab) {
 
 			var tabListItems = tab.childNodes;
-			for (var i = 0; i < tabListItems.length; i++) {
-				if (tabListItems[i].nodeName == "A") {
-					var tabLink = tabListItems[i];
+			for (var _i = 0; _i < tabListItems.length; _i++) {
+				if (tabListItems[_i].nodeName == "A") {
+					var tabLink = tabListItems[_i];
 					var id = getHash(tabLink.getAttribute('href'));
 					tabLinks[id] = tabLink;
 					contentDivs[id] = document.getElementById(id);
@@ -193,20 +193,20 @@ ready(function () {
 			// highlight the first tab
 			var i = 0;
 
-			for (var id in tabLinks) {
-				tabLinks[id].onclick = showTab;
-				tabLinks[id].onfocus = function () {
+			for (var _id in tabLinks) {
+				tabLinks[_id].onclick = showTab;
+				tabLinks[_id].onfocus = function () {
 					this.blur();
 				};
-				if (i == 0) tabLinks[id].classList.add('tab--active');
+				if (i == 0) tabLinks[_id].classList.add('tab--active');
 				i++;
 			}
 
 			// Hide all content divs except the first
-			var i = 0;
+			i = 0;
 
-			for (var id in contentDivs) {
-				if (i != 0) contentDivs[id].classList.add('hide');
+			for (var _id2 in contentDivs) {
+				if (i != 0) contentDivs[_id2].classList.add('hide');
 				i++;
 			}
 		});
