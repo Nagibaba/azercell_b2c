@@ -81,7 +81,8 @@ ready(function() {
 	
 	const allContacts = document.querySelectorAll('.b-card__contacts')
 	const contactButton = document.querySelectorAll('.b-contact__button')
-
+	
+	// console.log(allDropdowns)
 	if(contactButton.length>0){
 		contactButton.forEach(el=>{
 			const contacts = el.parentNode.querySelector('.b-card__contacts')
@@ -89,28 +90,45 @@ ready(function() {
 				contacts.style.display = 'block'
 			}
 		})
-		
+	}
 
-		document.body.onclick = e=>{
-			// console.log()
+	// for every element that must lose blur by clicking others
+	document.body.onclick = e=>{
+		// console.log()
 
-			// for contacts tooltip
-			if(e.target.className.indexOf('b-contact__button')===-1 
-				&& getClosest(e.target, '.b-card__contacts')===null
-			){ 
-				allContacts.forEach(c=>{
-					c.style.display = 'none'
-				})
-			}
-
-
-			// for blur effect
-			if((e.target.className.indexOf('popup-button')===-1 && getClosest(e.target, '.b-card--popup')===null) || e.target.className.indexOf('close-popup')>-1) {
-					popup.style.display = 'none'
-					fullContainer.classList.remove('blur')
-			}
+		// for contacts tooltip
+		if(allContacts.length>0 
+			&& e.target.className.indexOf('b-contact__button')===-1 
+			&& getClosest(e.target, '.b-card__contacts')===null
+		){ 
+			allContacts.forEach(c=>{
+				c.style.display = 'none'
+			})
 		}
 
+
+		// for blur effect
+		if(	popup
+			&& 
+			(
+				(e.target.className.indexOf('popup-button')===-1 
+				&& getClosest(e.target, '.b-card--popup')===null
+				) 
+				|| e.target.className.indexOf('close-popup')>-1
+			) 
+		){
+
+			popup.style.display = 'none'
+			fullContainer.classList.remove('blur')
+		}
+
+		// for material selects
+		const allDropdowns = document.querySelectorAll('.material-select__options--visible')
+		if(allDropdowns.length>0 && e.target.nodeName!='SELECT'){
+			Array.from(allDropdowns).forEach(d=>{
+				d.classList.remove('material-select__options--visible')
+			})
+		}
 	}
 
 	const getClosest = (elem, selector) => {
@@ -320,7 +338,6 @@ ready(function() {
 	const expandCard = function(inner, innerInitialHeight, e) {
 		e.preventDefault
 		clearSelection()
-		console.log(innerInitialHeight)
 
 		// if (this.style.display!='none')
 		// 	this.style.display = 'none'
@@ -521,6 +538,38 @@ ready(function() {
 		});
 		
 	}
+
+
+
+	const selects = document.querySelectorAll('.material-select')
+	Array.from(selects).forEach((s)=>{
+		// const wrapper = document.createElement('div')
+		// wrapper.className = 'inline-block-wrapper'
+		// wrapper.appendChild(s)
+		const dropdown = document.createElement('div')
+		dropdown.className = 'material-select__options'
+
+		const options = s.querySelectorAll('option')
+		Array.from(options).forEach(o=>{
+			const p = document.createElement('p') 
+			p.className = 'material-select__option'
+			p.setAttribute('value', o.value)
+			p.innerHTML = o.text
+			dropdown.appendChild(p)
+			dropdown.appendAfter(s)
+			p.onclick = (e)=>{
+				s.value = o.value
+				dropdown.classList.remove('material-select__options--visible')
+			}
+		})
+		s.onmousedown = (e)=>{
+			e.preventDefault()
+			dropdown.classList.toggle('material-select__options--visible')
+
+		}
+		
+
+	})
 
 }) // document ready
 

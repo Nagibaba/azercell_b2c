@@ -437,7 +437,7 @@ input {
       /*& *{
 				display: none!important;
 				transition: all .4s;
-			}*/
+				}*/
       /*opacity: 0;*/
       /*max-height: 0;*/
       overflow: hidden;
@@ -1012,7 +1012,7 @@ input {
   margin-top: 0;
   /*&-parent{
 		
-	}*/ }
+		}*/ }
   .switch__label {
     position: relative;
     display: inline-block;
@@ -1259,6 +1259,33 @@ input {
        background-size: 18px 18px; }
   .material-select:focus {
     outline: none; }
+  .material-select__option {
+    text-align: left;
+    padding: 10px;
+    cursor: pointer; }
+    .material-select__option:first-child {
+      margin-top: 10px; }
+    .material-select__option:hover {
+      background-color: white; }
+    .material-select__options {
+      background-color: #F5F5F5;
+      border: 1px solid #994DC9;
+      -webkit-border-radius: 5px;
+         -moz-border-radius: 5px;
+              border-radius: 5px;
+      position: absolute;
+      top: 46px;
+      width: 100%;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1000;
+      -webkit-transition: .4s all;
+      -o-transition: .4s all;
+      -moz-transition: .4s all;
+      transition: .4s all; }
+      .material-select__options--visible {
+        opacity: 1;
+        visibility: visible; }
 
 .delete-campaign-button {
   cursor: pointer; }
@@ -1270,7 +1297,7 @@ input {
   padding: 17px 0;
   width: 50%;
   /*background: #1fa2ed;
-  color: white;*/ }
+	color: white;*/ }
   .tab--material {
     /*grabbed the code for styling from google icons*/
     overflow: visible;
@@ -1472,7 +1499,7 @@ td {
 					bottom:0;
 					right: -30%;
 					border-top:2px solid white;
-				}*/ } }
+					}*/ } }
 
 /*/media max*/
 .expand-card-icon {
@@ -1996,6 +2023,10 @@ b-hr {
 .inline-wrapper {
   position: relative;
   /*display: inline-block;*/ }
+
+.inline-block-wrapper {
+  position: relative;
+  display: inline-block; }
 
 .b-clearfix:after, .b-jumbotron__col:after {
   clear: both; }
