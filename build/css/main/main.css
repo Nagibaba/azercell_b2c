@@ -1244,10 +1244,11 @@ input {
 .material-select {
   background-color: transparent;
   width: 100%;
-  padding: 11px 0;
-  color: #994DC9;
+  padding-bottom: 11px;
+  color: #4D4D4D;
+  font-weight: bold;
   border: none;
-  border-bottom: 1px solid #707070;
+  border-bottom: 2px solid rgba(112, 112, 112, 0.2);
   -webkit-border-radius: 0;
      -moz-border-radius: 0;
           border-radius: 0;
@@ -1261,18 +1262,22 @@ input {
     outline: none; }
   .material-select__option {
     text-align: left;
-    padding: 10px;
-    cursor: pointer; }
-    .material-select__option:first-child {
-      margin-top: 10px; }
+    padding: 10px 5px;
+    cursor: pointer;
+    margin-bottom: 0; }
     .material-select__option:hover {
-      background-color: white; }
+      background-color: #F5F5F5; }
     .material-select__options {
-      background-color: #F5F5F5;
-      border: 1px solid #994DC9;
-      -webkit-border-radius: 5px;
-         -moz-border-radius: 5px;
-              border-radius: 5px;
+      padding: 0;
+      height: 0;
+      overflow: hidden;
+      background-color: #FFFFFF;
+      border: 2px solid #E6E6E6;
+      -webkit-border-radius: 10px;
+         -moz-border-radius: 10px;
+              border-radius: 10px;
+      color: #4D4D4D;
+      font-weight: bold;
       position: absolute;
       top: 46px;
       width: 100%;
@@ -1285,7 +1290,11 @@ input {
       transition: .4s all; }
       .material-select__options--visible {
         opacity: 1;
-        visibility: visible; }
+        visibility: visible;
+        padding: 10px 15px;
+        height: auto;
+        max-height: 184px;
+        overflow: auto; }
 
 .delete-campaign-button {
   cursor: pointer; }

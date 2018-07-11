@@ -1051,13 +1051,14 @@
 
 
 
-	.material-select{
+	.material-select {
 		background-color: transparent;
 		width: 100%;
-		padding: 11px 0;
-		color: $main-color;
+		padding-bottom: 11px;
+		color: #4D4D4D;
+		font-weight: bold;
 		border: none;
-		border-bottom: 1px solid #707070;
+		border-bottom: 2px solid rgba(112, 112 ,112 , .2);
 		border-radius: 0;
 		appearance: none;
 		background: url(../../img/icons/expand_more.svg) 100% 50% no-repeat;
@@ -1066,35 +1067,41 @@
 			outline: none
 		}
 		&__option{
-			text-align: left;
-			padding: 10px;
-			cursor: pointer;
-			&:first-child{
-				margin-top: 10px;
-			}
-			&:hover{
-				background-color: white;
-			}
-			&s{
-				background-color: $dark-white;
-				border: 1px solid $main-color;
-				border-radius: 5px;
-				position: absolute;
-				top: 46px;
-				width: 100%;
-				opacity: 0;
-				visibility: hidden;
-				z-index: 1000;
-				transition: .4s all;
-				&--visible{
-					opacity: 1;
-					visibility: visible;
-
+				text-align: left;
+				padding: 10px 5px;
+				cursor: pointer;
+				margin-bottom: 0;
+				&:hover{
+					background-color: $dark-white;
 				}
-			}
+				&s{
+					padding:0;
+					height: 0;
+					overflow: hidden;
+					background-color: #FFFFFF;
+					border: 2px solid #E6E6E6;
+					border-radius: 10px;
+					color: #4D4D4D;
+					font-weight: bold;
+					position: absolute;
+					top: 46px;
+					width: 100%;
+					opacity: 0;
+					visibility: hidden;
+					z-index: 1000;
+					transition: .4s all;
+					&--visible{
+						opacity: 1;
+						visibility: visible;
+						padding: 10px 15px;
+						height: auto;
+						max-height:184px;
+						overflow:auto;
+					}
+				}
 
 		}
-	}
+		}
 
 	.delete-campaign-button{
 		cursor: pointer;
