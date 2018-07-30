@@ -1,3 +1,4 @@
+import 'babel-polyfill'
 'use strict'
 ////// POPUP
 

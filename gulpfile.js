@@ -23,6 +23,11 @@ var lastCompile = new Date();
 
 const babel = require('gulp-babel');
 
+var browserify = require('browserify');
+var babelify = require('babelify');
+var source = require('vinyl-source-stream');
+var gutil = require('gulp-util');
+
 
 var path = {
     build: { //Burada işlemden sonra bitmiş dosyaların nereye koyulacağını gösteriyoruz
@@ -91,11 +96,31 @@ gulp.task('html:build', function () {
 
 
 gulp.task('js:build', function () {
+    // gulp.src(path.src.js) //burdakileri al derle
+    // .on('error', function(err) {
+    //     console.log(err)
+    //     this.emit('end')
+    // })
+    // .pipe(babel({
+    //     presets: ['env','es2015',"es2015-ie"],
+    //     plugins: ['babel-polyfill']
+    // }))
+    // .pipe(concat('all.js'))
+    // .pipe(gulp.dest(path.build.js)) //minify etmeden all.js dosyasını ekledik aşağıdaki noSource: true  komutunu silersek buna gerek olmayacak sanırım denemedim ama mantık olarak o kod minify olunmamışını eklemesini engelliyor
+    // .pipe(minify({
+    //     ext:{
+
+    //         min:'.min.js'
+    //     },
+    //     noSource:true //bu build altındaki js klasörüne düşen index.js yi düşürmüyor sadece min olan düşüyor 
+    // }))
+    
+    
+    // .pipe(gulp.dest(path.build.js)) //derlenmiş dosyayı buraya at
+    // .pipe(reload())
+    // .pipe(notify("JS compiled"));
+
     gulp.src(path.src.js) //burdakileri al derle
-    .on('error', function(err) {
-        console.log(err)
-        this.emit('end')
-    })
     .pipe(babel({
         presets: ['env']
     }))
