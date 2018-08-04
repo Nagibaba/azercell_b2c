@@ -508,9 +508,11 @@
 
 				}
 				&__info{
-					max-width: 18px;
+					
+					height: auto;
 					vertical-align: top;
 					cursor: pointer;
+
 				}
 
 			}
@@ -776,10 +778,10 @@
 			transition: 0.4s;
 
 
-			&::before {
+			&:before {
 				box-sizing: initial;
 				position: absolute;
-				content: "";
+				content: " ";
 				height: calc( #{$switch-height} - (#{$switch-inner-border} * 2));
 				width: calc( #{$switch-height} - (#{$switch-inner-border} * 2));
 				left: 0;
@@ -805,8 +807,8 @@
 
 
 
-			&::before {
-				transform: translateX( calc( #{$switch-width} - #{$switch-height} ) );
+			&:before {
+				transform: translateX( #{str-replace(#{$switch-width},'px') - str-replace(#{$switch-height},'px') } );
 			}
 		}
 

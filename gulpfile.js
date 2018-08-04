@@ -26,7 +26,7 @@ const babel = require('gulp-babel');
 var browserify = require('browserify');
 var babelify = require('babelify');
 var source = require('vinyl-source-stream');
-var gutil = require('gulp-util');
+// var gutil = require('gulp-util');
 
 
 var path = {
@@ -78,32 +78,53 @@ gulp.task('html:build', function () {
         console.log(err)
         this.emit('end')
     })
-        .pipe(rigger()) //rigger ile dosyaları birleşdiriyoruz header footer gibi komponentleri import ediyoruz bir nevi
-        .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
-        .pipe(reload())
-        .pipe(
-            notify(function(){
-                if(!gulpJustStarted) {
-                    gulpJustStarted = false;
-                    // lastCompile = new Date()
-                     return 'HTML COMPILED'
-                }
-                return false
-            })
-        );
-    });
+    .pipe(rigger()) //rigger ile dosyaları birleşdiriyoruz header footer gibi komponentleri import ediyoruz bir nevi
+    .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
+    .pipe(reload())
+    .pipe(
+        notify(function(){
+            if(!gulpJustStarted) {
+                gulpJustStarted = false;
+                // lastCompile = new Date()
+                 return 'HTML COMPILED'
+            }
+            return false
+        })
+    );
+});
 
 
 
 gulp.task('js:build', function () {
+    browserify({
+        entries: ['./src/js/main/main.js'],
+        debug: true
+    })
+    .transform(babelify)
+    // .on('error',gutil.log)
+    .transform("babelify", {
+        presets: ["es2015"], 
+        plugins: ["add-module-exports","transform-es2015-modules-umd"]}
+    ) 
+    .bundle()
+    // .on('error',gutil.log)
+    .pipe(source('all.js'))
+    .pipe(gulp.dest(path.build.js))
+    // .pipe(minify({
+    //     ext:{
+
+    //         min:'.min.js'
+    //     },
+    //     noSource:true //bu build altındaki js klasörüne düşen index.js yi düşürmüyor sadece min olan düşüyor 
+    // }))
+    // .pipe(gulp.dest(path.build.js))
+
+    .pipe(reload())
+    .pipe(notify("JS compiled"));
+
     // gulp.src(path.src.js) //burdakileri al derle
-    // .on('error', function(err) {
-    //     console.log(err)
-    //     this.emit('end')
-    // })
     // .pipe(babel({
-    //     presets: ['env','es2015',"es2015-ie"],
-    //     plugins: ['babel-polyfill']
+    //     presets: ['env']
     // }))
     // .pipe(concat('all.js'))
     // .pipe(gulp.dest(path.build.js)) //minify etmeden all.js dosyasını ekledik aşağıdaki noSource: true  komutunu silersek buna gerek olmayacak sanırım denemedim ama mantık olarak o kod minify olunmamışını eklemesini engelliyor
@@ -119,25 +140,6 @@ gulp.task('js:build', function () {
     // .pipe(gulp.dest(path.build.js)) //derlenmiş dosyayı buraya at
     // .pipe(reload())
     // .pipe(notify("JS compiled"));
-
-    gulp.src(path.src.js) //burdakileri al derle
-    .pipe(babel({
-        presets: ['env']
-    }))
-    .pipe(concat('all.js'))
-    .pipe(gulp.dest(path.build.js)) //minify etmeden all.js dosyasını ekledik aşağıdaki noSource: true  komutunu silersek buna gerek olmayacak sanırım denemedim ama mantık olarak o kod minify olunmamışını eklemesini engelliyor
-    .pipe(minify({
-        ext:{
-
-            min:'.min.js'
-        },
-        noSource:true //bu build altındaki js klasörüne düşen index.js yi düşürmüyor sadece min olan düşüyor 
-    }))
-    
-    
-    .pipe(gulp.dest(path.build.js)) //derlenmiş dosyayı buraya at
-    .pipe(reload())
-    .pipe(notify("JS compiled"));
     });
 
 
@@ -149,7 +151,7 @@ gulp.task('css:build', function () {
             console.log(err)
             this.emit('end')
         })
-        .pipe(postcss([ autoprefixer({ browsers: ["> 0%"] }) ]))
+        .pipe(postcss([ autoprefixer({ browsers: ["> 0%", 'ie 11'] }) ]))
         .pipe(gulp.dest(path.build.css))
         .pipe(minifyCSS())
         .pipe(rename({suffix:'.min'}))

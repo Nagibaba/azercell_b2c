@@ -727,7 +727,7 @@ input {
     vertical-align: -webkit-baseline-middle; }
 
 .img__info {
-  max-width: 18px;
+  height: auto;
   vertical-align: top;
   cursor: pointer; }
 
@@ -1038,12 +1038,12 @@ input {
     -webkit-border-radius: 20px;
        -moz-border-radius: 20px;
             border-radius: 20px; }
-    .switch__slider::before {
+    .switch__slider:before {
       -webkit-box-sizing: initial;
          -moz-box-sizing: initial;
               box-sizing: initial;
       position: absolute;
-      content: "";
+      content: " ";
       height: -webkit-calc( 20px - (4px * 2));
       height: -moz-calc( 20px - (4px * 2));
       height: calc( 20px - (4px * 2));
@@ -1070,12 +1070,12 @@ input {
     background: -moz-linear-gradient(bottom, #4EB852, #4EB852);
     background: -o-linear-gradient(bottom, #4EB852, #4EB852);
     background: linear-gradient(to top, #4EB852, #4EB852); }
-    .switch__checkbox:checked + .switch__slider::before {
-      -webkit-transform: translateX(-webkit-calc( 46px - 20px));
-         -moz-transform: translateX(-moz-calc( 46px - 20px));
-          -ms-transform: translateX(calc( 46px - 20px));
-           -o-transform: translateX(calc( 46px - 20px));
-              transform: translateX(calc( 46px - 20px)); }
+    .switch__checkbox:checked + .switch__slider:before {
+      -webkit-transform: translateX(46-20);
+         -moz-transform: translateX(46-20);
+          -ms-transform: translateX(46-20);
+           -o-transform: translateX(46-20);
+              transform: translateX(46-20); }
   .switch__checkbox:focus + .switch__slider {
     -webkit-box-shadow: 0 0 1px #2196f3;
        -moz-box-shadow: 0 0 1px #2196f3;
