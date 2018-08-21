@@ -9,7 +9,7 @@
 	box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
 	/*transition: padding .2s;*/
 	&__inner{
-		/*max-width: 300px;*/
+		/*max-width: 		300px;*/
 		margin: 0 auto;
 		/*overflow: hidden;*/
 		/*opacity: 1;*/
@@ -310,7 +310,7 @@
 		&__icon{
 			width: 18px;
 			position: absolute;
-			right: 1px;
+			right: 4px;
 			top: 4px;
 		}
 
@@ -510,7 +510,7 @@
 				&__info{
 					
 					height: auto;
-					vertical-align: top;
+					vertical-align: middle;
 					cursor: pointer;
 
 				}
@@ -747,23 +747,20 @@
 			}
 
 
-			.switch{
-				background-color: $darker-white;
-				padding: 20px;
-				margin-top: 0; 
+	.switch{
+		background-color: $darker-white;
+		padding: 20px;
+		margin-top: 0; 
 	/*&-parent{
 		
 		}*/
 		&__label {
 			position: relative;
 			display: inline-block;
-			width: $switch-width;
-			height: $switch-height;
+			width: $switch-width+px;
+			height: $switch-height+px;
 			float: right;
-			width: 46px;
-			height: 20px;
-			float: right;
-
+			
 		}
 		&__slider {
 			position: absolute;
@@ -779,20 +776,20 @@
 
 
 			&:before {
-				box-sizing: initial;
 				position: absolute;
 				content: " ";
-				height: calc( #{$switch-height} - (#{$switch-inner-border} * 2));
-				width: calc( #{$switch-height} - (#{$switch-inner-border} * 2));
+				height: #{$switch-height - ($switch-inner-border )}px;
+				width: #{$switch-height - ($switch-inner-border )}px;
 				left: 0;
-				top: 0;
+				top: 50%;
+				transform: translate(0, -50%);
 				background-color: #E6E6E6;
-				border: #{$switch-inner-border/2} solid white;
+				border: #{$switch-inner-border/2}px solid white;
 				transition: 0.4s;
 			}
 
 			@if $switch-rounded {
-				border-radius: $switch-height;
+				border-radius: $switch-height+px;
 
 				&::before {
 					border-radius: 50%;
@@ -808,7 +805,8 @@
 
 
 			&:before {
-				transform: translateX( #{str-replace(#{$switch-width},'px') - str-replace(#{$switch-height},'px') } );
+				/*transform: translateY( -50% );*/
+				transform: translate( #{ $switch-width - $switch-height }px, -50% );
 			}
 		}
 
@@ -827,8 +825,10 @@
 				width: 70%;
 			}
 			text-align: left;
-			&--success{
-				color: $green;
+			&-text{
+				&--success{
+					color: $green;
+				}
 			}
 
 		}

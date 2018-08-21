@@ -87,6 +87,17 @@
 }
 
 
+@mixin font-full($family, $weight, $fileName) {
+	font-family: $font;
+	src: url('../../fonts/#{$font}.eot');
+	src: url('../../fonts/#{$font}.eot?#iefix') format('embedded-opentype'),
+	url('../../fonts/#{$font}.woff2') format('woff2'),
+	url('../../fonts/#{$font}.woff') format('woff'),
+	url('../../fonts/#{$font}.ttf') format('truetype'),
+	url('../../fonts/#{$font}.svg##{$font}') format('svg');
+}
+
+
 @mixin makeLiWider(){
 	position: absolute;
 	left: -50%;

@@ -85,7 +85,7 @@ ready(function() {
 	
 	// console.log(allDropdowns)
 	if(contactButton.length>0){
-		contactButton.forEach(el=>{
+		Array.from(contactButton).forEach(el=>{
 			const contacts = el.parentNode.querySelector('.b-card__contacts')
 			el.onclick = e=>{
 				contacts.style.display = 'block'
@@ -102,7 +102,7 @@ ready(function() {
 			&& e.target.className.indexOf('b-contact__button')===-1 
 			&& getClosest(e.target, '.b-card__contacts')===null
 		){ 
-			allContacts.forEach(c=>{
+			Array.from(allContacts).forEach(c=>{
 				c.style.display = 'none'
 			})
 		}
@@ -178,7 +178,7 @@ ready(function() {
 			number = number.innerText || number.textContent
 			number = number.substring(1)
 			getClosest(t,'.b-card__form-row').querySelector('.phone-number-area').value = number
-			allContacts.forEach(c=>{
+			Array.from(allContacts).forEach(c=>{
 				c.style.display = 'none'
 			})
 		}
@@ -470,7 +470,7 @@ ready(function() {
 
 	const switchCards = document.querySelectorAll('.b-card__inner--switch')
 	
-	if (switchCards) {
+	if (switchCards.length>0) {
 		const checkInputsAndAddActiveClass = (e, input, switchText)=>{
 			if(!input) return false
 			if (input.checked) {
@@ -496,6 +496,34 @@ ready(function() {
 		})
 	}
 
+	const switches = document.querySelectorAll('.switch')
+
+	if(switches.length>0){
+		const checkInputsAndAddActiveClass2 = (e, input, switchText)=>{
+			if(!input) return false
+			if (input.checked) {
+				e.classList.add('switch--success')
+				switchText.innerText = switchText.getAttribute('opened-text')
+				switchText.classList.add('switch__header-text--success')
+			} else {
+				e.classList.remove('switch--success')
+				switchText.innerText = switchText.getAttribute('closed-text')
+				switchText.classList.remove('switch__header-text--success')
+
+			}
+		}
+		Array.from(switches).forEach((e)=>{
+			const input = e.querySelector('.switch__checkbox')
+			const switchText = e.querySelector('.switch__header-text')
+
+			checkInputsAndAddActiveClass2(e, input, switchText)
+			e.addEventListener('change', ()=>{
+				checkInputsAndAddActiveClass2(e, input, switchText)
+			})
+
+		})
+	}
+
 	const clientMessage = document.querySelector('.client-message')
 	if (clientMessage) {
 		let count, messageCount
@@ -516,31 +544,35 @@ ready(function() {
 
 
 	/// stick footer bottom
-	const footer = document.querySelector('.footer')
-	const fullContainerHeight = fullContainer.offsetHeight
-	const windowHeight = window.innerHeight
+	let stickFooterToBottom
+	(stickFooterToBottom = ()=>{
+		const footer = document.querySelector('.footer')
+		const fullContainerHeight = fullContainer.offsetHeight
+		const windowHeight = window.innerHeight
 
-	if(windowHeight>fullContainerHeight){
-		footer.style.marginTop = (windowHeight-fullContainerHeight-footer.offsetHeight)+'px'
+		if(windowHeight>fullContainerHeight){
+			footer.style.marginTop = (windowHeight-fullContainerHeight-footer.offsetHeight)+'px'
+		}
+
+		const rules = document.querySelector('.b-card__rules')
+		if(rules){
+			rules.addEventListener('scroll', (event) =>
+			{
+			    const element = event.target;
+			    if (element.scrollHeight - Math.round(element.scrollTop) === element.clientHeight)
+			    {
+			    	const iAcceptButton = document.querySelector('.i-accept-button')
+			        if(iAcceptButton){
+			        	iAcceptButton.disabled = false
+			        }
+			    }
+			});
+			
+		}
+	})()
+	window.onresize = ()=>{
+		stickFooterToBottom()
 	}
-
-	const rules = document.querySelector('.b-card__rules')
-	if(rules){
-		rules.addEventListener('scroll', (event) =>
-		{
-		    const element = event.target;
-		    if (element.scrollHeight - Math.round(element.scrollTop) === element.clientHeight)
-		    {
-		    	const iAcceptButton = document.querySelector('.i-accept-button')
-		        if(iAcceptButton){
-		        	iAcceptButton.disabled = false
-		        }
-		    }
-		});
-		
-	}
-
-
 
 	const selects = document.querySelectorAll('.material-select')
 	Array.from(selects).forEach((s)=>{
@@ -572,11 +604,21 @@ ready(function() {
 
 	})
 
+
+	const showOwe = document.querySelectorAll('.showOwe')
+	const owe = document.querySelector('.owe')
+
+	Array.from(showOwe).forEach(s=>{
+		s.onclick = ()=>{
+			s.parentNode.parentNode.style.display = 'none'
+			owe.style.display='block'
+		}
+	})
+	 
+
 }) // document ready
 
-const showOwe = function(e) {
-	e.parentNode.parentNode.style.display = 'none';document.querySelector('.owe').style.display='block'
-}
+
 
 ///
 

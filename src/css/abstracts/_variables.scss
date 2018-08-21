@@ -1,5 +1,8 @@
 $aznb:jaznb;
 
+$PN-I: ProximaNova-Italic;
+$PN-R: ProximaNova-Regular;
+
 $full-container-mobile-padding: 10px;
 
 $giant-font-size: 46px;
@@ -64,9 +67,9 @@ $b-pad-left: ($b-height / 2 - $b-bun-width-half - 2); //Horizontally centers bun
 $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in menu
 
 
-$switch-width:          46px !default;
-$switch-height:         20px !default;
-$switch-inner-border:   4px !default;
+$switch-width:          46!default;
+$switch-height:         20!default;
+$switch-inner-border:   4!default;
 $switch-rounded:        true !default;
 $switch-bg-color:       linear-gradient(to top, $green, $green) !default;
 $switch-inactive-bg-color:       #AEAEAE !default;

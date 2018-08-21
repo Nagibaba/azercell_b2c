@@ -76,7 +76,9 @@ li{
 }
 
 img{
-	vertical-align: top;
+	vertical-align: middle;
+	height: 100%;
+	height: auto;
 }
 
 label{
@@ -211,6 +213,9 @@ b-hr{
 .align{
 	&-top{
 		vertical-align: top;
+	}
+	&-sub{
+		vertical-align: sub;
 	}
 	&-middle{
 		vertical-align: middle;
@@ -408,6 +413,7 @@ b-nav__header{
 
 @media(max-width: 991px){
 	body, .second-body{
+		background: $dark-white;
 		background-image: url('');
 	}
 	.visible-desktop{
@@ -459,7 +465,18 @@ b-nav__header{
 	}
 
 	.footer{
-		
+		position: relative;
+		&:before{
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 10;
+			box-shadow: 0 10px 20px rgba(0,0,0, 1);
+			pointer-events: none;
+		}
 		&__copyright{
 			text-align: center;
 		}
